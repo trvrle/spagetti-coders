@@ -1,0 +1,34 @@
+﻿<Window x:Class="Spaghetti_Coders.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spaghetti_Coders"
+        mc:Ignorable="d"
+        Title="Spaghetti Coders" Height="700" Width="400" Background="#d57174">
+    <Grid>
+
+        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left"/>
+        
+        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0">
+            <TabItem Header="All" Background="#d57174" Height="50" Width="79">
+                <ScrollViewer Background="#deafb3">
+                    <Label Content="ListLabel"/>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Main" Background="#d57174" Width="79">
+                <Grid Background="#deafb3"/>
+            </TabItem>
+            <TabItem Header="Sides" Background="#d57174" Width="79">
+                <Grid Background="#deafb3"/>
+            </TabItem>
+            <TabItem Header="Desserts" Background="#d57174" Width="79">
+                <Grid Background="#deafb3"/>
+            </TabItem>
+            <TabItem Header="Drinks" Background="#d57174" Width="79">
+                <Grid Background="#deafb3"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
