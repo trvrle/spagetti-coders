@@ -16,7 +16,7 @@
 
                 <ScrollViewer Margin="1,0,-4,0" CanContentScroll="True" >
 
-                    <Grid x:Name="Scroll" Background="#deafb3" FlowDirection="LeftToRight" Height="724" Width="402">
+                    <Grid x:Name="AllPage" Background="#deafb3" FlowDirection="LeftToRight" Height="724" Width="402">
 
                         <Button x:Name="SortButton" Width="74" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" Padding="1,1,-3,1" FlowDirection="LeftToRight" Margin="0,0,21,694">
                             <Image x:Name="Sort_Icon" Stretch="Fill" Source="/sort-icon-png-16.jpg" Height="22" Width="22"/>
@@ -69,10 +69,61 @@
 
             </TabItem>
             <TabItem Header="Main" Background="#d57174" Width="79" IsSelected="True">
-                <Grid Background="#deafb3"/>
+                
+                    <ScrollViewer>
+                        <Grid x:Name="MainsPage" Background="#deafb3" FlowDirection="LeftToRight" Height="724" Width="402">
+                        <Button x:Name="SortButton_Copy" Width="74" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" Padding="1,1,-3,1" FlowDirection="LeftToRight" Margin="0,0,21,694">
+                            <Image x:Name="Sort_Icon1" Stretch="Fill" Source="/sort-icon-png-16.jpg" Height="22" Width="22"/>
+
+                        </Button>
+                        <Label Content="Mains!" HorizontalAlignment="Center" FontFamily="Freestyle Script" FontSize="48" Margin="0,40,0,617"/>
+                            
+                        <Grid HorizontalAlignment="Left" Margin="-4,122,0,0" VerticalAlignment="Top" Width="385" Height="465">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="15*"/>
+                            <RowDefinition Height="16*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" FlowDirection="LeftToRight" Margin="13,0,14,13" >
+                            <Image Height="137" Stretch="Fill" Source="/2021-10-24 19_33_09-general - Discord.png" Width="164"/>
+                            <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Spicy Ramen"/>
+                            <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="14,0,13,13" >
+                            <Image Height="137" Stretch="Fill" Source="/2021-10-24 20_20_32-1._All.png (1668×2388).png" Width="164"/>
+                            <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Tempura"/>
+                            <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" FlowDirection="LeftToRight" Margin="13,0,14,-32">
+                            <Image Height="137" Stretch="Fill" Source="/2021-10-24 19_33_09-general - Discord.png" Width="164"/>
+                            <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Spicy Ramen"/>
+                            <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                        </StackPanel>
+
+                        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="14,0,13,-32">
+                            <Image Height="137" Stretch="Fill" Source="/2021-10-24 20_20_32-1._All.png (1668×2388).png" Width="164"/>
+                            <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Tempura"/>
+                            <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                        </StackPanel>
+                    </Grid>
+
+
+                 </Grid>
+  
+                    </ScrollViewer>
+                
+
             </TabItem>
             <TabItem Header="Sides" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
+
             </TabItem>
             <TabItem Header="Desserts" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
