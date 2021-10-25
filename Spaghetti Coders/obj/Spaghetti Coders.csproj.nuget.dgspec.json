@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj": {}
+    "C:\\Users\\timm\\source\\repos\\spagetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj": {}
   },
   "projects": {
-    "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj": {
+    "C:\\Users\\timm\\source\\repos\\spagetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
+        "projectUniqueName": "C:\\Users\\timm\\source\\repos\\spagetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
         "projectName": "Spaghetti Coders",
-        "projectPath": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
-        "packagesPath": "C:\\Users\\trevo\\.nuget\\packages\\",
-        "outputPath": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\obj\\",
+        "projectPath": "C:\\Users\\timm\\source\\repos\\spagetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
+        "packagesPath": "C:\\Users\\timm\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\timm\\source\\repos\\spagetti-coders\\Spaghetti Coders\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\trevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\timm\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -58,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -17,3 +17,23 @@ Z:\school\CPSC481\Spaghetti Coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spag
 Z:\school\CPSC481\Spaghetti Coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.dll
 Z:\school\CPSC481\Spaghetti Coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.pdb
 Z:\school\CPSC481\Spaghetti Coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.genruntimeconfig.cache
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.exe
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.deps.json
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.runtimeconfig.json
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.runtimeconfig.dev.json
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.dll
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\bin\Debug\netcoreapp3.1\Spaghetti Coders.pdb
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.csproj.AssemblyReference.cache
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders_MarkupCompile.cache
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders_MarkupCompile.lref
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.g.resources
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.AssemblyInfoInputs.cache
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.AssemblyInfo.cs
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.csproj.CoreCompileInputs.cache
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.dll
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.pdb
+C:\Users\timm\source\repos\spagetti-coders\Spaghetti Coders\obj\Debug\netcoreapp3.1\Spaghetti Coders.genruntimeconfig.cache

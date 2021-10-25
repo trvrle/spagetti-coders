@@ -7,4 +7,18 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="2021-10-24 19_33_09-general - Discord.png" />
+    <None Remove="2021-10-24 20_20_32-1._All.png %281668×2388%29.png" />
+    <None Remove="search_icon_125165.png" />
+    <None Remove="sort-icon-png-16.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="2021-10-24 19_33_09-general - Discord.png" />
+    <Resource Include="2021-10-24 20_20_32-1._All.png (1668×2388).png" />
+    <Resource Include="search_icon_125165.png" />
+    <Resource Include="sort-icon-png-16.jpg" />
+  </ItemGroup>
+
 </Project>

@@ -1,34 +1,103 @@
-﻿<Window x:Class="Spaghetti_Coders.MainWindow"
+﻿<Window x:Class="Spaghetti_Coders.MainWindow" Height="700" Width="410"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spaghetti_Coders"
         mc:Ignorable="d"
-        Title="Spaghetti Coders" Height="700" Width="400" Background="#d57174">
+        Title="Spaghetti Coders" Background="#d57174">
     <Grid>
 
-        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left"/>
-        
-        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0">
-            <TabItem Header="All" Background="#d57174" Height="50" Width="79">
-                <ScrollViewer Background="#deafb3">
-                    <Label Content="ListLabel"/>
+        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top"/>
+
+        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0" Background="#FFDEAFB3" Visibility="Visible">
+
+            <TabItem Header="All" Background="#d57174" Height="50" Width="79" IsSelected="True" Visibility="Visible">
+
+                <ScrollViewer Margin="1,0,-4,0" CanContentScroll="True" >
+
+                    <Grid x:Name="Scroll" Background="#deafb3" FlowDirection="LeftToRight" Height="724" Width="402">
+
+                        <Button x:Name="SortButton" Width="74" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" Padding="1,1,-3,1" FlowDirection="LeftToRight" Margin="0,0,21,694">
+                            <Image x:Name="Sort_Icon" Stretch="Fill" Source="/sort-icon-png-16.jpg" Height="22" Width="22"/>
+
+                        </Button>
+                        <Label Content="Today's Specials!" HorizontalAlignment="Center" FontFamily="Freestyle Script" FontSize="48" Margin="0,40,0,617"/>
+
+
+
+
+
+
+
+                        <Grid HorizontalAlignment="Left" Margin="-4,122,0,0" VerticalAlignment="Top" Width="385" Height="465">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15*"/>
+                                <RowDefinition Height="16*"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" FlowDirection="LeftToRight" Margin="13,0,14,13" >
+                                <Image Height="137" Stretch="Fill" Source="/2021-10-24 19_33_09-general - Discord.png" Width="164"/>
+                                <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Spicy Ramen"/>
+                                <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Vertical" Margin="14,0,13,13" >
+                                <Image Height="137" Stretch="Fill" Source="/2021-10-24 20_20_32-1._All.png (1668×2388).png" Width="164"/>
+                                <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Tempura"/>
+                                <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical" FlowDirection="LeftToRight" Margin="13,0,14,-32">
+                                <Image Height="137" Stretch="Fill" Source="/2021-10-24 19_33_09-general - Discord.png" Width="164"/>
+                                <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Spicy Ramen"/>
+                                <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical" Margin="14,0,13,-32">
+                                <Image Height="137" Stretch="Fill" Source="/2021-10-24 20_20_32-1._All.png (1668×2388).png" Width="164"/>
+                                <TextBox Height="40" TextWrapping="Wrap" Width="165" Text="Tempura"/>
+                                <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
+                            </StackPanel>
+                        </Grid>
+
+
+
+
+
+                    </Grid>
+
+
                 </ScrollViewer>
+
             </TabItem>
-            <TabItem Header="Main" Background="#d57174" Width="79">
+            <TabItem Header="Main" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
             </TabItem>
-            <TabItem Header="Sides" Background="#d57174" Width="79">
+            <TabItem Header="Sides" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
             </TabItem>
-            <TabItem Header="Desserts" Background="#d57174" Width="79">
+            <TabItem Header="Desserts" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
             </TabItem>
-            <TabItem Header="Drinks" Background="#d57174" Width="79">
+            <TabItem Header="Drinks" Background="#d57174" Width="79" IsSelected="True">
                 <Grid Background="#deafb3"/>
             </TabItem>
         </TabControl>
+        <TextBox HorizontalAlignment="Left" Margin="275,5,0,0" Text="Search" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="18"/>
+
+        <Button
+            HorizontalAlignment="Left" Margin="370,5,0,0" VerticalAlignment="Top" Width="25" Height="25" Background="White" Click="Button_Click">
+            <Image x:Name="Search_icon" Stretch="Uniform" Source="/search_icon_125165.png" Height="25" Width="25"/>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="535,34,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="670,224,0,0" VerticalAlignment="Top" Width="100"/>
+
 
     </Grid>
 </Window>

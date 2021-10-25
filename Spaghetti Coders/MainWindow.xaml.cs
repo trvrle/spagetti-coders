@@ -24,5 +24,17 @@ namespace Spaghetti_Coders
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public bool CanContentScroll { get; set; }
     }
 }
