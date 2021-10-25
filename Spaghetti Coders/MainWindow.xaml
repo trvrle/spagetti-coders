@@ -8,11 +8,11 @@
         Title="Spaghetti Coders" Background="#d57174">
     <Grid>
 
-        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top"/>
+        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top"/>
 
-        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0" Background="#FFDEAFB3" Visibility="Visible">
+        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0" Background="#deafb3" Visibility="Visible">
 
-            <TabItem Header="All" Background="#d57174" Height="50" Width="79" IsSelected="True" Visibility="Visible">
+            <TabItem Header="All" Background="#d57174" Height="50" Width="" IsSelected="True" Visibility="Visible">
 
                 <ScrollViewer Margin="1,0,-4,0" CanContentScroll="True" >
 
@@ -23,11 +23,6 @@
 
                         </Button>
                         <Label Content="Today's Specials!" HorizontalAlignment="Center" FontFamily="Freestyle Script" FontSize="48" Margin="0,40,0,617"/>
-
-
-
-
-
 
 
                         <Grid HorizontalAlignment="Left" Margin="-4,122,0,0" VerticalAlignment="Top" Width="385" Height="465">
@@ -65,9 +60,6 @@
                                 <TextBox Text="TextBox" TextWrapping="Wrap" Width="165"/>
                             </StackPanel>
                         </Grid>
-
-
-
 
 
                     </Grid>
