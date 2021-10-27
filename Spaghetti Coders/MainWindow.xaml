@@ -32,9 +32,7 @@
         <TabControl Grid.Row="1" x:Name="tabControl" FontSize="18">
 
             <TabItem Header="All" Background="#d57174" Height="50" Width="75">
-                <ScrollViewer Margin="1,0,-4,0" CanContentScroll="True">
-                    <local:Menu Title="Today's Specials!" />
-                </ScrollViewer>
+                <local:Menu Title="Today's Specials!" />
             </TabItem>
             <TabItem Header="Main" Background="#d57174" Width="75">
                 <local:Menu Title="Main" />

@@ -7,73 +7,77 @@
              x:Name="root"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#deafb3">
+    
+    <ScrollViewer CanContentScroll="True">
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="75" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Column="0" x:Name="OrderButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
-                <Image x:Name="Order_Icon" Stretch="Fill" Source="/Controls/order.png" Height="22" Width="22"/>
-            </Button>
-            
-            <Label 
-                Grid.Column="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Bottom"
-                FontStyle="Italic"
-                Content="{Binding Title, ElementName=root}" />
-
-            <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
-                <Image x:Name="Sort_Icon" Stretch="Fill" Source="/Controls/sort.png" Height="22" Width="22"/>
-            </Button>
-
-        </Grid>
-
-        <Grid Grid.Row="1">
-
-            <Grid.Resources >
-                <Style TargetType="local:FoodItem" >
-                    <Setter Property="Padding" Value="10,10,10,10" />
-                </Style>
-            </Grid.Resources>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+        <Grid Background="#deafb3">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="150"/>
+                <RowDefinition Height="75" />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
-            <local:FoodItem 
-                Grid.Row="0"
-                Title="Food Item 1"
-                Click="OnFoodItemClick"/>
-            <local:FoodItem 
-                Grid.Row="1"
-                Title="Food Item 2"
-                Click="OnFoodItemClick"/>
-            <local:FoodItem 
-                Grid.Row="2"
-                Title="Food Item 3"
-                Click="OnFoodItemClick"/>
-            <local:FoodItem 
-                Grid.Row="3"
-                Title="Food Item 4"
-                Click="OnFoodItemClick"/>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
 
+                <Button Grid.Column="0" x:Name="OrderButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
+                    <Image x:Name="Order_Icon" Stretch="Fill" Source="/Controls/order.png" Height="22" Width="22"/>
+                </Button>
+
+                <Label 
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontStyle="Italic"
+                    Content="{Binding Title, ElementName=root}" />
+
+                <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
+                    <Image x:Name="Sort_Icon" Stretch="Fill" Source="/Controls/sort.png" Height="22" Width="22"/>
+                </Button>
+
+            </Grid>
+
+            <Grid Grid.Row="1">
+
+                <Grid.Resources >
+                    <Style TargetType="local:FoodItem" >
+                        <Setter Property="Padding" Value="10,10,10,10" />
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+
+                <local:FoodItem 
+                    Grid.Row="0"
+                    Title="Food Item 1"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="1"
+                    Title="Food Item 2"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="2"
+                    Title="Food Item 3"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="3"
+                    Title="Food Item 4"
+                    Click="OnFoodItemClick"/>
+
+            </Grid>
         </Grid>
-    </Grid>
+    </ScrollViewer>
 </UserControl>
