@@ -7,4 +7,19 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Controls\order.png" />
+    <None Remove="Controls\sort.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Controls\order.png" />
+    <Resource Include="order.png" />
+    <Resource Include="Controls\sort.png" />
+  </ItemGroup>
+
 </Project>

@@ -3,30 +3,50 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Spaghetti_Coders"
+        xmlns:local="clr-namespace:Spaghetti_Coders.Controls"
         mc:Ignorable="d"
         Title="Spaghetti Coders" Height="700" Width="400" Background="#d57174">
     <Grid>
 
-        <Label x:Name="label" FontSize="18" Content="Spaghetti Coders" HorizontalAlignment="Left"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Label 
+                x:Name="label" 
+                FontSize="18" 
+                Content="Spaghetti Coders" 
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"/>
+           
+
+        </Grid>
         
-        <TabControl x:Name="tabControl" FontSize="18" Margin="0,35,0,0">
-            <TabItem Header="All" Background="#d57174" Height="50" Width="79">
-                <ScrollViewer Background="#deafb3">
-                    <Label Content="ListLabel"/>
+        <TabControl Grid.Row="1" x:Name="tabControl" FontSize="18">
+
+            <TabItem Header="All" Background="#d57174" Height="50" Width="75">
+                <ScrollViewer Margin="1,0,-4,0" CanContentScroll="True">
+                    <local:Menu Title="Today's Specials!" />
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Main" Background="#d57174" Width="79">
-                <Grid Background="#deafb3"/>
+            <TabItem Header="Main" Background="#d57174" Width="75">
+                <local:Menu Title="Main" />
             </TabItem>
-            <TabItem Header="Sides" Background="#d57174" Width="79">
-                <Grid Background="#deafb3"/>
+            <TabItem Header="Sides" Background="#d57174" Width="75">
+                <local:Menu Title="Sides" />
             </TabItem>
-            <TabItem Header="Desserts" Background="#d57174" Width="79">
-                <Grid Background="#deafb3"/>
+            <TabItem Header="Desserts" Background="#d57174" Width="75">
+                <local:Menu Title="Desserts" />
             </TabItem>
-            <TabItem Header="Drinks" Background="#d57174" Width="79">
-                <Grid Background="#deafb3"/>
+            <TabItem Header="Drinks" Background="#d57174" Width="75">
+                <local:Menu Title="Drinks" />
             </TabItem>
         </TabControl>
 
