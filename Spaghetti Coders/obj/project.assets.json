@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
+      "projectUniqueName": "Z:\\school\\CPSC481\\spaghetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
       "projectName": "Spaghetti Coders",
-      "projectPath": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
+      "projectPath": "Z:\\school\\CPSC481\\spaghetti-coders\\Spaghetti Coders\\Spaghetti Coders.csproj",
       "packagesPath": "C:\\Users\\trevo\\.nuget\\packages\\",
-      "outputPath": "Z:\\school\\CPSC481\\Spaghetti Coders\\Spaghetti Coders\\obj\\",
+      "outputPath": "Z:\\school\\CPSC481\\spaghetti-coders\\Spaghetti Coders\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

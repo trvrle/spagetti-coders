@@ -1,2 +1,2 @@
-# spagetti-coders
+# spaghetti-coders
  
