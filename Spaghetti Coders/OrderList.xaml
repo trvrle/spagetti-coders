@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Spaghetti_Coders.OrderList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Spaghetti_Coders"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <ScrollViewer CanContentScroll="True">
+
+        <Grid Background="#FFF9F9F9">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+
+                <Grid.Resources >
+                    <Style TargetType="local:OrderItem" >
+                        <Setter Property="Padding" Value="10,10,10,10" />
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130*" />
+                    <ColumnDefinition Width="131*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                </Grid.RowDefinitions>
+
+                <local:OrderItem
+                    Grid.Row="0" Grid.ColumnSpan="2"/>
+
+                <local:OrderItem 
+                    Grid.Row="1" Grid.ColumnSpan="2"/>
+
+                <local:OrderItem 
+                    Grid.Row="2" Grid.ColumnSpan="2"/>
+
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

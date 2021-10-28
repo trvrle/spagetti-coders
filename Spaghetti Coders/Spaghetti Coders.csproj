@@ -8,18 +8,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="257-2575067_ic-ala-ios-back-comments-left-arrow-svg.png" />
+    <None Remove="282-2826625_short-arrow-right-svg-png-icon-free-download-487639-slider-arrow-icon.png" />
     <None Remove="Controls\order.png" />
     <None Remove="Controls\sort.png" />
     <None Remove="Controls\spicy-ramen.jpg" />
+    <None Remove="imgbin-x-mark-computer-icons-desktop-cerca-6TgDediBuqGdbSMsZEc86Lakb.jpg" />
+    <None Remove="letter-x-icon-free-of-entypo-icons-327012.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="257-2575067_ic-ala-ios-back-comments-left-arrow-svg.png" />
+    <Resource Include="282-2826625_short-arrow-right-svg-png-icon-free-download-487639-slider-arrow-icon.png" />
     <Resource Include="Controls\order.png" />
     <Resource Include="Controls\spicy-ramen.jpg" />
+    <Resource Include="imgbin-x-mark-computer-icons-desktop-cerca-6TgDediBuqGdbSMsZEc86Lakb.jpg" />
+    <Resource Include="letter-x-icon-free-of-entypo-icons-327012.png" />
     <Resource Include="order.png" />
     <Resource Include="Controls\sort.png" />
   </ItemGroup>
