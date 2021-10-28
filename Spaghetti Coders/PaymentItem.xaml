@@ -15,20 +15,10 @@
 
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="0,0,10,0" RenderTransformOrigin="0.553,0.5">
-            <Button x:Name="RemoveItem"  Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="20" BorderThickness="1,1,1,1" Height="26" Width="27" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3,0,0,0" >
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="100"/>
-                    </Style>
-
-                </Button.Resources>
-                <Image Height="56" Width="15" Source="/letter-x-icon-free-of-entypo-icons-327012.png"/>
-            </Button>
-        </Grid>
+        <Grid Grid.Column="0" Margin="0,0,3,0" RenderTransformOrigin="0.553,0.5"/>
 
         <Grid Grid.Column="1" Margin="10,0,75,0">
-            <Image Source="/Controls/spicy-ramen.jpg" Margin="-10,12,-70,4" Grid.RowSpan="2" />
+            <Image Source="/Controls/spicy-ramen.jpg" Margin="-8,8,-72,8" />
         </Grid>
 
         <Grid Grid.Column="2">
@@ -42,19 +32,11 @@
                 <RowDefinition Height="11*"/>
 
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Spicy Ramen"  FontWeight="Normal" Margin="0,-1,0,0" Width="190" Grid.ColumnSpan="2"   />
-            <Label x:Name="Quantity" Content="1" Grid.Row="1" Height="34" Width="29" FontSize="20"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight"  Grid.Row="1" >
-                <Image Height="37" Width="35" Source="/257-2575067_ic-ala-ios-back-comments-left-arrow-svg.png" HorizontalAlignment="Left"/>
-            </Button>
-            <Button Content="Edit Item" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Height="36" Width="90" Grid.ColumnSpan="2"/>
-            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Grid.Column="1"  Grid.Row="1" Margin="30,0,10,0" >
-                <Image Height="37" Width="35" Source="/282-2826625_short-arrow-right-svg-png-icon-free-download-487639-slider-arrow-icon.png"/>
-            </Button>
+            <TextBlock Grid.Row="1" FontSize="30" TextWrapping="Wrap" Text="Spicy Ramen"  FontWeight="Bold" Margin="0,-1,0,0" Width="190" Grid.ColumnSpan="2" VerticalAlignment="Center"   />
 
         </Grid>
         <Grid Grid.Column="3">
-            <TextBlock FontSize="20" TextWrapping="Wrap" Text="$12.99" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="63" RenderTransformOrigin="0.5,0.5" Margin="0,55,0,0" >
+            <TextBlock FontSize="30" FontWeight="Bold" TextWrapping="Wrap" Text="$12.99" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>

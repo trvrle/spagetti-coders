@@ -51,7 +51,7 @@
             <Label x:Name="GST" HorizontalAlignment="Left" Margin="60,31,0,0" Grid.Row="2" Content="GST"  VerticalAlignment="Top" FontSize="16"  BorderBrush="{x:Null}" Height="31" Width="38"/>
             <Label x:Name="GST_Price" HorizontalAlignment="Left" Margin="296,23,0,0" Grid.Row="2" Content="$1.30"  VerticalAlignment="Top" FontSize="20"  BorderBrush="{x:Null}" Height="37" Width="57"/>
             <Label x:Name="Subtotal_Price_Copy" HorizontalAlignment="Left" Margin="265,53,0,0" Grid.Row="2" Content="$27.28" VerticalAlignment="Top" FontSize="28"  FontWeight="Normal" RenderTransformOrigin="0.5,0.306" BorderBrush="{x:Null}" Height="47" Width="92"/>
-            <Button Content="Place Order" HorizontalAlignment="Left" Height="44" Margin="100,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="200" Background="#FFD57174" BorderBrush="#FF0A0101" FontWeight="Bold" FontSize="30"/>
+            <Button Content="Place Order" HorizontalAlignment="Left" Height="44" Margin="100,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="200" Background="#FFD57174" BorderBrush="#FF0A0101" FontWeight="Bold" FontSize="30" Click="Button_Click"/>
         </Grid>
     </ScrollViewer>
 

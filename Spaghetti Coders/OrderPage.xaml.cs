@@ -27,5 +27,14 @@ namespace Spaghetti_Coders
         {
             throw new NotImplementedException();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PaymentWindow paymentWindow = new PaymentWindow();
+            paymentWindow.Show();
+           
+        }
+
+        
     }
 }
