@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Spaghetti_Coders"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="400">
-    <ScrollViewer CanContentScroll="True">
+    <ScrollViewer CanContentScroll="True" Visibility="Visible" VerticalScrollBarVisibility="Hidden">
 
         <Grid Background="#FFF9F9F9">
 
@@ -24,8 +24,7 @@
                 </Grid.Resources>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="130*" />
-                    <ColumnDefinition Width="131*"/>
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
@@ -36,13 +35,28 @@
                 </Grid.RowDefinitions>
 
                 <local:OrderItem
-                    Grid.Row="0" Grid.ColumnSpan="2"/>
+                    Grid.Row="0" RenderTransformOrigin="0.5,0.5" Margin="-176,-60,-186,80" Grid.RowSpan="2">
+                    <local:OrderItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </local:OrderItem.RenderTransform>
+                </local:OrderItem>
 
-                <local:OrderItem 
-                    Grid.Row="1" Grid.ColumnSpan="2"/>
+                <local:OrderItem RenderTransformOrigin="0.5,0.5" Margin="-176,90,-186,80" Grid.RowSpan="3" >
+                    <local:OrderItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </local:OrderItem.RenderTransform>
+                </local:OrderItem>
 
-                <local:OrderItem 
-                    Grid.Row="2" Grid.ColumnSpan="2"/>
 
             </Grid>
         </Grid>

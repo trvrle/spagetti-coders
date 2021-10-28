@@ -23,6 +23,9 @@ namespace Spaghetti_Coders
             InitializeComponent();
         }
 
-     
+        internal void Show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

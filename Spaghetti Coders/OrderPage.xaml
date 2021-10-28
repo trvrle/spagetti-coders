@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:Spaghetti_Coders"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="400"
-      Title="OrderPage" Background="#FFF9F9F9">
+      Title="OrderPage" Background="#FFFF">
 
     <ScrollViewer CanContentScroll="True">
 
-        <Grid Background="#FFF9F9F9" Height="700">
+        <Grid Background="#FFFF" Height="700">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="75" />
