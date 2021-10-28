@@ -10,27 +10,26 @@
 
     <ScrollViewer CanContentScroll="True">
 
-        <Grid Background="#FFFF" Height="700">
+        <Grid Background="#FFFF" Height="700" Width="400">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
-                <RowDefinition />
-                <RowDefinition Height="295" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height ="400*"/>
+                <RowDefinition Height="160*" />
 
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="95*" />
-                    <ColumnDefinition Width="195*" />
-                    <ColumnDefinition Width="95" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
 
                 <Label 
                     Grid.Column="1"
                     Content="Your Order"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" FontSize="30" Width="154" Height="49"/>
+                    FontSize="30" HorizontalAlignment="Center" Width="auto" Height="49"/>
             </Grid>
 
             <Grid Grid.Row="1">
@@ -38,6 +37,7 @@
                 <Grid.Resources >
                     <Style TargetType="local:OrderList" >
                         <Setter Property="Padding" Value="10,10,10,10" />
+                        <Setter Property="Width"   Value="380"/>
                     </Style>
                 </Grid.Resources>
                 <local:OrderList 
@@ -45,13 +45,37 @@
 
 
             </Grid>
-            <Label x:Name="Subtotal" HorizontalAlignment="Left" Margin="60,5,0,0" Grid.Row="2" Content="Subtotal" VerticalAlignment="Top" FontSize="16"  BorderBrush="{x:Null}" Height="31" Width="69"/>
-            <Label x:Name="Total" HorizontalAlignment="Left" Margin="60,58,0,0" Grid.Row="2" Content="Total" VerticalAlignment="Top" FontSize="28"  FontWeight="Normal" BorderBrush="{x:Null}" Height="42" Width="69"/>
-            <Label x:Name="Subtotal_Price" HorizontalAlignment="Left" Margin="285,1,0,0" Grid.Row="2" Content="$25.98"  VerticalAlignment="Top" FontSize="20"  BorderBrush="{x:Null}" Height="37" Width="68"/>
-            <Label x:Name="GST" HorizontalAlignment="Left" Margin="60,31,0,0" Grid.Row="2" Content="GST"  VerticalAlignment="Top" FontSize="16"  BorderBrush="{x:Null}" Height="31" Width="38"/>
-            <Label x:Name="GST_Price" HorizontalAlignment="Left" Margin="296,23,0,0" Grid.Row="2" Content="$1.30"  VerticalAlignment="Top" FontSize="20"  BorderBrush="{x:Null}" Height="37" Width="57"/>
-            <Label x:Name="Subtotal_Price_Copy" HorizontalAlignment="Left" Margin="265,53,0,0" Grid.Row="2" Content="$27.28" VerticalAlignment="Top" FontSize="28"  FontWeight="Normal" RenderTransformOrigin="0.5,0.306" BorderBrush="{x:Null}" Height="47" Width="92"/>
-            <Button Content="Place Order" HorizontalAlignment="Left" Height="44" Margin="100,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="200" Background="#FFD57174" BorderBrush="#FF0A0101" FontWeight="Bold" FontSize="30" Click="Button_Click"/>
+            <Grid Grid.Row="2">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row ="0">
+                    <Label x:Name="Subtotal" HorizontalAlignment="Left" Grid.Row="2" Content="Subtotal" VerticalAlignment="Top" FontSize="16"  BorderBrush="{x:Null}"/>
+                    <Label x:Name="Subtotal_Price" HorizontalAlignment="Right" Grid.Row="2" Content="$25.98"  VerticalAlignment="Top" FontSize="20"  BorderBrush="{x:Null}"/>
+                </Grid>
+
+                <Grid Grid.Row ="1">
+                    <Label x:Name="GST" HorizontalAlignment="Left" Content="GST" FontSize="16"  BorderBrush="{x:Null}" Height="Auto" Width="65"/>
+                    <Label x:Name="GST_Price" HorizontalAlignment="Right" Content="$1.30"  VerticalAlignment="Center" FontSize="20"  BorderBrush="{x:Null}" Height="42" Width="60"/>
+                </Grid>
+
+                <Grid Grid.Row = "2">
+                    <Label x:Name="Total" HorizontalAlignment="Left" Content="Total" VerticalAlignment="Top" FontSize="28"  FontWeight="Normal" BorderBrush="{x:Null}" Height="42" Width="69"/>
+                    <Label x:Name="Subtotal_Price_Copy" HorizontalAlignment="Right" Margin="0,0,0,0" Content="$27.28" VerticalAlignment="Top" FontSize="28"  FontWeight="Normal" BorderBrush="{x:Null}" Height="46" Width="92"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <Button Content="Place Order" HorizontalAlignment="Center" Height="auto" Margin="0,20,0,0" Grid.Row="2" Width="200" Background="#FFD57174" BorderBrush="#FF0A0101" FontWeight="Bold" FontSize="30" Click="Button_Click"/>
+
+                </Grid>
+
+            </Grid>
+            
         </Grid>
     </ScrollViewer>
 
