@@ -24,8 +24,8 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Column="0" x:Name="OrderButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
-                    <Image x:Name="Order_Icon" Stretch="Fill" Source="/Controls/order.png" Height="22" Width="22"/>
+                <Button Grid.Column="0" x:Name="OrderButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Left" FlowDirection="LeftToRight" Margin="10">
+                    <Image x:Name="Order_Icon" Stretch="Fill" Source="/Images/order.png" Height="22" Width="22"/>
                 </Button>
 
                 <Label 
@@ -35,8 +35,8 @@
                     FontStyle="Italic"
                     Content="{Binding Title, ElementName=root}" />
 
-                <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" >
-                    <Image x:Name="Sort_Icon" Stretch="Fill" Source="/Controls/sort.png" Height="22" Width="22"/>
+                <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" FlowDirection="LeftToRight" Margin="10" >
+                    <Image x:Name="Sort_Icon" Stretch="Fill" Source="/Images/sort.png" Height="22" Width="22"/>
                 </Button>
 
             </Grid>

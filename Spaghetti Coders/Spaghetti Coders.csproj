@@ -9,19 +9,18 @@
 
   <ItemGroup>
     <None Remove="Controls\order.png" />
-    <None Remove="Controls\sort.png" />
-    <None Remove="Controls\spicy-ramen.jpg" />
+    <None Remove="Controls\search.png" />
+    <None Remove="Controls\search.svg" />
+    <None Remove="Images\order.png" />
+    <None Remove="Images\sort.png" />
+    <None Remove="Images\spicy-ramen.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Controls\order.png" />
-    <Resource Include="Controls\spicy-ramen.jpg" />
-    <Resource Include="order.png" />
-    <Resource Include="Controls\sort.png" />
+    <Resource Include="Images\order.png" />
+    <Resource Include="Images\search.png" />
+    <Resource Include="Images\sort.png" />
+    <Resource Include="Images\spicy-ramen.jpg" />
   </ItemGroup>
 
 </Project>

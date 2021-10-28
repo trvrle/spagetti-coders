@@ -24,12 +24,14 @@
                 FontSize="18" 
                 Content="Spaghetti Coders" 
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center"/>
-           
+                VerticalAlignment="Center"
+                Margin="10,0,0,0"/>
+
+            <local:SearchBox Grid.Column="1" Margin="10" />
 
         </Grid>
         
-        <TabControl Grid.Row="1" x:Name="tabControl" FontSize="18">
+        <TabControl Grid.Row="1" x:Name="tabControl" FontSize="16">
 
             <TabItem Header="All" Background="#d57174" Height="50" Width="75">
                 <local:Menu Title="Today's Specials!" />
