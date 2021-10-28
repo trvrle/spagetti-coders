@@ -29,10 +29,6 @@
         </Grid>
 
         <Grid Grid.Column="1" Margin="10,0,75,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="7*"/>
-                <RowDefinition Height="23*"/>
-            </Grid.RowDefinitions>
             <Image Source="/Controls/spicy-ramen.jpg" Margin="-10,12,-70,4" Grid.RowSpan="2" />
         </Grid>
 
@@ -47,14 +43,14 @@
                 <RowDefinition Height="25*"/>
 
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Spicy Ramen"  FontWeight="Normal" Margin="0,-1,0,55" Grid.RowSpan="2" Width="191" Grid.ColumnSpan="2"   />
+            <TextBlock Grid.Row="0" FontSize="30" TextWrapping="Wrap" HorizontalAlignment="Left" Text="Spicy Ramen"  FontWeight="Normal" Margin="0,-1,0,0" Width="190" Grid.ColumnSpan="2"   />
             <TextBlock Grid.Row="2" TextWrapping="Wrap" HorizontalAlignment="Left" Width="57" Margin="1,0,0,4" ><Run Language="en-ca" Text="-No Egg"/></TextBlock>
-            <Label x:Name="Quantity" Content="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="28" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="91,10,0,0" Grid.ColumnSpan="2"/>
-            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Center" FlowDirection="LeftToRight" Margin="0,5,0,7" Grid.Row="1" >
+            <Label x:Name="Quantity" Content="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="29" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="90,10,0,0" Grid.ColumnSpan="2"/>
+            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Left" FlowDirection="LeftToRight" Margin="36,5,0,7" Grid.Row="1" >
                 <Image Height="37" Width="35" Source="/257-2575067_ic-ala-ios-back-comments-left-arrow-svg.png" HorizontalAlignment="Left"/>
             </Button>
             <Button Content="Edit Item" HorizontalAlignment="Left" Margin="68,20,0,0" Grid.Row="2" VerticalAlignment="Top" Height="26" Width="74" Grid.ColumnSpan="2"/>
-            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Grid.Column="1" Margin="25,5,45,7" Grid.Row="1" >
+            <Button Width="44" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Grid.Column="1" Margin="25,5,36,7" Grid.Row="1" >
                 <Image Height="37" Width="35" Source="/282-2826625_short-arrow-right-svg-png-icon-free-download-487639-slider-arrow-icon.png"/>
             </Button>
 
