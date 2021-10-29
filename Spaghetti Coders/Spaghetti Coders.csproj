@@ -11,15 +11,17 @@
     <None Remove="Controls\order.png" />
     <None Remove="Controls\sort.png" />
     <None Remove="Controls\spicy-ramen.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\backarrow.png" />
+    <None Remove="Images\keyboard.png" />
+    <None Remove="Images\spicy-ramen.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Controls\order.png" />
     <Resource Include="Controls\spicy-ramen.jpg" />
+    <Resource Include="Images\backarrow.png" />
+    <Resource Include="Images\keyboard.png" />
+    <Resource Include="Images\spicy-ramen.jpg" />
     <Resource Include="order.png" />
     <Resource Include="Controls\sort.png" />
   </ItemGroup>
