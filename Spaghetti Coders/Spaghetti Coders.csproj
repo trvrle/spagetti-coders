@@ -11,7 +11,9 @@
     <None Remove="Controls\order.png" />
     <None Remove="Controls\search.png" />
     <None Remove="Controls\search.svg" />
+    <None Remove="Images\backarrow.png" />
     <None Remove="Images\california-roll.jpg" />
+    <None Remove="Images\keyboard.png" />
     <None Remove="Images\left.png" />
     <None Remove="Images\miso-ramen.jpg" />
     <None Remove="Images\order.png" />
@@ -26,6 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\backarrow.png" />
+    <Resource Include="Images\keyboard.png" />
     <Resource Include="Images\right.png" />
   </ItemGroup>
 
