@@ -29,16 +29,16 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Row ="1" x:Name="BackButton" Height="40" Width="40" HorizontalAlignment="Left" Margin="15,0,0,0" FlowDirection="LeftToRight" Background="#d57174">
-                <Image x:Name="Back_Icon" Stretch="Fill" Source="/Controls/back.png" Height="35" Width="35"/>
+                <Image x:Name="Back_Icon" Stretch="Fill" Source="/Images/back.png" Height="35" Width="35"/>
             </Button>
 
             <Label Content="Spicy Ramen" FontFamily="Comic Sans MS" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
 
-            <Image Grid.Row="3" HorizontalAlignment="Center" Source="/Controls/spicy-ramen.jpg" />
+            <Image Grid.Row="3" HorizontalAlignment="Center" Source="/Images/spicy-ramen.jpg" />
 
             <TextBlock VerticalAlignment="Center" Text="{Binding Title, ElementName=root}" />
 
-            <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Controls/divider.png" />
+            <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 
             <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,30,25,0" Text="         Spicy miso based soup with fermented soybean paste, which contains grains (steamed rice or barley), salt, and koji culture (a fermentation starter). Topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg. " />
 
