@@ -30,11 +30,11 @@
   <ItemGroup>
     <Resource Include="Images\backarrow.png" />
     <Resource Include="Images\keyboard.png" />
+    <Resource Include="Images\left.png" />
     <Resource Include="Images\right.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\left.png" />
     <Resource Include="Images\california-roll.jpg" />
     <Resource Include="Images\x.png" />
     <Resource Include="Images\miso-ramen.jpg" />
