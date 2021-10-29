@@ -36,7 +36,7 @@
         
         <TabControl Grid.Row="1" x:Name="tabControl" FontSize="16">
 
-            <TabItem Header="All" Background="#d57174" Height="50" Width="75">
+            <TabItem Header="Specials" Background="#d57174" Height="50" Width="75">
                 <local:Menu Title="Today's Specials!" />
             </TabItem>
             <TabItem Header="Main" Background="#d57174" Width="75">
