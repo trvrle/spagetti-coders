@@ -8,7 +8,7 @@
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
+    <ScrollViewer CanContentScroll="True" ContextMenuService.IsEnabled="False">
 
         <Grid Background="#deafb3">
 

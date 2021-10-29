@@ -37,6 +37,7 @@ namespace Spaghetti_Coders.Controls
         {
             OrderPage order = new OrderPage();
             this.Content = order.Content;
+           
         }
     }
 }
