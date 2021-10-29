@@ -10,14 +10,9 @@
     
     <ScrollViewer CanContentScroll="True">
 
-        <Grid Background="#deafb3">
+        <StackPanel Background="#deafb3" Orientation="Vertical">
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="75" />
-                <RowDefinition />
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="0">
+            <Grid Height="75" Grid.Row="0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition Width="150"/>
@@ -33,6 +28,8 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     FontStyle="Italic"
+                    FontWeight="SemiBold"
+                    FontSize="18"
                     Content="{Binding Title, ElementName=root}" />
 
                 <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" FlowDirection="LeftToRight" Margin="10" >
@@ -41,72 +38,45 @@
 
             </Grid>
 
-            <Grid Grid.Row="1">
-
-                <Grid.Resources >
-                    <Style TargetType="local:FoodItem" >
-                        <Setter Property="Padding" Value="5,5,5,5" />
-                    </Style>
-                </Grid.Resources>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                </Grid.RowDefinitions>
+            <StackPanel Grid.Row="1" Orientation="Vertical">
 
                 <local:FoodItem 
-                    Grid.Row="0"
                     Title="Spicy Ramen"
                     Description="Spicy Ramen Description"
                     ImageSource="/Images/spicy-ramen.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="1"
                     Title="Tempura"
                     Description="Tempura Description"
                     ImageSource="/Images/tempura.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="2"
                     Title="Miso Ramen"
                     Description="Miso Ramen Description"
                     ImageSource="/Images/miso-ramen.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="3"
                     Title="California Roll"
                     Description="California Roll Description"
                     ImageSource="/Images/california-roll.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="4"
                     Title="Tuna Roll"
                     Description="Tuna Roll Description"
                     ImageSource="/Images/tuna-roll.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="5"
                     Title="Salmon Sushi Roll"
                     Description="Salmon Sushi Roll Description"
                     ImageSource="/Images/salmon-sushi-roll.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
-                    Grid.Row="6"
                     Title="Salmon Sushi"
                     Description="Salmon Sushi Description"
                     ImageSource="/Images/salmon-sushi.jpg"
                     Click="OnFoodItemClick"/>
 
-            </Grid>
-        </Grid>
+            </StackPanel>
+        </StackPanel>
     </ScrollViewer>
 </UserControl>

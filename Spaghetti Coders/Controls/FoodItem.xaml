@@ -5,12 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              x:Name="root"
              mc:Ignorable="d" 
+             Height="150"
              d:DesignHeight="150" d:DesignWidth="400">
-    <Grid MouseDown="OnClick" Background="WhiteSmoke">
+    <Grid Margin="5" MouseDown="OnClick" Background="WhiteSmoke">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
-            <ColumnDefinition />
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Image
