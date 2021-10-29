@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace Spaghetti_Coders.Controls
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for ItemClose_up.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class ItemClose_up : UserControl
     {
-        public UserControl1()
+        public ItemClose_up()
         {
             InitializeComponent();
         }
