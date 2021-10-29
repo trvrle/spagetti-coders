@@ -42,9 +42,9 @@
 
             <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,30,25,0" Text="         Spicy miso based soup with fermented soybean paste, which contains grains (steamed rice or barley), salt, and koji culture (a fermentation starter). Topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg. " />
 
-            <TextBlock Grid.Row="6" FontSize="12" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="Calories : 200" />
+            <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="Calories : 200" />
 
-            <TextBlock Grid.Row="8" FontSize="15" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="$12.99" />
+            <TextBlock Grid.Row="8" FontSize="20" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="$12.99" />
 
             <Button Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,5,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
 
