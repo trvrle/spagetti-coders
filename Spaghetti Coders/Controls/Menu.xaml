@@ -10,7 +10,12 @@
     
     <ScrollViewer CanContentScroll="True">
 
-        <StackPanel Background="#deafb3" Orientation="Vertical">
+        <Grid Background="#deafb3">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
             <Grid Height="75" Grid.Row="0">
                 <Grid.ColumnDefinitions>
@@ -77,6 +82,6 @@
                     Click="OnFoodItemClick"/>
 
             </StackPanel>
-        </StackPanel>
+        </Grid>
     </ScrollViewer>
 </UserControl>
