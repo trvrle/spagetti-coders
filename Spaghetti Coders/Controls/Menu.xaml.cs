@@ -35,7 +35,8 @@ namespace Spaghetti_Coders.Controls
 
         private void OnFoodItemClick( object sender, RoutedEventArgs e )
         {
-            MessageBox.Show( "Clicked Food Item", "Success", MessageBoxButton.OK, MessageBoxImage.Information );
+            OrderPage order = new OrderPage();
+            this.Content = order.Content;
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,16 +14,13 @@ using System.Windows.Shapes;
 namespace Spaghetti_Coders
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PaymentItem.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PaymentItem : UserControl
     {
-        public MainWindow()
+        public PaymentItem()
         {
             InitializeComponent();
-            this.Width = 400;
-            this.Height = 700;
-
         }
     }
 }

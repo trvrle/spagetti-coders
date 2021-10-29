@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spaghetti_Coders.Controls"
         mc:Ignorable="d"
-        Title="Spaghetti Coders" Height="700" Width="400" Background="#d57174">
+        
+
+    Title="Spaghetti Coders"  Width="400" Height=" 700" Background="#d57174" >
     <Grid>
 
         <Grid.RowDefinitions>
