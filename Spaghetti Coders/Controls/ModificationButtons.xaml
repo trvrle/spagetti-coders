@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Spaghetti_Coders.Controls.ModificationButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Spaghetti_Coders.Controls"
+             x:Name="root"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="400">
+    
+    <Grid Background="#deafb3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="133"/>
+            <ColumnDefinition Width="133"/>
+            <ColumnDefinition Width="133"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" 
+            Text="{Binding Select, ElementName=root}" 
+            Grid.Column="1" 
+            Margin="0,6"
+            FontSize="14" />
+
+        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+                     Grid.Column="0"
+                     Margin="0,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}">
+            <TextBlock Text="{Binding ModOne, ElementName=root}"
+                       FontSize="20"
+                       Margin="0,-6"/>
+        </RadioButton>
+
+        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+                     Grid.Column="1"
+                     Margin="0,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}">
+            <TextBlock Text="{Binding ModTwo, ElementName=root}"
+                       FontSize="20"
+                       Margin="0,-6"/>
+        </RadioButton>
+
+        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+                     Grid.Column="2"
+                     Margin="0,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}">
+            <TextBlock Text="{Binding ModThree, ElementName=root}"
+                       FontSize="20"
+                       Margin="0,-6"/>
+        </RadioButton>
+
+
+    </Grid>
+</UserControl>
