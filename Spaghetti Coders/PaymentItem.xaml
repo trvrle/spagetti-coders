@@ -18,7 +18,7 @@
         <Grid Grid.Column="0" Margin="0,0,3,0" RenderTransformOrigin="0.553,0.5"/>
 
         <Grid Grid.Column="1" Margin="10,0,75,0">
-            <Image Source="/Controls/spicy-ramen.jpg" Margin="-8,8,-72,8" />
+            <Image Source="/Images/spicy-ramen.jpg" Margin="-8,8,-72,8" />
         </Grid>
 
         <Grid Grid.Column="2">
