@@ -30,11 +30,20 @@ namespace Spaghetti_Coders
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PaymentWindow paymentWindow = new PaymentWindow();
-            paymentWindow.Show();
-           
+            if (sender.Equals(Order))
+            {
+                OrderPopUp order = new OrderPopUp();
+                order.Show();
+            }
+            else if (sender.Equals(Pay))
+            {
+                PaymentWindow paymentWindow = new PaymentWindow();
+                paymentWindow.Show();
+            }
         }
-
+           
         
+
+
     }
 }
