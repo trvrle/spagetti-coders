@@ -19,6 +19,15 @@ namespace Spaghetti_Coders.Controls
     public partial class FoodItem : UserControl
     {
 
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register( "ImageSource", typeof( ImageSource ), typeof( FoodItem ), new PropertyMetadata( null ) );
+
+        public ImageSource ImageSource
+        {
+            get { return (ImageSource)GetValue( ImageSourceProperty ); }
+            set { SetValue( ImageSourceProperty, value ); }
+        }
+
         public static readonly DependencyProperty TitleProperty =
             DependencyProperty.Register( "Title", typeof( string ), typeof( FoodItem ), new PropertyMetadata( string.Empty ) );
 
@@ -26,6 +35,15 @@ namespace Spaghetti_Coders.Controls
         {
             get { return (string)GetValue( TitleProperty ); }
             set { SetValue( TitleProperty, value ); }
+        }
+
+        public static readonly DependencyProperty DescriptionProperty =
+            DependencyProperty.Register( "Description", typeof( string ), typeof( FoodItem ), new PropertyMetadata( string.Empty ) );
+
+        public string Description
+        {
+            get { return (string)GetValue( DescriptionProperty ); }
+            set { SetValue( DescriptionProperty, value ); }
         }
 
         public static readonly RoutedEvent ClickEvent =

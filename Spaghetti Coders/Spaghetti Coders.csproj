@@ -11,16 +11,28 @@
     <None Remove="Controls\order.png" />
     <None Remove="Controls\search.png" />
     <None Remove="Controls\search.svg" />
+    <None Remove="Images\california-roll.jpg" />
+    <None Remove="Images\miso-ramen.jpg" />
     <None Remove="Images\order.png" />
+    <None Remove="Images\salmon-sushi-roll.jpg" />
+    <None Remove="Images\salmon-sushi.jpg" />
     <None Remove="Images\sort.png" />
     <None Remove="Images\spicy-ramen.jpg" />
+    <None Remove="Images\tempura.jpg" />
+    <None Remove="Images\tuna-roll.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\california-roll.jpg" />
+    <Resource Include="Images\miso-ramen.jpg" />
     <Resource Include="Images\order.png" />
+    <Resource Include="Images\salmon-sushi-roll.jpg" />
+    <Resource Include="Images\salmon-sushi.jpg" />
     <Resource Include="Images\search.png" />
     <Resource Include="Images\sort.png" />
     <Resource Include="Images\spicy-ramen.jpg" />
+    <Resource Include="Images\tempura.jpg" />
+    <Resource Include="Images\tuna-roll.jpg" />
   </ItemGroup>
 
 </Project>

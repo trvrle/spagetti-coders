@@ -6,23 +6,37 @@
              x:Name="root"
              mc:Ignorable="d" 
              d:DesignHeight="150" d:DesignWidth="400">
-    <Grid MouseDown="OnClick" Background="White">
+    <Grid MouseDown="OnClick" Background="WhiteSmoke">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Image HorizontalAlignment="Left" Source="/Images/spicy-ramen.jpg" />
+        <Image
+            Stretch="UniformToFill"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Source="{Binding ImageSource, ElementName=root}" />
 
-        <Grid Grid.Column="1">
+
+        <Grid Grid.Column="1" Margin="10">
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock VerticalAlignment="Center" Text="{Binding Title, ElementName=root}" />
 
-            <TextBlock Grid.Row="1" FontSize="12" TextWrapping="Wrap" Text="Miso Soup, fermented soybean paste, is made from soybeans, grains (steamed rice or barley), salt, and koji culture (a fermentation starter)." />
+            <TextBlock 
+                    VerticalAlignment="Center" 
+                    Text="{Binding Title, ElementName=root}" />
+
+            <TextBlock 
+                    Grid.Row="1" 
+                    FontSize="12" 
+                    TextWrapping="Wrap" 
+                    TextTrimming="WordEllipsis"
+                    Text="{Binding Description, ElementName=root}" />
         </Grid>
     </Grid>
 </UserControl>

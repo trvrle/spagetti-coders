@@ -45,7 +45,7 @@
 
                 <Grid.Resources >
                     <Style TargetType="local:FoodItem" >
-                        <Setter Property="Padding" Value="10,10,10,10" />
+                        <Setter Property="Padding" Value="5,5,5,5" />
                     </Style>
                 </Grid.Resources>
 
@@ -58,23 +58,52 @@
                     <RowDefinition Height="150"/>
                     <RowDefinition Height="150"/>
                     <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="150"/>
                 </Grid.RowDefinitions>
 
                 <local:FoodItem 
                     Grid.Row="0"
-                    Title="Food Item 1"
+                    Title="Spicy Ramen"
+                    Description="Spicy Ramen Description"
+                    ImageSource="/Images/spicy-ramen.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
                     Grid.Row="1"
-                    Title="Food Item 2"
+                    Title="Tempura"
+                    Description="Tempura Description"
+                    ImageSource="/Images/tempura.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
                     Grid.Row="2"
-                    Title="Food Item 3"
+                    Title="Miso Ramen"
+                    Description="Miso Ramen Description"
+                    ImageSource="/Images/miso-ramen.jpg"
                     Click="OnFoodItemClick"/>
                 <local:FoodItem 
                     Grid.Row="3"
-                    Title="Food Item 4"
+                    Title="California Roll"
+                    Description="California Roll Description"
+                    ImageSource="/Images/california-roll.jpg"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="4"
+                    Title="Tuna Roll"
+                    Description="Tuna Roll Description"
+                    ImageSource="/Images/tuna-roll.jpg"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="5"
+                    Title="Salmon Sushi Roll"
+                    Description="Salmon Sushi Roll Description"
+                    ImageSource="/Images/salmon-sushi-roll.jpg"
+                    Click="OnFoodItemClick"/>
+                <local:FoodItem 
+                    Grid.Row="6"
+                    Title="Salmon Sushi"
+                    Description="Salmon Sushi Description"
+                    ImageSource="/Images/salmon-sushi.jpg"
                     Click="OnFoodItemClick"/>
 
             </Grid>
