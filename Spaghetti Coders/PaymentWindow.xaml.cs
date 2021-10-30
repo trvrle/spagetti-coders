@@ -22,6 +22,7 @@ namespace Spaghetti_Coders
             InitializeComponent();
             this.Height = 700;
             this.Width = 400;
+            this.Owner = App.Current.MainWindow;
         }
     }
 }

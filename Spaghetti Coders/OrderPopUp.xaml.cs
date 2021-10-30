@@ -22,12 +22,9 @@ namespace Spaghetti_Coders
         {
             InitializeComponent();
 
-            
+            this.Owner = App.Current.MainWindow;
+
         }
-        protected override void OnActivated(EventArgs e)
-        {
-            base.OnActivated(e);
-            this.SetValue(MainWindow.ParentWindowProperty, Owner);
-        }
+       
     }
 }

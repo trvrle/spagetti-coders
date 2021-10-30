@@ -34,6 +34,7 @@ namespace Spaghetti_Coders
             {
                 OrderPopUp order = new OrderPopUp();
                 order.Show();
+               
             }
             else if (sender.Equals(Pay))
             {
