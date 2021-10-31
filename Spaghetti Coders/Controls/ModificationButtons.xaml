@@ -20,33 +20,33 @@
             Text="{Binding Select, ElementName=root}" 
             Grid.Column="1" 
             Margin="0,6"
-            FontSize="14" />
+            FontSize="19" />
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="0"
-                     Margin="0,0,0,-26"
+                     Margin="0,0,0,-30"
                      GroupName="{Binding RadioName, ElementName=root}">
             <TextBlock Text="{Binding ModOne, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="1"
-                     Margin="0,0,0,-26"
+                     Margin="0,0,0,-30"
                      GroupName="{Binding RadioName, ElementName=root}">
             <TextBlock Text="{Binding ModTwo, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="2"
-                     Margin="0,0,0,-26"
+                     Margin="0,0,0,-30"
                      GroupName="{Binding RadioName, ElementName=root}">
             <TextBlock Text="{Binding ModThree, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
 
