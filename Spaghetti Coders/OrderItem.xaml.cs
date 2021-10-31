@@ -18,6 +18,16 @@ namespace Spaghetti_Coders
     /// </summary>
     public partial class OrderItem : UserControl
     {
+
+        public static readonly DependencyProperty CommentsProperty =
+            DependencyProperty.Register( "Comments", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
+
+        public string Comments
+        {
+            get { return (string)GetValue( CommentsProperty ); }
+            set { SetValue( CommentsProperty, value ); }
+        }
+
         public OrderItem()
         {
             InitializeComponent();
