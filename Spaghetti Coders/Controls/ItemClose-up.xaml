@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Spaghetti_Coders.Controls.ItemClose-up"
+<UserControl x:Class="Spaghetti_Coders.Controls.ItemClose_up"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="400">
 
-    <Grid MouseDown="OnClick" Background="White">
+    <Grid Background="White">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -32,7 +32,7 @@
                 <Image x:Name="Back_Icon" Source="/Images/backarrow.png"/>
             </Button>
 
-            <Label Content="Spicy Ramen" FontFamily="Comic Sans MS" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
+            <Label Content="Spicy Ramen" FontFamily="MV Boli" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
 
             <Image Grid.Row="3" HorizontalAlignment="Center" Source="/Images/spicy-ramen.jpg" />
 
@@ -40,15 +40,15 @@
 
             <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 
-            <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,30,25,0" Text="         Spicy miso based soup with fermented soybean paste, which contains grains (steamed rice or barley), salt, and koji culture (a fermentation starter). Topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg. " />
+            <TextBlock Grid.Row="5" FontFamily="MV Boli" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,5,25,0" Text="         Spicy miso based soup with fermented soybean paste, which contains grains (steamed rice or barley), salt, and koji culture (a fermentation starter). Topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg. " />
 
             <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="Calories : 200" />
 
             <TextBlock Grid.Row="8" FontSize="20" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="$12.99" />
 
-            <Button Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,5,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
+            <Button Content="Modify Item" FontFamily="MV Boli" FontWeight="Bold" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,5,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
 
-            <Button Content="Add Item" FontWeight="Medium" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,5,45,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
+            <Button Content="Add Item" FontFamily="MV Boli" FontWeight="Bold" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,5,45,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
 
         </Grid>
     </Grid>
