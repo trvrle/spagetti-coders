@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Spaghetti_Coders"
         mc:Ignorable="d" d:DesignWidth="400"
+        
         WindowStartupLocation="CenterOwner"
       Background="#FFFF" Height="639">
 
@@ -27,8 +28,8 @@
             <Label 
                     Grid.Column="1"
                     Content="Your Order"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center" FontSize="30" Width="154" Height="49"/>
+                    FontFamily= "MV Boli"
+                    VerticalAlignment="Center" FontSize="30" Width="auto" Height="49"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -67,7 +68,7 @@
             </Grid>
 
             <Grid Grid.Row="3">
-                <Label Content="Please Pay at the Front" HorizontalAlignment="Center" FontSize="30" FontStyle="Italic" Height="50" Width="Auto"/>
+                <Label Content="Please Pay at the Front" FontFamily= "MV Boli" HorizontalAlignment="Center" FontSize="30" Height="50" Width="Auto"/>
             </Grid>
 
         </Grid>

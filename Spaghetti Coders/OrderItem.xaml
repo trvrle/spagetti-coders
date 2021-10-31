@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Spaghetti_Coders"
              x:Name="root"
              mc:Ignorable="d" 
-             d:DesignHeight="340" d:DesignWidth="380">
+             d:DesignHeight="340" d:DesignWidth="380"
+             FontFamily= "MV Boli">
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="8*" />

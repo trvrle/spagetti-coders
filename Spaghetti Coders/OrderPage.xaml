@@ -29,6 +29,7 @@
                 <Label 
                     Grid.Column="1"
                     Content="Your Order"
+                    FontFamily="MV Boli"
                     FontSize="30" HorizontalAlignment="Center" Width="auto" Height="49"/>
             </Grid>
 
@@ -69,8 +70,9 @@
                 </Grid>
 
                 <Grid Grid.Row="3">
-                    <Button x:Name="Pay" Content="Pay Now" HorizontalAlignment="Center" Height="auto" Margin="0,0,-165,0" Grid.Row="2" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101" FontSize="28" Click="Button_Click" />
-                    <Button x:Name="Order" Content="Place Order" HorizontalAlignment="Center" Height="auto" Margin="0,0,210,0" Grid.Row="2" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="28" Click="Button_Click"/>
+
+                    <Button x:Name="Pay" Content="Pay Now" FontFamily="MV Boli" HorizontalAlignment="Center" Height="auto" Margin="0,0,-165,0" Grid.Row="2" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101" FontSize="28" Click="Button_Click" />
+                    <Button x:Name="Order" Content="Place Order" FontFamily="MV Boli" HorizontalAlignment="Center" Height="auto" Margin="0,0,210,0" Grid.Row="2" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="26" Click="Button_Click"/>
 
                 </Grid>
 
