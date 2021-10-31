@@ -25,10 +25,12 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition />
+                <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
             <TextBlock 
                 VerticalAlignment="Center" 
+                FontWeight="SemiBold"
                 Text="{Binding Title, ElementName=root}" />
 
             <TextBlock 
@@ -37,6 +39,15 @@
                 TextWrapping="Wrap" 
                 TextTrimming="WordEllipsis"
                 Text="{Binding Description, ElementName=root}" />
+
+            <TextBlock 
+                Grid.Row="2"
+                FontSize="12"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Text="$11.99"/>
         </Grid>
     </Grid>
 </UserControl>
