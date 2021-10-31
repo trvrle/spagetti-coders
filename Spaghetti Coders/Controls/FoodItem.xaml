@@ -42,12 +42,11 @@
 
             <TextBlock 
                 Grid.Row="2"
-                FontSize="12"
-                FontStyle="Italic"
+                FontSize="14"
                 FontWeight="Bold"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
-                Text="$11.99"/>
+                Text="{Binding Price, ElementName=root}"/>
         </Grid>
     </Grid>
 </UserControl>

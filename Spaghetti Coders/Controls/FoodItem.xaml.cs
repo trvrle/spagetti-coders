@@ -46,6 +46,15 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( DescriptionProperty, value ); }
         }
 
+        public static readonly DependencyProperty PriceProperty =
+            DependencyProperty.Register( "Price", typeof( string ), typeof( FoodItem ), new PropertyMetadata( string.Empty ) );
+
+        public string Price
+        {
+            get { return (string)GetValue( PriceProperty ); }
+            set { SetValue( PriceProperty, value ); }
+        }
+
         public static readonly RoutedEvent ClickEvent =
             EventManager.RegisterRoutedEvent( nameof(Click), RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof( FoodItem ) );
 
