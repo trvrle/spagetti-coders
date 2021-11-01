@@ -27,8 +27,16 @@ namespace Spaghetti_Coders
             this.Height = 700;
 
         }
-       
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender.Equals(Bell))
+            {
+                BellPopUp bellPopUp = new BellPopUp();
+                bellPopUp.Show();
 
+            }
+
+        }
     }
 }
 
