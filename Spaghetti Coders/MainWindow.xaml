@@ -28,7 +28,7 @@
 
                 <Image HorizontalAlignment="Left" VerticalAlignment="Center" Stretch="Fill" Source="/Images/logo.png" Height="50" Width="50" Margin="10 0 0 0"/>
 
-                <Button x:Name="Bell" Grid.Column="1" Height="30" Width="40" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" HorizontalAlignment="Center" Margin="10">
+                <Button x:Name="Bell" Grid.Column="1" Height="30" Width="40" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" HorizontalAlignment="Center" Margin="10" Click="Button_Click">
                     <Image x:Name="Bell1" Stretch="Fill" Source="/Images/bell.png" Height="22" Width="22"/>
                 </Button>
             </Grid>
