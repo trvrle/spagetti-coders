@@ -35,9 +35,24 @@ namespace Spaghetti_Coders.Controls
 
         private void OnFoodItemClick( object sender, RoutedEventArgs e )
         {
-            OrderPage order = new OrderPage();
-            this.Content = order.Content;
-           
+             
         }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender.Equals(OrderButton))
+            {
+                OrderPage order = new OrderPage();
+                this.Content = order.Content;
+
+            }
+
+            if (sender.Equals(SortButton))
+            {
+                
+
+            }
+
+        }
+        
     }
 }
