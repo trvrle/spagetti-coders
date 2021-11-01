@@ -19,8 +19,8 @@ namespace Spaghetti_Coders
     {
         public BellPopUp()
         {
-            
-                this.Owner = App.Current.MainWindow;
+            InitializeComponent();
+            this.Owner = App.Current.MainWindow;
 
             
         }
