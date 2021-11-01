@@ -48,8 +48,9 @@ namespace Spaghetti_Coders.Controls
 
             if (sender.Equals(SortButton))
             {
-                
 
+                Sorting sort = new Sorting();
+                sort.Show();
             }
 
         }

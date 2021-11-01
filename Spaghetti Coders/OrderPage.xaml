@@ -10,7 +10,7 @@
 
     <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Hidden" >
 
-        <Grid Background="#FFFF" Height="500" Width="400">
+        <Grid Background="#FFFF" Height="490" Width="400">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*" />
