@@ -113,13 +113,14 @@
                 </Grid>
 
             </ScrollViewer>
-            <Button Content="Add Item" 
+            <Button x:Name="AddItem" Content="Add Item" 
                     HorizontalAlignment="Center" 
                     Grid.Row="7" 
                     VerticalAlignment="Top"
                     Height="30" Width="70"
                     Background="#d57174"
-                    FontWeight="ExtraBold" />
+                    FontWeight="ExtraBold"
+                    Click="Button_Click"/>
 
             <TextBlock HorizontalAlignment="Left" 
                        Margin="13,10,0,0" 

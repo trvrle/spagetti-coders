@@ -70,7 +70,16 @@ namespace Spaghetti_Coders.Controls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+             if (sender.Equals(AddItem))
+                {
+                //navigate to order screen
+                OrderPage order = new OrderPage();
+                this.Content = order.Content;
 
-        }
+                //add item to order 
+
+            }
+
+            }
     }
 }
