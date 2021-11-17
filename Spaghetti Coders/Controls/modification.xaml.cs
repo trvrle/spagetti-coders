@@ -72,7 +72,7 @@ namespace Spaghetti_Coders.Controls
         {
              if (sender.Equals(AddItem))
                 {
-                //navigate to order screen
+                //navigate to order screen-- check once item hooked up
                 OrderPage order = new OrderPage();
                 this.Content = order.Content;
 

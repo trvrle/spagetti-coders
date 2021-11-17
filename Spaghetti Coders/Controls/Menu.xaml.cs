@@ -35,7 +35,8 @@ namespace Spaghetti_Coders.Controls
 
         private void OnFoodItemClick( object sender, RoutedEventArgs e )
         {
-             
+            ItemClose_up window = new ItemClose_up();
+            this.Content = window.Content;
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
