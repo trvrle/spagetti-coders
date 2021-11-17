@@ -13,7 +13,8 @@
             FontSize="16"
             Text="Search..."
             VerticalAlignment="Center"
-            Padding="5,2,0,0"/>
+            Padding="5,2,0,0"
+            GotFocus="TextBox_GotFocus"/>
 
         <Image
             Height="20"
