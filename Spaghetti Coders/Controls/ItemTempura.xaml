@@ -36,7 +36,7 @@
 
             <TextBlock VerticalAlignment="Center" Text="{Binding Title, ElementName=root}" />
 
-            <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Controls/divider.png" />
+            <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 
             <TextBlock Grid.Row="5" FontFamily="MV Boli" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,5,25,0" Text="         Perfectly crispy deep-fried shrimps dipped in tempura batter. Served with special tempura dipping sauce. The batter used to make the tempura batter consists of flour, water, cornstarch, and eggs." />
 
