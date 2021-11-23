@@ -42,50 +42,7 @@
 
             </Grid>
 
-            <StackPanel Grid.Row="1" Orientation="Vertical">
-
-                <local:FoodItem
-                    Title="Spicy Ramen"
-                    Description="Spicy miso based soup topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg."
-                    ImageSource="/Images/spicy-ramen.jpg"
-                    Price="$12.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="Tempura"
-                    Description="Fresh shrimp dipped in tempura batter and deep-fried until perfectly crispy."
-                    ImageSource="/Images/tempura.jpg"
-                    Price="$11.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="Miso Ramen"
-                    Description="Miso ramen soup topped with sesame, green onions, seaweed, carrots, and egg."
-                    ImageSource="/Images/miso-ramen.jpg"
-                    Price="$12.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="California Roll"
-                    Description="California Roll Description"
-                    ImageSource="/Images/california-roll.jpg"
-                    Price="$8.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="Tuna Roll"
-                    Description="Tuna Roll Description"
-                    ImageSource="/Images/tuna-roll.jpg"
-                    Price="$8.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="Salmon Sushi Roll"
-                    Description="Salmon Sushi Roll Description"
-                    ImageSource="/Images/salmon-sushi-roll.jpg"
-                    Price="$8.99"
-                    Click="OnFoodItemClick"/>
-                <local:FoodItem
-                    Title="Salmon Sushi"
-                    Description="Salmon Sushi Description"
-                    ImageSource="/Images/salmon-sushi.jpg"
-                    Price="$8.99"
-                    Click="OnFoodItemClick"/>
+            <StackPanel x:Name="FoodItemList" Grid.Row="1" Orientation="Vertical">
 
             </StackPanel>
         </Grid>

@@ -39,21 +39,11 @@
         
         <TabControl Grid.Row="1" x:Name="tabControl" FontSize="16">
 
-            <TabItem Header="Specials" Background="#d57174" Height="50" Width="75">
-                <local:Menu Title="Today's Specials!" />
-            </TabItem>
-            <TabItem Header="Main" Background="#d57174" Width="75">
-                <local:Menu Title="Main" />
-            </TabItem>
-            <TabItem Header="Sides" Background="#d57174" Width="75">
-                <local:Menu Title="Sides" />
-            </TabItem>
-            <TabItem Header="Desserts" Background="#d57174" Width="75">
-                <local:Menu Title="Desserts" />
-            </TabItem>
-            <TabItem Header="Drinks" Background="#d57174" Width="75">
-                <local:Menu Title="Drinks" />
-            </TabItem>
+            <TabItem x:Name="SpecialsTab" Header="Specials" Background="#d57174" Height="50" Width="75"/>
+            <TabItem Name="MainTab" Header="Main" Background="#d57174" Width="75"/>
+            <TabItem Name="SidesTab" Header="Sides" Background="#d57174" Width="75"/>
+            <TabItem Name="DessertsTab" Header="Desserts" Background="#d57174" Width="75"/>
+            <TabItem Name="DrinksTab" Header="Drinks" Background="#d57174" Width="75"/>
         </TabControl>
 
     </Grid>
