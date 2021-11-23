@@ -6,7 +6,7 @@
              x:Name="root"
              mc:Ignorable="d"
              d:DesignHeight="150" d:DesignWidth="400">
-    <Grid Height="150" Margin="5" MouseDown="OnClick" Background="WhiteSmoke">
+    <Grid Height="150" Margin="10 0 10 10" MouseDown="OnClick" Background="WhiteSmoke">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Spaghetti_Coders.Data;
 
 namespace Spaghetti_Coders.Controls
 {
@@ -63,6 +64,9 @@ namespace Spaghetti_Coders.Controls
             add { AddHandler( ClickEvent, value ); }
             remove { RemoveHandler( ClickEvent, value ); }
         }
+
+        public List<FoodCategory> Categories;
+
         public FoodItem()
         {
             InitializeComponent();

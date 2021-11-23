@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Spaghetti_Coders.Data;
 
 namespace Spaghetti_Coders.Controls
 {
@@ -29,80 +30,6 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( TitleProperty, value ); }
         }
 
-        Dictionary<string, FoodItem> foodItemDictionary = new Dictionary<string, FoodItem>
-        {
-            {
-                "Spicy Ramen",
-                new FoodItem
-                    {
-                        Title = "Spicy Ramen",
-                        Description = "Spicy miso based soup topped with sesame, green onions, corn seeds, beansprouts, enoki mushrooms, and egg.",
-                        ImageSource = new BitmapImage( new Uri( "/Images/spicy-ramen.jpg", UriKind.Relative ) ),
-                        Price = "$12.99"
-                    }
-            },
-            {
-                "Tempura",
-                new FoodItem
-                    {
-                        Title = "Tempura",
-                        Description = "Fresh shrimp dipped in tempura batter and deep-fried until perfectly crispy.",
-                        ImageSource = new BitmapImage( new Uri( "/Images/tempura.jpg", UriKind.Relative ) ),
-                        Price = "$11.99"
-                    }
-            },
-            {
-                "Miso Ramen",
-                new FoodItem
-                    {
-                        Title = "Miso Ramen",
-                        Description = "Miso ramen soup topped with sesame, green onions, seaweed, carrots, and egg.",
-                        ImageSource = new BitmapImage( new Uri( "/Images/miso-ramen.jpg", UriKind.Relative ) ),
-                        Price = "$12.99"
-                    }
-            },
-            {
-                "California Roll",
-                new FoodItem
-                    {
-                        Title = "California Roll",
-                        Description = "California Rolls with a layer of rice on the outside and a sheet of nori on the inside, and include avocado, imitation crab, cucumber, and tobiko (flying fish roe).",
-                        ImageSource = new BitmapImage( new Uri( "/Images/california-roll.jpg", UriKind.Relative ) ),
-                        Price = "$8.99"
-                    }
-            },
-            {
-                "Tuna Roll",
-                new FoodItem
-                    {
-                        Title = "Tuna Roll",
-                        Description = "Tuna Rolls with sashimi grade tuna tossed in sesame Sriracha sauce, topped with spicy mayo.",
-                        ImageSource = new BitmapImage( new Uri( "/Images/spicy-ramen.jpg", UriKind.Relative ) ),
-                        Price = "$12.99"
-                    }
-            },
-            {
-                "Salmon Sushi Roll",
-                new FoodItem
-                    {
-                        Title = "Salmon Sushi Roll",
-                        Description = "Salmon Sushi Roll made from raw salmon, spicy sauce (Japanese-style mayonnaise mixed with chili sauce), and sushi rice, wrapped in nori (seaweed).",
-                        ImageSource = new BitmapImage( new Uri( "/Images/salmon-sushi-roll.jpg", UriKind.Relative ) ),
-                        Price = "$8.99"
-                    }
-            },
-            {
-                "Salmon Sushi",
-                new FoodItem
-                    {
-                        Title = "Salmon Sushi",
-                        Description = "Salmon Sushi Description",
-                        ImageSource = new BitmapImage( new Uri( "/Images/spicy-ramen.jpg", UriKind.Relative ) ),
-                        Price = "$8.99"
-                    }
-            }
-        };
-
         public Menu()
         {
             InitializeComponent();
@@ -111,24 +38,11 @@ namespace Spaghetti_Coders.Controls
 
         private void Menu_Loaded(object sender, RoutedEventArgs e)
         {
-            List<FoodItem> foodItemList = new List<FoodItem>();
-            
-            if (Title.Equals("Today's Specials"))
-            {
-                foodItemList.Add( foodItemDictionary["Spicy Ramen"] );
-                foodItemList.Add( foodItemDictionary["Miso Ramen"] );
-                foodItemList.Add( foodItemDictionary["Tempura"] );
-            }
-            else
-            {
-                foodItemList.Add( foodItemDictionary["Spicy Ramen"] );
-                foodItemList.Add( foodItemDictionary["Miso Ramen"] );
-                foodItemList.Add( foodItemDictionary["California Roll"] );
-            }
-
             FoodItemList.Children.Clear();
-            foodItemList.ForEach( delegate ( FoodItem foodItem )
+            var results = FoodItemData.GetFoodItemList().FindAll( item => item.Categories.Exists( category => category.Value.Equals(Title)) ) ;
+            results.ForEach( delegate ( FoodItem foodItem )
              {
+                 foodItem.Click += OnFoodItemClick;
                  FoodItemList.Children.Add( foodItem );
              } );
         }

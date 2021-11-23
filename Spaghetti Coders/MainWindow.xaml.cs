@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Spaghetti_Coders.Controls;
+using Spaghetti_Coders.Data;
 
 namespace Spaghetti_Coders
 {
@@ -25,27 +26,27 @@ namespace Spaghetti_Coders
             InitializeComponent();
             SpecialsTab.Content = new Menu
             {
-                Title = "Today's Specials"
+                Title = FoodCategory.Specials.Value
             };
 
             MainTab.Content = new Menu
             {
-                Title = "Main"
+                Title = FoodCategory.Main.Value
             };
 
             SidesTab.Content = new Menu
             {
-                Title = "Sides"
+                Title = FoodCategory.Sides.Value
             };
 
             DessertsTab.Content = new Menu
             {
-                Title = "Desserts"
+                Title = FoodCategory.Desserts.Value
             };
 
             DrinksTab.Content = new Menu
             {
-                Title = "Drinks"
+                Title = FoodCategory.Drinks.Value
             };
         }
 

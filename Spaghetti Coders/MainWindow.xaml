@@ -39,7 +39,7 @@
         
         <TabControl Grid.Row="1" x:Name="tabControl" FontSize="16">
 
-            <TabItem x:Name="SpecialsTab" Header="Specials" Background="#d57174" Height="50" Width="75"/>
+            <TabItem Name="SpecialsTab" Header="Specials" Background="#d57174" Height="50" Width="75"/>
             <TabItem Name="MainTab" Header="Main" Background="#d57174" Width="75"/>
             <TabItem Name="SidesTab" Header="Sides" Background="#d57174" Width="75"/>
             <TabItem Name="DessertsTab" Header="Desserts" Background="#d57174" Width="75"/>
