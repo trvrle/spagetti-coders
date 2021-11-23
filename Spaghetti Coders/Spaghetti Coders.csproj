@@ -11,35 +11,61 @@
     <None Remove="Controls\order.png" />
     <None Remove="Controls\search.png" />
     <None Remove="Controls\search.svg" />
+    <None Remove="Images\agedashi-tofu-with-broth.jpg" />
     <None Remove="Images\backarrow.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\california-roll.jpg" />
+    <None Remove="Images\coffee-milk-tea.jpg" />
+    <None Remove="Images\green-tea-ice-cream.jpg" />
+    <None Remove="Images\green-tea.jpg" />
+    <None Remove="Images\hot-matcha-latte.jpg" />
+    <None Remove="Images\ice-cream-mochi.jpg" />
+    <None Remove="Images\japanese-pancakes.jpg" />
+    <None Remove="Images\karaage.jpg" />
     <None Remove="Images\keyboard.png" />
     <None Remove="Images\left.png" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\miso-ramen.jpg" />
     <None Remove="Images\order.png" />
+    <None Remove="Images\original-milk-tea.jpg" />
     <None Remove="Images\right.png" />
+    <None Remove="Images\roasted-milk-tea.jpg" />
     <None Remove="Images\salmon-sushi-roll.jpg" />
     <None Remove="Images\salmon-sushi.jpg" />
     <None Remove="Images\sort.png" />
     <None Remove="Images\spicy-ramen.jpg" />
+    <None Remove="Images\strawberry-chocolate-mochi.jpeg" />
+    <None Remove="Images\taiyaki.jpg" />
+    <None Remove="Images\taro-milk-tea.jpg" />
     <None Remove="Images\tempura.jpg" />
     <None Remove="Images\tuna-roll.jpg" />
     <None Remove="Images\x.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\agedashi-tofu-with-broth.jpg" />
     <Resource Include="Images\backarrow.png" />
     <Resource Include="Images\bell.png" />
+    <Resource Include="Images\coffee-milk-tea.jpg" />
+    <Resource Include="Images\green-tea-ice-cream.jpg" />
+    <Resource Include="Images\green-tea.jpg" />
+    <Resource Include="Images\hot-matcha-latte.jpg" />
+    <Resource Include="Images\ice-cream-mochi.jpg" />
+    <Resource Include="Images\japanese-pancakes.jpg" />
+    <Resource Include="Images\karaage.jpg" />
     <Resource Include="Images\keyboard.png" />
     <Resource Include="Images\left.png" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\original-milk-tea.jpg" />
     <Resource Include="Images\right.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\california-roll.jpg" />
+    <Resource Include="Images\roasted-milk-tea.jpg" />
+    <Resource Include="Images\strawberry-chocolate-mochi.jpeg" />
+    <Resource Include="Images\taiyaki.jpg" />
+    <Resource Include="Images\taro-milk-tea.jpg" />
     <Resource Include="Images\x.png" />
     <Resource Include="Images\miso-ramen.jpg" />
     <Resource Include="Images\order.png" />
