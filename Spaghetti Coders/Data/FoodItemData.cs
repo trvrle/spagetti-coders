@@ -45,90 +45,88 @@ namespace Spaghetti_Coders.Data
         public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
 
         public const string SalmonSushiTitle = "Salmon Sushi";
-        public const string SalmonSushiDescription = "Salmon Sushi Description";
+        public const string SalmonSushiDescription = "A ball of sushi rice containing vinegar topped with a slice of salmon.";
         public const string SalmonSushiImageSource = "/Images/salmon-sushi.jpg";
         public const string SalmonSushiPrice = "$8.99";
         public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
 
         public const string AgedashiTofuWithBrothTitle = "Agedashi Tofu with Broth";
-        public const string AgedashiTofuWithBrothDescription = "Agedashi Tofu with Broth Description";
+        public const string AgedashiTofuWithBrothDescription = "Agedashi Tofu is soft tofu coated with potato starch and deep-fried so that the outer shell is crispy.";
         public const string AgedashiTofuWithBrothImageSource = "/Images/agedashi-tofu-with-broth.jpg";
-        public const string AgedashiTofuWithBrothPrice = "$7.99";
+        public const string AgedashiTofuWithBrothPrice = "$6.99";
         public static readonly List<FoodCategory> AgedashiTofuWithBrothCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string JapanesePancakesTitle = "Japanese Pancakes";
-        public const string JapanesePancakesDescription = "Japanese Pancakes Description";
+        public const string JapanesePancakesDescription = "Japanese savory pancakes made with shredded cabbage, flour, eggs, and water.";
         public const string JapanesePancakesImageSource = "/Images/japanese-pancakes.jpg";
-        public const string JapanesePancakesPrice = "$8.99";
+        public const string JapanesePancakesPrice = "$7.99";
         public static readonly List<FoodCategory> JapanesePancakesCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string KaraageTitle = "Karaage";
-        public const string KaraageDescription = "Karaage Description";
+        public const string KaraageDescription = "Chicken thigh coated in potato starch and deep-friend in hot oil until crispy.";
         public const string KaraageImageSource = "/Images/karaage.jpg";
-        public const string KaraagePrice = "$8.99";
+        public const string KaraagePrice = "$11.50";
         public static readonly List<FoodCategory> KaraageCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string GreenTeaIceCreamTitle = "Green Tea Ice Cream";
-        public const string GreenTeaIceCreamDescription = "Green Tea Ice Cream Description";
+        public const string GreenTeaIceCreamDescription = "Matcha green tea flavored ice cream";
         public const string GreenTeaIceCreamImageSource = "/Images/green-tea-ice-cream.jpg";
-        public const string GreenTeaIceCreamPrice = "$5.99";
+        public const string GreenTeaIceCreamPrice = "$3.99";
         public static readonly List<FoodCategory> GreenTeaIceCreamCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string IceCreamMochiTitle = "Ice Cream Mochi";
-        public const string IceCreamMochiDescription = "Ice Cream Mochi Description";
+        public const string IceCreamMochiDescription = "Consists of small, round confections that have a soft, pounded sticky rice dumpling (mochi) formed around an ice cream filling. The ice cream flavors the confection while the mochi adds sweetness and texture.";
         public const string IceCreamMochiImageSource = "/Images/ice-cream-mochi.jpg";
-        public const string IceCreamMochiPrice = "$5.99";
+        public const string IceCreamMochiPrice = "$9.50";
         public static readonly List<FoodCategory> IceCreamMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string StrawberryChocolateMochiTitle = "Strawberry Chocolate Mochi";
-        public const string StrawberryChocolateMochiDescription = "Strawberry Chocolate Mochi Description";
+        public const string StrawberryChocolateMochiDescription = "Fresh strawberries dipped in melted milk chocolate and wrapped in mochi rice cakes.";
         public const string StrawberryChocolateMochiImageSource = "/Images/strawberry-chocolate-mochi.jpeg";
-        public const string StrawberryChocolateMochiPrice = "$5.99";
+        public const string StrawberryChocolateMochiPrice = "$7.50";
         public static readonly List<FoodCategory> StrawberryChocolateMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string TaiyakiTitle = "Taiyaki";
-        public const string TaiyakiDescription = "Taiyaki Description";
+        public const string TaiyakiDescription = "Japanese fish-shapped cake that contains red bean paste as filling. This paste is made from sweetened azuki beans.";
         public const string TaiyakiImageSource = "/Images/taiyaki.jpg";
-        public const string TaiyakiPrice = "$6.99";
+        public const string TaiyakiPrice = "$3.99";
         public static readonly List<FoodCategory> TaiyakiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string CoffeeMilkTeaTitle = "Coffee Milk Tea";
-        public const string CoffeeMilkTeaDescription = "Coffee Milk Tea Description";
+        public const string CoffeeMilkTeaDescription = "Black tea is brewed directly in milk with sugar, then combined with brewed coffee.";
         public const string CoffeeMilkTeaImageSource = "/Images/coffee-milk-tea.jpg";
-        public const string CoffeeMilkTeaPrice = "$5.99";
+        public const string CoffeeMilkTeaPrice = "$5.25";
         public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string GreenTeaTitle = "Green Tea";
-        public const string GreenTeaDescription = "Green Tea Description";
+        public const string GreenTeaDescription = "Green tea is slightly sweet and leaves a refreshing aftertaste.";
         public const string GreenTeaImageSource = "/Images/green-tea.jpg";
-        public const string GreenTeaPrice = "$5.99";
+        public const string GreenTeaPrice = "$1.99";
         public static readonly List<FoodCategory> GreenTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string HotMatchaLatteTitle = "Hot Matcha Latte";
-        public const string HotMatchaLatteDescription = "Hot Matcha Latte Description";
+        public const string HotMatchaLatteDescription = "Tea-based beverage combining vivid green matcha tea powder and milk to create a smooth, creamy latte.";
         public const string HotMatchaLatteImageSource = "/Images/hot-matcha-latte.jpg";
-        public const string HotMatchaLattePrice = "$5.99";
+        public const string HotMatchaLattePrice = "$3.25";
         public static readonly List<FoodCategory> HotMatchaLatteCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string OriginalMilkTeaTitle = "Original Milk Tea";
-        public const string OriginalMilkTeaDescription = "Original Milk Tea Description";
+        public const string OriginalMilkTeaDescription = "Our signature original milk tea comes with freshly brewed tea and cooked pearls every 2 hours! The tea has a rich flavor that goes perfectly with milk. There is a variety of toppings and sweeteners available.";
         public const string OriginalMilkTeaImageSource = "/Images/original-milk-tea.jpg";
-        public const string OriginalMilkTeaPrice = "$5.99";
+        public const string OriginalMilkTeaPrice = "$5.25";
         public static readonly List<FoodCategory> OriginalMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string RoastedMilkTeaTitle = "Roasted Milk Tea";
-        public const string RoastedMilkTeaDescription = "Roasted Milk Tea Description";
+        public const string RoastedMilkTeaDescription = "This milk tea uses a special roasted brown sugar to create a sweet, bold, and robust flavor.";
         public const string RoastedMilkTeaImageSource = "/Images/roasted-milk-tea.jpg";
-        public const string RoastedMilkTeaPrice = "$5.99";
+        public const string RoastedMilkTeaPrice = "$5.25";
         public static readonly List<FoodCategory> RoastedMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string TaroMilkTeaTitle = "Taro Milk Tea";
-        public const string TaroMilkTeaDescription = "Taro Milk Tea Description";
+        public const string TaroMilkTeaDescription = "The taro milk tea combines jasmine tea with taro flavoring to create a very sweet taste, with a slight hint of vanilla.";
         public const string TaroMilkTeaImageSource = "/Images/taro-milk-tea.jpg";
-        public const string TaroMilkTeaPrice = "$5.99";
+        public const string TaroMilkTeaPrice = "$5.25";
         public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
-
-
 
         public static List<FoodItem> GetFoodItemList()
         {

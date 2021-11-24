@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Spaghetti_Coders.Data;
+using Spaghetti_Coders.Pages;
 
 namespace Spaghetti_Coders.Controls
 {
@@ -30,6 +31,10 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( TitleProperty, value ); }
         }
 
+        public delegate void OnFoodItemClickDelegate( FoodItem foodItem );
+
+        public event OnFoodItemClickDelegate OnFoodItemClick;
+
         public Menu()
         {
             InitializeComponent();
@@ -39,19 +44,19 @@ namespace Spaghetti_Coders.Controls
         private void Menu_Loaded(object sender, RoutedEventArgs e)
         {
             FoodItemList.Children.Clear();
-            var results = FoodItemData.GetFoodItemList().FindAll( item => item.Categories.Exists( category => category.Value.Equals(Title)) ) ;
-            results.ForEach( delegate ( FoodItem foodItem )
+            var foodItemsInCategory = FoodItemData.GetFoodItemList().FindAll( item => item.Categories.Exists( category => category.Value.Equals(Title)) ) ;
+            foodItemsInCategory.ForEach( delegate ( FoodItem foodItem )
              {
-                 foodItem.Click += OnFoodItemClick;
+                 foodItem.Click += FoodItemClick;
                  FoodItemList.Children.Add( foodItem );
              } );
         }
 
-        private void OnFoodItemClick( object sender, RoutedEventArgs e )
+        private void FoodItemClick(object sender, RoutedEventArgs e)
         {
-            ItemSpicyRamen window = new ItemSpicyRamen();
-            this.Content = window.Content;
+            OnFoodItemClick?.Invoke( ( sender as FoodItem ) );
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (sender.Equals(OrderButton))
