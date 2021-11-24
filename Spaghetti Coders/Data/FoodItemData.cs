@@ -24,31 +24,31 @@ namespace Spaghetti_Coders.Data
         public const string MisoRamenDescription = "Miso ramen soup topped with sesame, green onions, seaweed, carrots, and egg.";
         public const string MisoRamenImageSource = "/Images/miso-ramen.jpg";
         public const string MisoRamenPrice = "$12.99";
-        public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string CaliforniaRollTitle = "California Roll";
         public const string CaliforniaRollDescription = "California Rolls with a layer of rice on the outside and a sheet of nori on the inside, and include avocado, imitation crab, cucumber, and tobiko (flying fish roe).";
         public const string CaliforniaRollImageSource = "/Images/california-roll.jpg";
         public const string CaliforniaRollPrice = "$8.99";
-        public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> {FoodCategory.Main };
 
         public const string TunaRollTitle = "Tuna Roll";
         public const string TunaRollDescription = "Tuna Rolls with sashimi grade tuna tossed in sesame Sriracha sauce, topped with spicy mayo.";
         public const string TunaRollImageSource = "/Images/tuna-roll.jpg";
         public const string TunaRollPrice = "$12.99";
-        public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string SalmonSushiRollTitle = "Salmon Sushi Roll";
         public const string SalmonSushiRollDescription = "Tuna Rolls with sashimi grade tuna tossed in sesame Sriracha sauce, topped with spicy mayo.";
         public const string SalmonSushiRollImageSource = "/Images/salmon-sushi-roll.jpg";
         public const string SalmonSushiRollPrice = "$12.99";
-        public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string SalmonSushiTitle = "Salmon Sushi";
         public const string SalmonSushiDescription = "A ball of sushi rice containing vinegar topped with a slice of salmon.";
         public const string SalmonSushiImageSource = "/Images/salmon-sushi.jpg";
         public const string SalmonSushiPrice = "$8.99";
-        public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string AgedashiTofuWithBrothTitle = "Agedashi Tofu with Broth";
         public const string AgedashiTofuWithBrothDescription = "Agedashi Tofu is soft tofu coated with potato starch and deep-fried so that the outer shell is crispy.";
@@ -126,7 +126,7 @@ namespace Spaghetti_Coders.Data
         public const string TaroMilkTeaDescription = "The taro milk tea combines jasmine tea with taro flavoring to create a very sweet taste, with a slight hint of vanilla.";
         public const string TaroMilkTeaImageSource = "/Images/taro-milk-tea.jpg";
         public const string TaroMilkTeaPrice = "$5.25";
-        public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Drinks };
 
         public static List<FoodItem> GetFoodItemList()
         {
@@ -139,7 +139,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( SpicyRamenImageSource, UriKind.Relative ) ),
                     Price = SpicyRamenPrice,
                     Categories = SpicyRamenCategories
-        },
+                },
                 new FoodItem
                 {
                     Title = TempuraTitle,

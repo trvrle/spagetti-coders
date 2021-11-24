@@ -28,6 +28,7 @@
 
                 <Button Grid.Column="0" 
                     x:Name="BackButton" 
+                    Click="BackButton_Click"
                     Height="30" Width="70" 
                     Background="Transparent" 
                     BorderBrush="Transparent"

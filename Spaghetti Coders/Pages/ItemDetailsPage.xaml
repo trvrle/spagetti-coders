@@ -30,7 +30,7 @@
                 <Image x:Name="Back_Icon" Source="/Images/backarrow.png"/>
             </Button>
 
-            <Label Content="{Binding Title, ElementName=root}" FontFamily="Comic Sans MS" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
+            <Label Content="{Binding Title, ElementName=root}" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
 
             <Image Grid.Row="3" HorizontalAlignment="Center" Source="{Binding ImageSource, ElementName=root}" />
 

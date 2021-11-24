@@ -29,7 +29,8 @@ namespace Spaghetti_Coders.Pages
             {
                 Title = FoodCategory.Specials.Value
             };
-            ( SpecialsTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate(OnItemClick);
+            ( SpecialsTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            ( SpecialsTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
 
             MainTab.Content = new Menu
             {
@@ -59,6 +60,11 @@ namespace Spaghetti_Coders.Pages
         private void OnItemClick(FoodItem foodItem)
         {
             NavigationService.Navigate( new ItemDetailsPage(foodItem) );
+        }
+
+        private void OnOrderButtonClick()
+        {
+            NavigationService.Navigate( new OrderPage() );
         }
 
         private void Button_Click( object sender, RoutedEventArgs e )

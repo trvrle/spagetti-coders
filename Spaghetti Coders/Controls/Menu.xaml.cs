@@ -35,6 +35,10 @@ namespace Spaghetti_Coders.Controls
 
         public event OnFoodItemClickDelegate OnFoodItemClick;
 
+        public delegate void OnOrderButtonClickDelegate();
+
+        public event OnOrderButtonClickDelegate OnOrderButtonClick;
+
         public Menu()
         {
             InitializeComponent();
@@ -61,9 +65,7 @@ namespace Spaghetti_Coders.Controls
         {
             if (sender.Equals(OrderButton))
             {
-                OrderPage order = new OrderPage();
-                this.Content = order.Content;
-
+                OnOrderButtonClick?.Invoke( );
             }
 
             if (sender.Equals(SortButton))

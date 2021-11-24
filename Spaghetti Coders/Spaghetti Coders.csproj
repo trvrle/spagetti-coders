@@ -16,6 +16,7 @@
     <None Remove="Images\bell.png" />
     <None Remove="Images\california-roll.jpg" />
     <None Remove="Images\coffee-milk-tea.jpg" />
+    <None Remove="Images\divider.png" />
     <None Remove="Images\green-tea-ice-cream.jpg" />
     <None Remove="Images\green-tea.jpg" />
     <None Remove="Images\hot-matcha-latte.jpg" />
@@ -47,6 +48,7 @@
     <Resource Include="Images\backarrow.png" />
     <Resource Include="Images\bell.png" />
     <Resource Include="Images\coffee-milk-tea.jpg" />
+    <Resource Include="Images\divider.png" />
     <Resource Include="Images\green-tea-ice-cream.jpg" />
     <Resource Include="Images\green-tea.jpg" />
     <Resource Include="Images\hot-matcha-latte.jpg" />

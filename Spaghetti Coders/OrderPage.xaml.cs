@@ -42,9 +42,10 @@ namespace Spaghetti_Coders
                 paymentWindow.Show();
             }
         }
-           
-        
 
-
+        private void BackButton_Click( object sender, RoutedEventArgs e )
+        {
+            NavigationService.GoBack();
+        }
     }
 }
