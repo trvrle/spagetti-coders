@@ -42,9 +42,9 @@
 
             <TextBlock Grid.Row="8" FontSize="20" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Price, ElementName=root}" />
 
-            <Button Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,0,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
+            <Button x:Name="ModifyItem" Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,0,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174" Click="ModClick"/>
 
-            <Button Content="Add Item" FontWeight="Medium" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,0,45,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174"/>
+            <Button x:Name="AddItem" Content="Add Item" FontWeight="Medium" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,0,45,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174" Click="ItemClick"/>
 
         </Grid>
     </Grid>

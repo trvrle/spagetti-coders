@@ -67,6 +67,7 @@ namespace Spaghetti_Coders.Pages
             NavigationService.Navigate( new OrderPage() );
         }
 
+
         private void Button_Click( object sender, RoutedEventArgs e )
         {
             if ( sender.Equals( Bell ) )

@@ -15,14 +15,19 @@ namespace Spaghetti_Coders
     /// <summary>
     /// Interaction logic for PaymentWindow.xaml
     /// </summary>
-    public partial class PaymentWindow : Window
+    public partial class PaymentWindow : Page
     {
         public PaymentWindow()
         {
             InitializeComponent();
             this.Height = 700;
             this.Width = 400;
-            this.Owner = App.Current.MainWindow;
+            
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

@@ -32,5 +32,10 @@ namespace Spaghetti_Coders
         {
             InitializeComponent();
         }
+
+        private void EditClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

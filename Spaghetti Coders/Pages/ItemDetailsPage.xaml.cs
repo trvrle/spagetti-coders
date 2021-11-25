@@ -75,5 +75,15 @@ namespace Spaghetti_Coders.Pages
         {
             NavigationService.GoBack();
         }
+
+        private void ItemClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new OrderPage());
+        }
+
+        private void ModClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Modification());
+        }
     }
 }

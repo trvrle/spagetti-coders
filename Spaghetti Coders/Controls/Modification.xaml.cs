@@ -16,7 +16,7 @@ namespace Spaghetti_Coders.Controls
     /// <summary>
     /// Interaction logic for modification.xaml
     /// </summary>
-    public partial class Modification : UserControl
+    public partial class Modification : Page
     {
         public Modification()
         {
@@ -73,8 +73,7 @@ namespace Spaghetti_Coders.Controls
              if (sender.Equals(AddItem))
                 {
                 //navigate to order screen-- check once item hooked up
-                OrderPage order = new OrderPage();
-                this.Content = order.Content;
+                NavigationService.Navigate(new OrderPage());
 
                 //add item to order 
 

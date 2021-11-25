@@ -21,6 +21,7 @@ namespace Spaghetti_Coders
         public OrderPage()
         {
             InitializeComponent();
+
         }
 
         internal void Show()
@@ -34,18 +35,20 @@ namespace Spaghetti_Coders
             {
                 OrderPopUp order = new OrderPopUp();
                 order.Show();
-               
+
             }
             else if (sender.Equals(Pay))
             {
-                PaymentWindow paymentWindow = new PaymentWindow();
-                paymentWindow.Show();
+                NavigationService.Navigate(new PaymentWindow());
+
             }
         }
 
-        private void BackButton_Click( object sender, RoutedEventArgs e )
-        {
-            NavigationService.GoBack();
-        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+            {
+                NavigationService.GoBack();
+            }
+        
     }
 }
