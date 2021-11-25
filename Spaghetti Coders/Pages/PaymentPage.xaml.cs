@@ -13,16 +13,13 @@ using System.Windows.Shapes;
 namespace Spaghetti_Coders
 {
     /// <summary>
-    /// Interaction logic for PaymentWindow.xaml
+    /// Interaction logic for PaymentPage.xaml
     /// </summary>
-    public partial class PaymentWindow : Page
+    public partial class PaymentPage : Page
     {
-        public PaymentWindow()
+        public PaymentPage()
         {
             InitializeComponent();
-            this.Height = 700;
-            this.Width = 400;
-            
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

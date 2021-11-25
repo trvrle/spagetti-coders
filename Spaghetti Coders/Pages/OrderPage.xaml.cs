@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Pages
 {
     /// <summary>
     /// Interaction logic for OrderPage.xaml
@@ -38,7 +38,7 @@ namespace Spaghetti_Coders
             }
             else if (sender.Equals(Pay))
             {
-                NavigationService.Navigate(new PaymentWindow());
+                NavigationService.Navigate(new PaymentPage());
 
             }
         }

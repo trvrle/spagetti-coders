@@ -11,19 +11,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders.Controls
+namespace Spaghetti_Coders.Pages
 {
     /// <summary>
     /// Interaction logic for modification.xaml
     /// </summary>
-    public partial class Modification : Page
+    public partial class ModificationPage : Page
     {
-        public Modification()
+        public ModificationPage()
         {
             InitializeComponent();
         }
-
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -37,6 +35,7 @@ namespace Spaghetti_Coders.Controls
             }
 
         }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();

@@ -83,7 +83,7 @@ namespace Spaghetti_Coders.Pages
 
         private void ModClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Modification());
+            NavigationService.Navigate(new ModificationPage());
         }
     }
 }
