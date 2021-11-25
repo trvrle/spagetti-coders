@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using System.Diagnostics;
 using Spaghetti_Coders.Data;
 using Spaghetti_Coders.Controls;
+using Spaghetti_Coders.Popups;
 using Menu = Spaghetti_Coders.Controls.Menu;
 
 namespace Spaghetti_Coders.Pages
@@ -76,8 +77,8 @@ namespace Spaghetti_Coders.Pages
         {
             if ( sender.Equals( Bell ) )
             {
-                BellPopUp bellPopUp = new BellPopUp();
-                bellPopUp.Show();
+                BellPopup bellPopup = new BellPopup();
+                bellPopup.Show();
 
             }
         }

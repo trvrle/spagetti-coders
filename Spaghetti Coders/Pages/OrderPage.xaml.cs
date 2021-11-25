@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Spaghetti_Coders.Popups;
 
 namespace Spaghetti_Coders.Pages
 {
@@ -32,8 +33,8 @@ namespace Spaghetti_Coders.Pages
         {
             if (sender.Equals(Order))
             {
-                OrderPopUp order = new OrderPopUp();
-                order.Show();
+                OrderPopup orderPopup = new OrderPopup();
+                orderPopup.Show();
 
             }
             else if (sender.Equals(Pay))
@@ -42,7 +43,6 @@ namespace Spaghetti_Coders.Pages
 
             }
         }
-
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

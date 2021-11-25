@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Pages
 {
     /// <summary>
     /// Interaction logic for PaymentPage.xaml

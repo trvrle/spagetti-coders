@@ -8,23 +8,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Controls
 {
     /// <summary>
-    /// Interaction logic for OrderPopUp.xaml
+    /// Interaction logic for OrderList.xaml
     /// </summary>
-    public partial class OrderPopUp : Window
+    public partial class OrderList : UserControl
     {
-        public OrderPopUp()
+        public OrderList()
         {
             InitializeComponent();
-
-            this.Owner = App.Current.MainWindow;
-
         }
-       
     }
 }

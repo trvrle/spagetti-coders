@@ -11,14 +11,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Controls
 {
     /// <summary>
-    /// Interaction logic for PaymentList.xaml
+    /// Interaction logic for PaymentItem.xaml
     /// </summary>
-    public partial class PaymentList : UserControl
+    public partial class PaymentItem : UserControl
     {
-        public PaymentList()
+        public PaymentItem()
         {
             InitializeComponent();
         }

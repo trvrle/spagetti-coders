@@ -8,19 +8,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Popups
 {
     /// <summary>
-    /// Interaction logic for Payment.xaml
+    /// Interaction logic for BellPopups.xaml
     /// </summary>
-    public partial class Payment : Page
+    public partial class BellPopup : Window
     {
-        public Payment()
+        public BellPopup()
         {
             InitializeComponent();
+            this.Owner = App.Current.MainWindow;
+
+            
         }
     }
 }

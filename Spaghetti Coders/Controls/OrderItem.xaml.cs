@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Spaghetti_Coders
+namespace Spaghetti_Coders.Controls
 {
     /// <summary>
     /// Interaction logic for OrderItem.xaml
