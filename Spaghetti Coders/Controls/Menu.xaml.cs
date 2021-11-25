@@ -39,10 +39,6 @@ namespace Spaghetti_Coders.Controls
 
         public event OnOrderButtonClickDelegate OnOrderButtonClick;
 
-        public delegate void OnPayButtonClickDelegate();
-
-        public event OnPayButtonClickDelegate OnPayButtonClick;
-
         public Menu()
         {
             InitializeComponent();

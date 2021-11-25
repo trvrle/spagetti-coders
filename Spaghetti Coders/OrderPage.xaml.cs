@@ -21,7 +21,6 @@ namespace Spaghetti_Coders
         public OrderPage()
         {
             InitializeComponent();
-
         }
 
         internal void Show()
@@ -46,9 +45,9 @@ namespace Spaghetti_Coders
 
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
-            {
-                NavigationService.GoBack();
-            }
+        {
+            NavigationService.GoBack();
+        }
         
     }
 }

@@ -37,24 +37,28 @@ namespace Spaghetti_Coders.Pages
                 Title = FoodCategory.Main.Value
             };
             ( MainTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            ( MainTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
 
             SidesTab.Content = new Menu
             {
                 Title = FoodCategory.Sides.Value
             };
             ( SidesTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            ( SidesTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
 
             DessertsTab.Content = new Menu
             {
                 Title = FoodCategory.Desserts.Value
             };
             ( DessertsTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            ( DessertsTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
 
             DrinksTab.Content = new Menu
             {
                 Title = FoodCategory.Drinks.Value
             };
             ( DrinksTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            ( DrinksTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
         }
 
         private void OnItemClick(FoodItem foodItem)
