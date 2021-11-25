@@ -19,7 +19,7 @@ namespace Spaghetti_Coders.Controls
     public partial class ModificationButtons : UserControl
     {
 
-        public static readonly DependencyProperty TitleProperty =
+        public static readonly DependencyProperty TProperty =
     DependencyProperty.Register("Select", typeof(string), typeof(ModificationButtons), new PropertyMetadata(string.Empty));
 
         public static readonly DependencyProperty ModProperty =
@@ -36,8 +36,8 @@ namespace Spaghetti_Coders.Controls
 
         public string Select
         {
-            get { return (string)GetValue(TitleProperty); }
-            set { SetValue(TitleProperty, value); }
+            get { return (string)GetValue(TProperty); }
+            set { SetValue(TProperty, value); }
         }
 
         public string ModOne
