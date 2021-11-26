@@ -41,13 +41,47 @@
                 TextTrimming="WordEllipsis"
                 Text="{Binding Description, ElementName=root}" />
 
-            <TextBlock 
+            <Grid
                 Grid.Row="2"
-                FontSize="14"
-                FontWeight="Bold"
                 VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
-                Text="{Binding Price, ElementName=root}"/>
+                HorizontalAlignment="Right">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                
+                <TextBlock
+                    x:Name="DiscountedPriceTextBlock"
+                    FontSize="14"
+                    Margin="5 5 5 0"
+                    FontWeight="Bold"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Visibility="Hidden"
+                    Foreground="Red"/>
+
+                <TextBlock 
+                    x:Name="PriceTextBlock"
+                    Grid.Column="1"
+                    FontSize="14"
+                    Margin="5 5 5 0"
+                    FontWeight="Bold"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Text="{Binding Price, ElementName=root}">
+                    <TextBlock.TextDecorations>
+                        <TextDecoration Location="Strikethrough">
+                            <TextDecoration.Pen>
+                                <Pen Brush="Red" Thickness="3"/>
+                            </TextDecoration.Pen>
+                        </TextDecoration>
+                    </TextBlock.TextDecorations>
+                </TextBlock>
+
+            </Grid>
+          
         </Grid>
     </Grid>
 </UserControl>

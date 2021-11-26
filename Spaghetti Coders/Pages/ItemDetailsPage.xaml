@@ -38,7 +38,7 @@
 
             <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,30,25,0" Text="{Binding Description, ElementName=root}" />
 
-            <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="Calories : 200" />
+            <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
 
             <TextBlock Grid.Row="8" FontSize="20" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Price, ElementName=root}" />
 

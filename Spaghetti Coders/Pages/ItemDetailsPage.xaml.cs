@@ -48,14 +48,30 @@ namespace Spaghetti_Coders.Pages
             set { SetValue( DescriptionProperty, value ); }
         }
 
+        public static readonly DependencyProperty CaloriesProperty =
+            DependencyProperty.Register( "Calories", typeof( string ), typeof( ItemDetailsPage ), new PropertyMetadata( string.Empty ) );
+
+        public int Calories
+        {
+            get 
+            {
+                string caloriesText = (string)GetValue( CaloriesProperty );
+                string numberOfCalories = caloriesText.Substring( caloriesText.IndexOf( ':' ) + 1 );
+                return int.Parse(numberOfCalories); 
+            }
+            set { SetValue( CaloriesProperty, $"Calories : {value.ToString()}" ); }
+        }
+
         public static readonly DependencyProperty PriceProperty =
             DependencyProperty.Register( "Price", typeof( string ), typeof( ItemDetailsPage ), new PropertyMetadata( string.Empty ) );
 
-        public string Price
+        public float Price
         {
-            get { return (string)GetValue( PriceProperty ); }
-            set { SetValue( PriceProperty, value ); }
+            get { return float.Parse( ( (string)GetValue( PriceProperty ) ).Replace( "$", "" ) ); }
+            set { SetValue( PriceProperty, $"${value.ToString("0.00")}" ); }
         }
+
+        public float? Discount { get; set; }
 
         public ItemDetailsPage()
         {
@@ -68,7 +84,9 @@ namespace Spaghetti_Coders.Pages
             Title = foodItem.Title;
             ImageSource = foodItem.ImageSource;
             Description = foodItem.Description;
+            Calories = foodItem.Calories;
             Price = foodItem.Price;
+            Discount = foodItem.Discount;
         }
 
         private void BackButton_Click( object sender, RoutedEventArgs e )
