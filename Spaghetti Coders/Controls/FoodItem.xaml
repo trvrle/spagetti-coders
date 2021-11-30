@@ -49,13 +49,14 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
 
                 
                 <TextBlock
                     x:Name="DiscountedPriceTextBlock"
                     FontSize="14"
-                    Margin="5 5 5 0"
+                    Margin="5 5 0 0"
                     FontWeight="Bold"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
@@ -66,7 +67,7 @@
                     x:Name="PriceTextBlock"
                     Grid.Column="1"
                     FontSize="14"
-                    Margin="5 5 5 0"
+                    Margin="5 5 0 0"
                     FontWeight="Bold"
                     VerticalAlignment="Bottom"
                     HorizontalAlignment="Right"
@@ -79,6 +80,16 @@
                         </TextDecoration>
                     </TextBlock.TextDecorations>
                 </TextBlock>
+
+                <TextBlock
+                    x:Name="QuantityTextBlock"
+                    Grid.Column="2"
+                    FontSize="14"
+                    Margin="0 5 5 0"
+                    FontWeight="Bold"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Text="{Binding Quantity, ElementName=root}"/>
 
             </Grid>
           

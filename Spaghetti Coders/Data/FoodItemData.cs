@@ -14,6 +14,7 @@ namespace Spaghetti_Coders.Data
         public const int SpicyRamenCalories = 200;
         public const float SpicyRamenPrice = 12.99F;
         public const float SpicyRamenDiscount = 3.00F;
+        public const string SpicyRamenQuantity = "bowl";
         public static readonly List<FoodCategory> SpicyRamenCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
 
         public const string TempuraTitle = "Tempura";
@@ -22,6 +23,7 @@ namespace Spaghetti_Coders.Data
         public const int TempuraCalories = 246;
         public const float TempuraPrice = 11.99F;
         public const float TempuraDiscount = 2.00F;
+        public const string TempuraQuantity = "10 pcs";
         public static readonly List<FoodCategory> TempuraCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Sides };
 
         public const string MisoRamenTitle = "Miso Ramen";
@@ -29,6 +31,7 @@ namespace Spaghetti_Coders.Data
         public const string MisoRamenImageSource = "/Images/miso-ramen.jpg";
         public const int MisoRamenCalories = 200;
         public const float MisoRamenPrice = 12.99F;
+        public const string MisoRamenQuantity = "bowl";
         public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string CaliforniaRollTitle = "California Roll";
@@ -36,6 +39,7 @@ namespace Spaghetti_Coders.Data
         public const string CaliforniaRollImageSource = "/Images/california-roll.jpg";
         public const int CaliforniaRollCalories = 262;
         public const float CaliforniaRollPrice = 8.99F;
+        public const string CaliforniaRollQuantity = "8 pcs";
         public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> {FoodCategory.Main };
 
         public const string TunaRollTitle = "Tuna Roll";
@@ -43,6 +47,7 @@ namespace Spaghetti_Coders.Data
         public const string TunaRollImageSource = "/Images/tuna-roll.jpg";
         public const int TunaRollCalories = 176;
         public const float TunaRollPrice = 12.99F;
+        public const string TunaRollQuantity = "9 pcs";
         public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string SalmonSushiRollTitle = "Salmon Sushi Roll";
@@ -50,6 +55,7 @@ namespace Spaghetti_Coders.Data
         public const string SalmonSushiRollImageSource = "/Images/salmon-sushi-roll.jpg";
         public const int SalmonSushiRollCalories = 220;
         public const float SalmonSushiRollPrice = 12.99F;
+        public const string SalmonSushiRollQuantity = "8 pcs";
         public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string SalmonSushiTitle = "Salmon Sushi";
@@ -57,6 +63,7 @@ namespace Spaghetti_Coders.Data
         public const string SalmonSushiImageSource = "/Images/salmon-sushi.jpg";
         public const int SalmonSushiCalories = 190; 
         public const float SalmonSushiPrice = 8.99F;
+        public const string SalmonSushiQuantity = "4 pcs";
         public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Main };
 
         public const string AgedashiTofuWithBrothTitle = "Agedashi Tofu with Broth";
@@ -64,6 +71,7 @@ namespace Spaghetti_Coders.Data
         public const string AgedashiTofuWithBrothImageSource = "/Images/agedashi-tofu-with-broth.jpg";
         public const int AgedashiTofuWithBrothCalories = 140;
         public const float AgedashiTofuWithBrothPrice = 6.99F;
+        public const string AgedashiTofuWithBrothQuantity = "bowl";
         public static readonly List<FoodCategory> AgedashiTofuWithBrothCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string JapanesePancakesTitle = "Japanese Pancakes";
@@ -71,6 +79,7 @@ namespace Spaghetti_Coders.Data
         public const string JapanesePancakesImageSource = "/Images/japanese-pancakes.jpg";
         public const int JapanesePancakesCalories = 800;
         public const float JapanesePancakesPrice = 7.99F;
+        public const string JapanesePancakesQuantity = "2 pcs";
         public static readonly List<FoodCategory> JapanesePancakesCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string KaraageTitle = "Karaage";
@@ -78,6 +87,7 @@ namespace Spaghetti_Coders.Data
         public const string KaraageImageSource = "/Images/karaage.jpg";
         public const int KaraageCalories = 452;
         public const float KaraagePrice = 11.50F;
+        public const string KaraageQuantity = "10 pcs";
         public static readonly List<FoodCategory> KaraageCategories = new List<FoodCategory> { FoodCategory.Sides };
 
         public const string GreenTeaIceCreamTitle = "Green Tea Ice Cream";
@@ -85,6 +95,7 @@ namespace Spaghetti_Coders.Data
         public const string GreenTeaIceCreamImageSource = "/Images/green-tea-ice-cream.jpg";
         public const int GreenTeaIceCreamCalories = 140;
         public const float GreenTeaIceCreamPrice = 3.99F;
+        public const string GreenTeaIceCreamQuantity = "scoop";
         public static readonly List<FoodCategory> GreenTeaIceCreamCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string IceCreamMochiTitle = "Ice Cream Mochi";
@@ -92,6 +103,7 @@ namespace Spaghetti_Coders.Data
         public const string IceCreamMochiImageSource = "/Images/ice-cream-mochi.jpg";
         public const int IceCreamMochiCalories = 450;
         public const float IceCreamMochiPrice = 9.50F;
+        public const string IceCreamMochiQuantity = "4 confections";
         public static readonly List<FoodCategory> IceCreamMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string StrawberryChocolateMochiTitle = "Strawberry Chocolate Mochi";
@@ -99,6 +111,7 @@ namespace Spaghetti_Coders.Data
         public const string StrawberryChocolateMochiImageSource = "/Images/strawberry-chocolate-mochi.jpeg";
         public const int StrawberryChocolateMochiCalories = 550;
         public const float StrawberryChocolateMochiPrice = 7.50F;
+        public const string StrawberryChocolateMochiQuantity = "4 confections";
         public static readonly List<FoodCategory> StrawberryChocolateMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string TaiyakiTitle = "Taiyaki";
@@ -106,6 +119,7 @@ namespace Spaghetti_Coders.Data
         public const string TaiyakiImageSource = "/Images/taiyaki.jpg";
         public const int TaiyakiCalories = 220;
         public const float TaiyakiPrice = 3.99F;
+        public const string TaiyakiQuantity = "taiyaki";
         public static readonly List<FoodCategory> TaiyakiCategories = new List<FoodCategory> { FoodCategory.Desserts };
 
         public const string CoffeeMilkTeaTitle = "Coffee Milk Tea";
@@ -113,6 +127,7 @@ namespace Spaghetti_Coders.Data
         public const string CoffeeMilkTeaImageSource = "/Images/coffee-milk-tea.jpg";
         public const int CoffeeMilkTeaCalories = 320;
         public const float CoffeeMilkTeaPrice = 5.25F;
+        public const string CoffeeMilkTeaQuantity = "drink with boba";
         public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string GreenTeaTitle = "Green Tea";
@@ -120,6 +135,7 @@ namespace Spaghetti_Coders.Data
         public const string GreenTeaImageSource = "/Images/green-tea.jpg";
         public const int GreenTeaCalories = 50;
         public const float GreenTeaPrice = 1.99F;
+        public const string GreenTeaQuantity = "teapot";
         public static readonly List<FoodCategory> GreenTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string HotMatchaLatteTitle = "Hot Matcha Latte";
@@ -127,6 +143,7 @@ namespace Spaghetti_Coders.Data
         public const string HotMatchaLatteImageSource = "/Images/hot-matcha-latte.jpg";
         public const int HotMatchaLatteCalories = 250;
         public const float HotMatchaLattePrice = 3.25F;
+        public const string HotMatchaLatteQuantity = "mug";
         public static readonly List<FoodCategory> HotMatchaLatteCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string OriginalMilkTeaTitle = "Original Milk Tea";
@@ -134,6 +151,7 @@ namespace Spaghetti_Coders.Data
         public const string OriginalMilkTeaImageSource = "/Images/original-milk-tea.jpg";
         public const int OriginalMilkTeaCalories = 455;
         public const float OriginalMilkTeaPrice = 5.25F;
+        public const string OriginalMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> OriginalMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string RoastedMilkTeaTitle = "Roasted Milk Tea";
@@ -141,6 +159,7 @@ namespace Spaghetti_Coders.Data
         public const string RoastedMilkTeaImageSource = "/Images/roasted-milk-tea.jpg";
         public const int RoastedMilkTeaCalories = 450;
         public const float RoastedMilkTeaPrice = 5.25F;
+        public const string RoastedMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> RoastedMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string TaroMilkTeaTitle = "Taro Milk Tea";
@@ -149,6 +168,7 @@ namespace Spaghetti_Coders.Data
         public const int TaroMilkTeaCalories = 278;
         public const float TaroMilkTeaPrice = 5.25F;
         public const float TaroMilkTeaDiscount = 1.00F;
+        public const string TaroMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Drinks };
 
         public static List<FoodItem> GetFoodItemList()
@@ -163,6 +183,7 @@ namespace Spaghetti_Coders.Data
                     Calories = SpicyRamenCalories,
                     Price = SpicyRamenPrice,
                     Discount = SpicyRamenDiscount,
+                    Quantity = SpicyRamenQuantity,
                     Categories = SpicyRamenCategories
                 },
                 new FoodItem
@@ -173,6 +194,7 @@ namespace Spaghetti_Coders.Data
                     Calories = TempuraCalories,
                     Price = TempuraPrice,
                     Discount = TempuraDiscount,
+                    Quantity = TempuraQuantity,
                     Categories = TempuraCategories
                 },
                 new FoodItem
@@ -181,6 +203,7 @@ namespace Spaghetti_Coders.Data
                     Description = MisoRamenDescription,
                     ImageSource = new BitmapImage( new Uri( MisoRamenImageSource, UriKind.Relative ) ),
                     Price = MisoRamenPrice,
+                    Quantity = MisoRamenQuantity,
                     Categories = MisoRamenCategories
                 },
                 new FoodItem
@@ -190,6 +213,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( CaliforniaRollImageSource, UriKind.Relative ) ),
                     Calories = CaliforniaRollCalories,
                     Price = CaliforniaRollPrice,
+                    Quantity = CaliforniaRollQuantity,
                     Categories = CaliforniaRollCategories
                 },
                 new FoodItem
@@ -199,6 +223,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( TunaRollImageSource, UriKind.Relative ) ),
                     Calories = TunaRollCalories,
                     Price = TunaRollPrice,
+                    Quantity = TunaRollQuantity,
                     Categories = TunaRollCategories
                 },
                 new FoodItem
@@ -208,6 +233,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( SalmonSushiRollImageSource, UriKind.Relative ) ),
                     Calories = SalmonSushiRollCalories,
                     Price = SalmonSushiRollPrice,
+                    Quantity = SalmonSushiRollQuantity,
                     Categories = SalmonSushiRollCategories
                 },
                 new FoodItem
@@ -217,6 +243,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( SalmonSushiImageSource, UriKind.Relative ) ),
                     Calories = SalmonSushiCalories,
                     Price = SalmonSushiPrice,
+                    Quantity = SalmonSushiQuantity,
                     Categories = SalmonSushiCategories
                 },
                 new FoodItem
@@ -226,6 +253,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( AgedashiTofuWithBrothImageSource, UriKind.Relative ) ),
                     Calories = AgedashiTofuWithBrothCalories,
                     Price = AgedashiTofuWithBrothPrice,
+                    Quantity = AgedashiTofuWithBrothQuantity,
                     Categories = AgedashiTofuWithBrothCategories
                 },
                 new FoodItem
@@ -235,6 +263,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( JapanesePancakesImageSource, UriKind.Relative ) ),
                     Calories = JapanesePancakesCalories,
                     Price = JapanesePancakesPrice,
+                    Quantity = JapanesePancakesQuantity,
                     Categories = JapanesePancakesCategories
                 },
                 new FoodItem
@@ -244,6 +273,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( KaraageImageSource, UriKind.Relative ) ),
                     Calories = KaraageCalories,
                     Price = KaraagePrice,
+                    Quantity = KaraageQuantity,
                     Categories = KaraageCategories
                 },
                 new FoodItem
@@ -253,6 +283,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( GreenTeaIceCreamImageSource, UriKind.Relative ) ),
                     Calories = GreenTeaCalories,
                     Price = GreenTeaIceCreamPrice,
+                    Quantity = GreenTeaIceCreamQuantity,
                     Categories = GreenTeaIceCreamCategories
                 },
                 new FoodItem
@@ -262,6 +293,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( IceCreamMochiImageSource, UriKind.Relative ) ),
                     Calories = IceCreamMochiCalories,
                     Price = IceCreamMochiPrice,
+                    Quantity = IceCreamMochiQuantity,
                     Categories = IceCreamMochiCategories
                 },
                 new FoodItem
@@ -271,6 +303,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( StrawberryChocolateMochiImageSource, UriKind.Relative ) ),
                     Calories = StrawberryChocolateMochiCalories,
                     Price = StrawberryChocolateMochiPrice,
+                    Quantity = StrawberryChocolateMochiQuantity,
                     Categories = StrawberryChocolateMochiCategories
                 },
                 new FoodItem
@@ -280,6 +313,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( TaiyakiImageSource, UriKind.Relative ) ),
                     Calories = TaiyakiCalories,
                     Price = TaiyakiPrice,
+                    Quantity = TaiyakiQuantity,
                     Categories = TaiyakiCategories
                 },
                 new FoodItem
@@ -289,6 +323,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( CoffeeMilkTeaImageSource, UriKind.Relative ) ),
                     Calories = CoffeeMilkTeaCalories,
                     Price = CoffeeMilkTeaPrice,
+                    Quantity = CoffeeMilkTeaQuantity,
                     Categories = CoffeeMilkTeaCategories
                 },
                 new FoodItem
@@ -298,6 +333,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( GreenTeaImageSource, UriKind.Relative ) ),
                     Calories = GreenTeaCalories,
                     Price = GreenTeaPrice,
+                    Quantity = GreenTeaQuantity,
                     Categories = GreenTeaCategories
                 },
                 new FoodItem
@@ -307,6 +343,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( HotMatchaLatteImageSource, UriKind.Relative ) ),
                     Calories = HotMatchaLatteCalories,
                     Price = HotMatchaLattePrice,
+                    Quantity = HotMatchaLatteQuantity,
                     Categories = HotMatchaLatteCategories
                 },
                 new FoodItem
@@ -316,6 +353,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( OriginalMilkTeaImageSource, UriKind.Relative ) ),
                     Calories = OriginalMilkTeaCalories,
                     Price = OriginalMilkTeaPrice,
+                    Quantity = OriginalMilkTeaQuantity,
                     Categories = OriginalMilkTeaCategories
                 },
                 new FoodItem
@@ -325,6 +363,7 @@ namespace Spaghetti_Coders.Data
                     ImageSource = new BitmapImage( new Uri( RoastedMilkTeaImageSource, UriKind.Relative ) ),
                     Calories = RoastedMilkTeaCalories,
                     Price = RoastedMilkTeaPrice,
+                    Quantity = RoastedMilkTeaQuantity,
                     Categories = RoastedMilkTeaCategories
                 },
                 new FoodItem
@@ -335,6 +374,7 @@ namespace Spaghetti_Coders.Data
                     Calories = TaroMilkTeaCalories,
                     Price = TaroMilkTeaPrice,
                     Discount = TaroMilkTeaDiscount,
+                    Quantity = TaroMilkTeaQuantity,
                     Categories = TaroMilkTeaCategories
                 }
             };

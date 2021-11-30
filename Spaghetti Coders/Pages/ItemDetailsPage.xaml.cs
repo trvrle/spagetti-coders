@@ -59,7 +59,7 @@ namespace Spaghetti_Coders.Pages
                 string numberOfCalories = caloriesText.Substring( caloriesText.IndexOf( ':' ) + 1 );
                 return int.Parse(numberOfCalories); 
             }
-            set { SetValue( CaloriesProperty, $"Calories : {value.ToString()}" ); }
+            set { SetValue( CaloriesProperty, $"Calories : {value}" ); }
         }
 
         public static readonly DependencyProperty PriceProperty =
@@ -68,7 +68,7 @@ namespace Spaghetti_Coders.Pages
         public float Price
         {
             get { return float.Parse( ( (string)GetValue( PriceProperty ) ).Replace( "$", "" ) ); }
-            set { SetValue( PriceProperty, $"${value.ToString("0.00")}" ); }
+            set { SetValue( PriceProperty, $"${value:0.00}" ); }
         }
 
         public float? Discount { get; set; }

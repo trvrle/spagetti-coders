@@ -55,10 +55,19 @@ namespace Spaghetti_Coders.Controls
         public float Price
         {
             get { return float.Parse(((string)GetValue( PriceProperty )).Replace("$", "")); }
-            set { SetValue( PriceProperty, $"${value.ToString( "0.00" )}" ); }
+            set { SetValue( PriceProperty, $"${value:0.00}" ); }
         }
 
         public float? Discount { get; set; }
+
+        public static readonly DependencyProperty QuantityProperty =
+            DependencyProperty.Register( "Quantity", typeof( string ), typeof( FoodItem ), new PropertyMetadata( string.Empty ) );
+
+        public string Quantity
+        {
+            get { return ((string)GetValue( QuantityProperty )).Remove(0); }
+            set { SetValue( QuantityProperty, $"/{value}" ); }
+        }
 
         public static readonly RoutedEvent ClickEvent =
             EventManager.RegisterRoutedEvent( nameof(Click), RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof( FoodItem ) );
@@ -86,7 +95,7 @@ namespace Spaghetti_Coders.Controls
             }
 
             float discountedPrice = Price - Discount.Value;
-            DiscountedPriceTextBlock.Text = $"${discountedPrice.ToString( "0.00" )}";
+            DiscountedPriceTextBlock.Text = $"${discountedPrice:0.00}";
             DiscountedPriceTextBlock.Visibility = Visibility.Visible;
         }
 
