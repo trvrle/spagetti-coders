@@ -40,20 +40,29 @@ namespace Spaghetti_Coders.Controls
         }
 
         public int amount = 0;
+        public decimal price = 0;
+        public decimal testprice = 12.99M;
         private void decreaseClick(object sender, RoutedEventArgs e)
         {
             if (amount > 0)
             {
                 amount--;
+            
             }
 
+            if (amount != 0) { price -=testprice; }
+            else { price = 0; }
+            
+
+            itemPrice.Text = "$" + price.ToString();
             Quantity.Content = amount.ToString();
         }
 
         private void increaseClick(object sender, RoutedEventArgs e)
         {
             amount++;
-
+            price += testprice;
+            itemPrice.Text = "$" + price.ToString();
             Quantity.Content = amount.ToString();
         }
     }
