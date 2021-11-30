@@ -37,5 +37,23 @@ namespace Spaghetti_Coders.Controls
         {
             
         }
+
+        public int amount = 0;
+        private void decreaseClick(object sender, RoutedEventArgs e)
+        {
+            if (amount > 0)
+            {
+                amount--;
+            }
+
+            Quantity.Content = amount.ToString();
+        }
+
+        private void increaseClick(object sender, RoutedEventArgs e)
+        {
+            amount++;
+
+            Quantity.Content = amount.ToString();
+        }
     }
 }

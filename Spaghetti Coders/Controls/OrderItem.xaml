@@ -41,11 +41,11 @@
                 <RowDefinition Height="13*"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" FontSize="30" TextWrapping="Wrap" Text="Spicy Ramen"  FontWeight="Bold" Margin="0,-1,0,0" Width="190" VerticalAlignment="Center"   />
-            <Label x:Name="Quantity" Content="1" Grid.Row="1" FontSize="30"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" Margin="-100,0,50,0" FlowDirection="LeftToRight"  Grid.Row="1" >
+            <Label x:Name="Quantity" Content="" Grid.Row="1" FontSize="30"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="decrease" Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" Margin="-100,0,50,0" FlowDirection="LeftToRight"  Grid.Row="1" Click="decreaseClick" >
                 <Image Height="40" Width="40" Source="/Images/left.png"/>
             </Button>
-            <Button Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Margin="30,0,-110,0" Grid.Row="1" >
+            <Button x:Name="increase" Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Margin="30,0,-110,0" Grid.Row="1" Click="increaseClick" >
                 <Image Height="40" Width="40" Source="/Images/right.png"/>
             </Button>
             <Grid Grid.Row="3">

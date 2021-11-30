@@ -97,6 +97,9 @@ namespace Spaghetti_Coders.Pages
         private void ItemClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new OrderPage());
+            OrderItem item = new OrderItem();
+            item.amount = 1;
+            item.Quantity.Content = item.amount.ToString();
         }
 
         private void ModClick(object sender, RoutedEventArgs e)
