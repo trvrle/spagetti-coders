@@ -40,7 +40,54 @@
 
             <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
 
-            <TextBlock Grid.Row="8" FontSize="20" FontStyle="Italic" FontWeight="Medium" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Price, ElementName=root}" />
+            <Grid 
+                Grid.Row="8"
+                HorizontalAlignment="Center"
+                Margin="20,0,20,0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    x:Name="DiscountedPriceTextBlock"
+                    FontSize="20" 
+                    FontStyle="Italic" 
+                    FontWeight="Medium"
+                    Visibility="Hidden"
+                    Foreground="Red"/>
+
+                <TextBlock 
+                    x:Name="PriceTextBlock"
+                    Grid.Column="1"
+                    Margin="5 0 0 0" 
+                    FontSize="20" 
+                    FontStyle="Italic"
+                    FontWeight="Medium" 
+                    HorizontalAlignment="Center" 
+                    Text="{Binding Price, ElementName=root}">
+
+                    <TextBlock.TextDecorations>
+                        <TextDecoration Location="Strikethrough">
+                            <TextDecoration.Pen>
+                                <Pen Brush="Red" Thickness="3"/>
+                            </TextDecoration.Pen>
+                        </TextDecoration>
+                    </TextBlock.TextDecorations>
+
+                </TextBlock>
+                
+                <TextBlock
+                    x:Name="QuantityTextBlock"
+                    Grid.Column="2"
+                    FontSize="20"
+                    FontStyle="Italic"
+                    FontWeight="Medium"
+                    Text="{Binding Quantity, ElementName=root}"/>
+
+            </Grid>
 
             <Button x:Name="ModifyItem" Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,0,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174" Click="ModClick"/>
 

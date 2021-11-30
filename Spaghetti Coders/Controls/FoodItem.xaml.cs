@@ -65,7 +65,7 @@ namespace Spaghetti_Coders.Controls
 
         public string Quantity
         {
-            get { return ((string)GetValue( QuantityProperty )).Remove(0); }
+            get { return ((string)GetValue( QuantityProperty )).Substring(1); }
             set { SetValue( QuantityProperty, $"/{value}" ); }
         }
 

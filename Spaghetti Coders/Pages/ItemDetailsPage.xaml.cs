@@ -73,6 +73,15 @@ namespace Spaghetti_Coders.Pages
 
         public float? Discount { get; set; }
 
+        public static readonly DependencyProperty QuantityProperty =
+            DependencyProperty.Register( "Quantity", typeof( string ), typeof( ItemDetailsPage ), new PropertyMetadata( string.Empty ) );
+
+        public string Quantity
+        {
+            get { return ( (string)GetValue( QuantityProperty ) ).Remove( 0 ); }
+            set { SetValue( QuantityProperty, $"/{value}" ); }
+        }
+
         public ItemDetailsPage()
         {
             InitializeComponent();
@@ -87,6 +96,17 @@ namespace Spaghetti_Coders.Pages
             Calories = foodItem.Calories;
             Price = foodItem.Price;
             Discount = foodItem.Discount;
+            Quantity = foodItem.Quantity;
+
+            if ( !Discount.HasValue )
+            {
+                PriceTextBlock.TextDecorations = null;
+                return;
+            }
+
+            float discountedPrice = Price - Discount.Value;
+            DiscountedPriceTextBlock.Text = $"${discountedPrice:0.00}";
+            DiscountedPriceTextBlock.Visibility = Visibility.Visible;
         }
 
         private void BackButton_Click( object sender, RoutedEventArgs e )

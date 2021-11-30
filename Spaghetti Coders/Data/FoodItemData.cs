@@ -127,7 +127,7 @@ namespace Spaghetti_Coders.Data
         public const string CoffeeMilkTeaImageSource = "/Images/coffee-milk-tea.jpg";
         public const int CoffeeMilkTeaCalories = 320;
         public const float CoffeeMilkTeaPrice = 5.25F;
-        public const string CoffeeMilkTeaQuantity = "drink with boba";
+        public const string CoffeeMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
 
         public const string GreenTeaTitle = "Green Tea";
