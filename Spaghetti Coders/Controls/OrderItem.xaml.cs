@@ -35,7 +35,8 @@ namespace Spaghetti_Coders.Controls
 
         private void EditClick(object sender, RoutedEventArgs e)
         {
-            
+  
+
         }
 
         public int amount = 0;

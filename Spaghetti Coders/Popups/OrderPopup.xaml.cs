@@ -21,6 +21,7 @@ namespace Spaghetti_Coders.Popups
         public OrderPopup()
         {
             InitializeComponent();
+            this.Owner = App.Current.MainWindow;
         }
        
     }
