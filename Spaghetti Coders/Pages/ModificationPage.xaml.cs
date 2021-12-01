@@ -38,26 +38,34 @@ namespace Spaghetti_Coders.Pages
 
         private void ModificationPageLoaded(object sender, RoutedEventArgs e)
         {
+            NoMods.Visibility = Visibility.Hidden;
+
             List<FoodItem> FoodItemList = FoodItemData.GetFoodItemList();
             Dictionary<string, List<string>> modifications = FoodItemList.Find(item => item.Title == Title).Modifications;
 
-            foreach (KeyValuePair<string, List<string>> mod in modifications)
-            { 
-                
-                String ModificationName = mod.Key;
-                List<string> ModificationValues = mod.Value;
+            if(modifications.Count != 0)
+            {
+                foreach (KeyValuePair<string, List<string>> mod in modifications)
+                {
 
-                ModificationButtons button = new ModificationButtons {
-                    RadioName = mod.Key,
-                    Select = mod.Key,
-                    ModOne = mod.Value[0],
-                    ModTwo = mod.Value[1],
-                    ModThree = mod.Value[2]
-                };
+                    String ModificationName = mod.Key;
+                    List<string> ModificationValues = mod.Value;
 
-                ModificationList.Children.Add(button);
+                    ModificationButtons button = new ModificationButtons
+                    {
+                        RadioName = mod.Key,
+                        Select = mod.Key,
+                        ModOne = mod.Value[0],
+                        ModTwo = mod.Value[1],
+                        ModThree = mod.Value[2]
+                    };
+
+                    ModificationList.Children.Add(button);
+                }
+            } else
+            {
+                NoMods.Visibility = Visibility.Visible;
             }
-       
         }
 
         public static readonly DependencyProperty TitleProperty =
