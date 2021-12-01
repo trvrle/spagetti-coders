@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spaghetti_Coders.Controls;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -10,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Spaghetti_Coders.Pages
 {
@@ -21,6 +23,32 @@ namespace Spaghetti_Coders.Pages
         public ModificationPage()
         {
             InitializeComponent();
+        }
+
+        public ModificationPage(FoodItem foodItem)
+        {
+            InitializeComponent();
+            ImageSource = foodItem.ImageSource;
+            Title = foodItem.Title;
+            Debug.WriteLine("Title: " + Title);
+        }
+
+        public static readonly DependencyProperty TitleProperty =
+             DependencyProperty.Register("Title", typeof(string), typeof(ModificationPage), new PropertyMetadata(string.Empty));
+
+        public string Title
+        {
+            get { return (string)GetValue(TitleProperty); }
+            set { SetValue(TitleProperty, value); }
+        }
+
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register("ImageSource", typeof(ImageSource), typeof(ModificationPage), new PropertyMetadata(null));
+
+        public ImageSource ImageSource
+        {
+            get { return (ImageSource)GetValue(ImageSourceProperty); }
+            set { SetValue(ImageSourceProperty, value); }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,10 +63,35 @@ namespace Spaghetti_Coders.Pages
             }
 
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        // Opening keyboard + textbox
+        private void Extra_Click_Open(object sender, EventArgs e)
+        {
+            Extra.Visibility = Visibility.Visible;
+            Extra1.Text = (sender as TextBox).Text;
+            Keyboard.Visibility = Visibility.Visible;
+        }
+
+        // Closing keyboard + textbox and moving text to first textbox
+        private void Extra_Click_Close(object sender, EventArgs e)
+        {
+            Extra.Visibility = Visibility.Hidden;
+            Keyboard.Visibility = Visibility.Hidden;
+            Extra1.Text = (sender as TextBox).Text;
+            Extra1.Foreground = Brushes.Black;
+        }
+
+        // Start close event when enter is clicked
+        private void KeyTest(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Extra_Click_Close(sender, e);
+            }
         }
     }
 }

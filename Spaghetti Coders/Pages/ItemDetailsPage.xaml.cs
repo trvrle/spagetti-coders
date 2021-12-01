@@ -124,7 +124,19 @@ namespace Spaghetti_Coders.Pages
 
         private void ModClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ModificationPage());
+            NavigationService.Navigate(
+                new ModificationPage(
+                    new FoodItem
+                    {
+                        Title = Title,
+                        Description = Description,
+                        ImageSource = ImageSource,
+                        Price = Price,
+                        Discount = Discount,
+                        Quantity = Quantity
+                    }
+                )
+            );
         }
     }
 }
