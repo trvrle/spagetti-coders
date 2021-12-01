@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Spaghetti_Coders.Pages" xmlns:local1="clr-namespace:Spaghetti_Coders.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="400"
-      Title="MainPage">
+      Title="MainPage"
+      FontFamily="MV Boli">
 
     <Grid>
 

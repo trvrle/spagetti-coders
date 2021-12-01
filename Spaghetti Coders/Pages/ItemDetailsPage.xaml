@@ -5,7 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="400"
-      x:Name="root">
+      x:Name="root"
+      FontFamily="MV Boli">
     <Grid Background="White">
 
         <Grid.ColumnDefinitions>
@@ -36,9 +37,9 @@
 
             <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 
-            <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextWrapping="Wrap" Margin="25,30,25,0" Text="{Binding Description, ElementName=root}" />
+            <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextAlignment="Center" TextWrapping="Wrap" Margin="25,30,25,0" Text="{Binding Description, ElementName=root}" />
 
-            <TextBlock Grid.Row="6" FontSize="15" FontStyle="Italic" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
+            <TextBlock Grid.Row="6" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
 
             <Grid 
                 Grid.Row="8"
@@ -54,7 +55,6 @@
                 <TextBlock
                     x:Name="DiscountedPriceTextBlock"
                     FontSize="20" 
-                    FontStyle="Italic" 
                     FontWeight="Medium"
                     Visibility="Hidden"
                     Foreground="Red"/>
@@ -64,7 +64,6 @@
                     Grid.Column="1"
                     Margin="5 0 0 0" 
                     FontSize="20" 
-                    FontStyle="Italic"
                     FontWeight="Medium" 
                     HorizontalAlignment="Center" 
                     Text="{Binding Price, ElementName=root}">
@@ -83,7 +82,6 @@
                     x:Name="QuantityTextBlock"
                     Grid.Column="2"
                     FontSize="20"
-                    FontStyle="Italic"
                     FontWeight="Medium"
                     Text="{Binding Quantity, ElementName=root}"/>
 

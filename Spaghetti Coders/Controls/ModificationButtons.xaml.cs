@@ -60,8 +60,8 @@ namespace Spaghetti_Coders.Controls
 
         public string RadioName
         {
-            get { return (string)GetValue(NameProperty); }
-            set { SetValue(NameProperty, value); }
+            get { return (string)GetValue( RadioNameProperty ); }
+            set { SetValue( RadioNameProperty, value); }
         }
 
         public ModificationButtons()

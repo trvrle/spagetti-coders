@@ -28,7 +28,7 @@ namespace Spaghetti_Coders.Data
                 }
             },
             {
-                "Green_Onion",
+                "Green Onion",
                 new List<string>
                 {
                     "None",
