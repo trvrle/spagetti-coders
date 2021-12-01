@@ -19,34 +19,44 @@
         <TextBlock HorizontalAlignment="Center" 
             Text="{Binding Select, ElementName=root}" 
             Grid.Column="1" 
-            Margin="0,6"
-            FontSize="14" />
+            Margin="0,0,13,6"
+            FontSize="17"
+            Height="45"
+            TextDecorations="Underline"
+            FontFamily="MV Boli"/>
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="0"
-                     Margin="0,0,0,-26"
-                     GroupName="{Binding RadioName, ElementName=root}">
+                     Margin="-13,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}"
+                     Height="20"
+                     FontFamily="MV Boli">
             <TextBlock Text="{Binding ModOne, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="1"
-                     Margin="0,0,0,-26"
-                     GroupName="{Binding RadioName, ElementName=root}">
+                     Margin="-13,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}"
+                     Height="20"
+                     FontFamily="MV Boli"
+                     IsChecked="True">
             <TextBlock Text="{Binding ModTwo, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
         <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="2"
-                     Margin="0,0,0,-26"
-                     GroupName="{Binding RadioName, ElementName=root}">
+                     Margin="-13,0,0,-26"
+                     GroupName="{Binding RadioName, ElementName=root}"
+                     Height="20"
+                     FontFamily="MV Boli">
             <TextBlock Text="{Binding ModThree, ElementName=root}"
-                       FontSize="20"
-                       Margin="0,-6"/>
+                       FontSize="14"
+                       Margin="0,-2"/>
         </RadioButton>
 
 
