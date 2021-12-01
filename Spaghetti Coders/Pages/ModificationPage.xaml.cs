@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using Spaghetti_Coders.Data;
 
 namespace Spaghetti_Coders.Pages
 {
@@ -30,7 +31,33 @@ namespace Spaghetti_Coders.Pages
             InitializeComponent();
             ImageSource = foodItem.ImageSource;
             Title = foodItem.Title;
-            Debug.WriteLine("Title: " + Title);
+
+            Loaded += ModificationPageLoaded;
+
+        }
+
+        private void ModificationPageLoaded(object sender, RoutedEventArgs e)
+        {
+            List<FoodItem> FoodItemList = FoodItemData.GetFoodItemList();
+            Dictionary<string, List<string>> modifications = FoodItemList.Find(item => item.Title == Title).Modifications;
+
+            foreach (KeyValuePair<string, List<string>> mod in modifications)
+            { 
+                
+                String ModificationName = mod.Key;
+                List<string> ModificationValues = mod.Value;
+
+                ModificationButtons button = new ModificationButtons {
+                    RadioName = mod.Key,
+                    Select = mod.Key,
+                    ModOne = mod.Value[0],
+                    ModTwo = mod.Value[1],
+                    ModThree = mod.Value[2]
+                };
+
+                ModificationList.Children.Add(button);
+            }
+       
         }
 
         public static readonly DependencyProperty TitleProperty =
