@@ -80,6 +80,8 @@ namespace Spaghetti_Coders.Controls
 
         public List<FoodCategory> Categories;
 
+        public Dictionary<string, List<string>> Modifications { get; set; }
+
         public FoodItem()
         {
             InitializeComponent();
