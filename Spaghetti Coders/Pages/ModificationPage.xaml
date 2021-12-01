@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Spaghetti_Coders.Controls"
              mc:Ignorable="d" 
-             d:DesignHeight="700" d:DesignWidth="400">
+             d:DesignHeight="700" d:DesignWidth="400"
+             x:Name="root">
     <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
         <Grid Background="#deafb3">
@@ -69,50 +70,13 @@
 
 
             <ScrollViewer Grid.Row="5" CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
-                <Grid Grid.Row="5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition />
-                    </Grid.RowDefinitions>
+                <StackPanel x:Name="ModificationList" 
+                            Grid.Row="1" 
+                            Orientation="Vertical"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Center">
 
-                    <local:ModificationButtons
-                        Grid.Row="0"
-                        Select="Spice"
-                        ModOne="None"
-                        ModTwo="Normal"
-                        ModThree="Extra"
-                        RadioName="Spice"/>
-
-                    <local:ModificationButtons
-                        Grid.Row="1"
-                        Select="Green Onion"
-                        ModOne="None"
-                        ModTwo="Normal"
-                        ModThree="Extra"
-                        RadioName="Green Onion"/>
-
-                    <local:ModificationButtons
-                        Grid.Row="2"
-                        Select="Egg"
-                        ModOne="None"
-                        ModTwo="One"
-                        ModThree="Two"
-                        RadioName="Egg"/>
-
-                    <local:ModificationButtons
-                        Grid.Row="3"
-                        Select="Soup"
-                        ModOne="None"
-                        ModTwo="Normal"
-                        ModThree="Extra"
-                        RadioName="Soup"/>
-
-                </Grid>
-
+                </StackPanel>
             </ScrollViewer>
             <Button x:Name="AddItem" Content="Add Item" 
                     HorizontalAlignment="Center" 
