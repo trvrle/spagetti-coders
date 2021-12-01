@@ -28,7 +28,7 @@ namespace Spaghetti_Coders.Data
                 }
             },
             {
-                "Green Onion",
+                "Green_Onion",
                 new List<string>
                 {
                     "None",
@@ -42,7 +42,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "One",
-                    "Two (+2)"
+                    "Two (+1)"
                 }
             },
             {
@@ -84,6 +84,36 @@ namespace Spaghetti_Coders.Data
         public const float MisoRamenPrice = 12.99F;
         public const string MisoRamenQuantity = "bowl";
         public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> MisoRamenModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Green_Onion",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Egg",
+                new List<string>
+                {
+                    "None",
+                    "One",
+                    "Two (+1)"
+                }
+            },
+            {
+                "Sesame",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string CaliforniaRollTitle = "California Roll";
         public const string CaliforniaRollDescription = "California Rolls with a layer of rice on the outside and a sheet of nori on the inside, and include avocado, imitation crab, cucumber, and tobiko (flying fish roe).";
@@ -92,6 +122,27 @@ namespace Spaghetti_Coders.Data
         public const float CaliforniaRollPrice = 8.99F;
         public const string CaliforniaRollQuantity = "8 pcs";
         public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> {FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> CaliforniaRollModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Imitation_Crab",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "tobiko_(flying_fish_roe)",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string TunaRollTitle = "Tuna Roll";
         public const string TunaRollDescription = "Tuna Rolls with sashimi grade tuna tossed in sesame Sriracha sauce, topped with spicy mayo.";
@@ -100,6 +151,18 @@ namespace Spaghetti_Coders.Data
         public const float TunaRollPrice = 12.99F;
         public const string TunaRollQuantity = "9 pcs";
         public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> TunaRollModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Spicy_Mayo",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string SalmonSushiRollTitle = "Salmon Sushi Roll";
         public const string SalmonSushiRollDescription = "Tuna Rolls with sashimi grade tuna tossed in sesame Sriracha sauce, topped with spicy mayo.";
@@ -108,6 +171,18 @@ namespace Spaghetti_Coders.Data
         public const float SalmonSushiRollPrice = 12.99F;
         public const string SalmonSushiRollQuantity = "8 pcs";
         public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> SalmonSushiRollModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Spicy_Mayo",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string SalmonSushiTitle = "Salmon Sushi";
         public const string SalmonSushiDescription = "A ball of sushi rice containing vinegar topped with a slice of salmon.";
@@ -116,6 +191,10 @@ namespace Spaghetti_Coders.Data
         public const float SalmonSushiPrice = 8.99F;
         public const string SalmonSushiQuantity = "4 pcs";
         public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> SalmonSushiModifications = new Dictionary<string, List<string>>
+        {
+
+        };
 
         public const string AgedashiTofuWithBrothTitle = "Agedashi Tofu with Broth";
         public const string AgedashiTofuWithBrothDescription = "Agedashi Tofu is soft tofu coated with potato starch and deep-fried so that the outer shell is crispy.";
@@ -124,6 +203,18 @@ namespace Spaghetti_Coders.Data
         public const float AgedashiTofuWithBrothPrice = 6.99F;
         public const string AgedashiTofuWithBrothQuantity = "bowl";
         public static readonly List<FoodCategory> AgedashiTofuWithBrothCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly Dictionary<string, List<string>> AgedashiTofuWithBrothModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Broth",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string JapanesePancakesTitle = "Japanese Pancakes";
         public const string JapanesePancakesDescription = "Japanese savory pancakes made with shredded cabbage, flour, eggs, and water.";
@@ -132,6 +223,18 @@ namespace Spaghetti_Coders.Data
         public const float JapanesePancakesPrice = 7.99F;
         public const string JapanesePancakesQuantity = "2 pcs";
         public static readonly List<FoodCategory> JapanesePancakesCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly Dictionary<string, List<string>> JapanesePancakesModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Cabbage",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string KaraageTitle = "Karaage";
         public const string KaraageDescription = "Chicken thigh coated in potato starch and deep-friend in hot oil until crispy.";
@@ -140,6 +243,18 @@ namespace Spaghetti_Coders.Data
         public const float KaraagePrice = 11.50F;
         public const string KaraageQuantity = "10 pcs";
         public static readonly List<FoodCategory> KaraageCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly Dictionary<string, List<string>> KaraageModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Dipping_Sauce",
+                new List<string>
+                {
+                    "None",
+                    "One",
+                    "Two"
+                }
+            }
+        };
 
         public const string GreenTeaIceCreamTitle = "Green Tea Ice Cream";
         public const string GreenTeaIceCreamDescription = "Matcha green tea flavored ice cream";
@@ -148,6 +263,10 @@ namespace Spaghetti_Coders.Data
         public const float GreenTeaIceCreamPrice = 3.99F;
         public const string GreenTeaIceCreamQuantity = "scoop";
         public static readonly List<FoodCategory> GreenTeaIceCreamCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly Dictionary<string, List<string>> GreenTeaIceCreamModifications = new Dictionary<string, List<string>>
+        {
+
+        };
 
         public const string IceCreamMochiTitle = "Ice Cream Mochi";
         public const string IceCreamMochiDescription = "Consists of small, round confections that have a soft, pounded sticky rice dumpling (mochi) formed around an ice cream filling. The ice cream flavors the confection while the mochi adds sweetness and texture.";
@@ -156,6 +275,10 @@ namespace Spaghetti_Coders.Data
         public const float IceCreamMochiPrice = 9.50F;
         public const string IceCreamMochiQuantity = "4 confections";
         public static readonly List<FoodCategory> IceCreamMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly Dictionary<string, List<string>> IceCreamMochiModifications = new Dictionary<string, List<string>>
+        {
+
+        };
 
         public const string StrawberryChocolateMochiTitle = "Strawberry Chocolate Mochi";
         public const string StrawberryChocolateMochiDescription = "Fresh strawberries dipped in melted milk chocolate and wrapped in mochi rice cakes.";
@@ -164,6 +287,10 @@ namespace Spaghetti_Coders.Data
         public const float StrawberryChocolateMochiPrice = 7.50F;
         public const string StrawberryChocolateMochiQuantity = "4 confections";
         public static readonly List<FoodCategory> StrawberryChocolateMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly Dictionary<string, List<string>> StrawberryChocolateMochiModifications = new Dictionary<string, List<string>>
+        {
+
+        };
 
         public const string TaiyakiTitle = "Taiyaki";
         public const string TaiyakiDescription = "Japanese fish-shapped cake that contains red bean paste as filling. This paste is made from sweetened azuki beans.";
@@ -172,6 +299,10 @@ namespace Spaghetti_Coders.Data
         public const float TaiyakiPrice = 3.99F;
         public const string TaiyakiQuantity = "taiyaki";
         public static readonly List<FoodCategory> TaiyakiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly Dictionary<string, List<string>> TaiyakiModifications = new Dictionary<string, List<string>>
+        {
+
+        };
 
         public const string CoffeeMilkTeaTitle = "Coffee Milk Tea";
         public const string CoffeeMilkTeaDescription = "Black tea is brewed directly in milk with sugar, then combined with brewed coffee.";
@@ -180,6 +311,36 @@ namespace Spaghetti_Coders.Data
         public const float CoffeeMilkTeaPrice = 5.25F;
         public const string CoffeeMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> CoffeeMilkTeaModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Pearls",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Ice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string GreenTeaTitle = "Green Tea";
         public const string GreenTeaDescription = "Green tea is slightly sweet and leaves a refreshing aftertaste.";
@@ -188,6 +349,27 @@ namespace Spaghetti_Coders.Data
         public const float GreenTeaPrice = 1.99F;
         public const string GreenTeaQuantity = "teapot";
         public static readonly List<FoodCategory> GreenTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> GreenTeaModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Ice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string HotMatchaLatteTitle = "Hot Matcha Latte";
         public const string HotMatchaLatteDescription = "Tea-based beverage combining vivid green matcha tea powder and milk to create a smooth, creamy latte.";
@@ -196,6 +378,18 @@ namespace Spaghetti_Coders.Data
         public const float HotMatchaLattePrice = 3.25F;
         public const string HotMatchaLatteQuantity = "mug";
         public static readonly List<FoodCategory> HotMatchaLatteCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> HotMatchaLatteModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string OriginalMilkTeaTitle = "Original Milk Tea";
         public const string OriginalMilkTeaDescription = "Our signature original milk tea comes with freshly brewed tea and cooked pearls every 2 hours! The tea has a rich flavor that goes perfectly with milk. There is a variety of toppings and sweeteners available.";
@@ -204,6 +398,36 @@ namespace Spaghetti_Coders.Data
         public const float OriginalMilkTeaPrice = 5.25F;
         public const string OriginalMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> OriginalMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> OriginalMilkTeaModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Pearls",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Ice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string RoastedMilkTeaTitle = "Roasted Milk Tea";
         public const string RoastedMilkTeaDescription = "This milk tea uses a special roasted brown sugar to create a sweet, bold, and robust flavor.";
@@ -212,6 +436,36 @@ namespace Spaghetti_Coders.Data
         public const float RoastedMilkTeaPrice = 5.25F;
         public const string RoastedMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> RoastedMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> RoastedMilkTeaModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Pearls",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Ice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string TaroMilkTeaTitle = "Taro Milk Tea";
         public const string TaroMilkTeaDescription = "The taro milk tea combines jasmine tea with taro flavoring to create a very sweet taste, with a slight hint of vanilla.";
@@ -221,6 +475,36 @@ namespace Spaghetti_Coders.Data
         public const float TaroMilkTeaDiscount = 1.00F;
         public const string TaroMilkTeaQuantity = "drink w/ boba";
         public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Drinks };
+        public static readonly Dictionary<string, List<string>> TaroMilkTeaModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Pearls",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Sweetness",
+                new List<string>
+                {
+                    "Less",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Ice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public static List<FoodItem> GetFoodItemList()
         {
@@ -258,7 +542,8 @@ namespace Spaghetti_Coders.Data
                     Calories = MisoRamenCalories,
                     Price = MisoRamenPrice,
                     Quantity = MisoRamenQuantity,
-                    Categories = MisoRamenCategories
+                    Categories = MisoRamenCategories,
+                    Modifications = MisoRamenModifications
                 },
                 new FoodItem
                 {
@@ -268,7 +553,8 @@ namespace Spaghetti_Coders.Data
                     Calories = CaliforniaRollCalories,
                     Price = CaliforniaRollPrice,
                     Quantity = CaliforniaRollQuantity,
-                    Categories = CaliforniaRollCategories
+                    Categories = CaliforniaRollCategories,
+                    Modifications = CaliforniaRollModifications
                 },
                 new FoodItem
                 {
@@ -278,7 +564,8 @@ namespace Spaghetti_Coders.Data
                     Calories = TunaRollCalories,
                     Price = TunaRollPrice,
                     Quantity = TunaRollQuantity,
-                    Categories = TunaRollCategories
+                    Categories = TunaRollCategories,
+                    Modifications = TunaRollModifications
                 },
                 new FoodItem
                 {
@@ -288,7 +575,8 @@ namespace Spaghetti_Coders.Data
                     Calories = SalmonSushiRollCalories,
                     Price = SalmonSushiRollPrice,
                     Quantity = SalmonSushiRollQuantity,
-                    Categories = SalmonSushiRollCategories
+                    Categories = SalmonSushiRollCategories,
+                    Modifications = SalmonSushiRollModifications
                 },
                 new FoodItem
                 {
@@ -298,7 +586,8 @@ namespace Spaghetti_Coders.Data
                     Calories = SalmonSushiCalories,
                     Price = SalmonSushiPrice,
                     Quantity = SalmonSushiQuantity,
-                    Categories = SalmonSushiCategories
+                    Categories = SalmonSushiCategories,
+                    Modifications = SalmonSushiModifications
                 },
                 new FoodItem
                 {
@@ -308,7 +597,8 @@ namespace Spaghetti_Coders.Data
                     Calories = AgedashiTofuWithBrothCalories,
                     Price = AgedashiTofuWithBrothPrice,
                     Quantity = AgedashiTofuWithBrothQuantity,
-                    Categories = AgedashiTofuWithBrothCategories
+                    Categories = AgedashiTofuWithBrothCategories,
+                    Modifications = AgedashiTofuWithBrothModifications
                 },
                 new FoodItem
                 {
@@ -318,7 +608,8 @@ namespace Spaghetti_Coders.Data
                     Calories = JapanesePancakesCalories,
                     Price = JapanesePancakesPrice,
                     Quantity = JapanesePancakesQuantity,
-                    Categories = JapanesePancakesCategories
+                    Categories = JapanesePancakesCategories,
+                    Modifications = JapanesePancakesModifications
                 },
                 new FoodItem
                 {
@@ -328,7 +619,8 @@ namespace Spaghetti_Coders.Data
                     Calories = KaraageCalories,
                     Price = KaraagePrice,
                     Quantity = KaraageQuantity,
-                    Categories = KaraageCategories
+                    Categories = KaraageCategories,
+                    Modifications = KaraageModifications
                 },
                 new FoodItem
                 {
@@ -338,7 +630,8 @@ namespace Spaghetti_Coders.Data
                     Calories = GreenTeaCalories,
                     Price = GreenTeaIceCreamPrice,
                     Quantity = GreenTeaIceCreamQuantity,
-                    Categories = GreenTeaIceCreamCategories
+                    Categories = GreenTeaIceCreamCategories,
+                    Modifications = GreenTeaIceCreamModifications
                 },
                 new FoodItem
                 {
@@ -348,7 +641,8 @@ namespace Spaghetti_Coders.Data
                     Calories = IceCreamMochiCalories,
                     Price = IceCreamMochiPrice,
                     Quantity = IceCreamMochiQuantity,
-                    Categories = IceCreamMochiCategories
+                    Categories = IceCreamMochiCategories,
+                    Modifications = IceCreamMochiModifications
                 },
                 new FoodItem
                 {
@@ -358,7 +652,8 @@ namespace Spaghetti_Coders.Data
                     Calories = StrawberryChocolateMochiCalories,
                     Price = StrawberryChocolateMochiPrice,
                     Quantity = StrawberryChocolateMochiQuantity,
-                    Categories = StrawberryChocolateMochiCategories
+                    Categories = StrawberryChocolateMochiCategories,
+                    Modifications = StrawberryChocolateMochiModifications
                 },
                 new FoodItem
                 {
@@ -368,7 +663,8 @@ namespace Spaghetti_Coders.Data
                     Calories = TaiyakiCalories,
                     Price = TaiyakiPrice,
                     Quantity = TaiyakiQuantity,
-                    Categories = TaiyakiCategories
+                    Categories = TaiyakiCategories,
+                    Modifications = TaiyakiModifications
                 },
                 new FoodItem
                 {
@@ -378,7 +674,8 @@ namespace Spaghetti_Coders.Data
                     Calories = CoffeeMilkTeaCalories,
                     Price = CoffeeMilkTeaPrice,
                     Quantity = CoffeeMilkTeaQuantity,
-                    Categories = CoffeeMilkTeaCategories
+                    Categories = CoffeeMilkTeaCategories,
+                    Modifications = CoffeeMilkTeaModifications
                 },
                 new FoodItem
                 {
@@ -388,7 +685,8 @@ namespace Spaghetti_Coders.Data
                     Calories = GreenTeaCalories,
                     Price = GreenTeaPrice,
                     Quantity = GreenTeaQuantity,
-                    Categories = GreenTeaCategories
+                    Categories = GreenTeaCategories,
+                    Modifications = GreenTeaModifications
                 },
                 new FoodItem
                 {
@@ -398,7 +696,8 @@ namespace Spaghetti_Coders.Data
                     Calories = HotMatchaLatteCalories,
                     Price = HotMatchaLattePrice,
                     Quantity = HotMatchaLatteQuantity,
-                    Categories = HotMatchaLatteCategories
+                    Categories = HotMatchaLatteCategories,
+                    Modifications = HotMatchaLatteModifications
                 },
                 new FoodItem
                 {
@@ -408,7 +707,8 @@ namespace Spaghetti_Coders.Data
                     Calories = OriginalMilkTeaCalories,
                     Price = OriginalMilkTeaPrice,
                     Quantity = OriginalMilkTeaQuantity,
-                    Categories = OriginalMilkTeaCategories
+                    Categories = OriginalMilkTeaCategories,
+                    Modifications = OriginalMilkTeaModifications
                 },
                 new FoodItem
                 {
@@ -418,7 +718,8 @@ namespace Spaghetti_Coders.Data
                     Calories = RoastedMilkTeaCalories,
                     Price = RoastedMilkTeaPrice,
                     Quantity = RoastedMilkTeaQuantity,
-                    Categories = RoastedMilkTeaCategories
+                    Categories = RoastedMilkTeaCategories,
+                    Modifications = RoastedMilkTeaModifications
                 },
                 new FoodItem
                 {
@@ -429,7 +730,8 @@ namespace Spaghetti_Coders.Data
                     Price = TaroMilkTeaPrice,
                     Discount = TaroMilkTeaDiscount,
                     Quantity = TaroMilkTeaQuantity,
-                    Categories = TaroMilkTeaCategories
+                    Categories = TaroMilkTeaCategories,
+                    Modifications = TaroMilkTeaModifications
                 }
             };
         }
