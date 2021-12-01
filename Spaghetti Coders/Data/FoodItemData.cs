@@ -16,6 +16,45 @@ namespace Spaghetti_Coders.Data
         public const float SpicyRamenDiscount = 3.00F;
         public const string SpicyRamenQuantity = "bowl";
         public static readonly List<FoodCategory> SpicyRamenCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly Dictionary<string, List<string>> SpicyRamenModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Spice",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            },
+            {
+                "Green Onion",
+                new List<string>
+                {
+                    "None",
+                    "One",
+                    "Two"
+                }
+            },
+            {
+                "Egg",
+                new List<string>
+                {
+                    "None",
+                    "One",
+                    "Two (+2)"
+                }
+            },
+            {
+                "Soup",
+                new List<string>
+                {
+                    "None",
+                    "Normal",
+                    "Extra"
+                }
+            }
+        };
 
         public const string TempuraTitle = "Tempura";
         public const string TempuraDescription = "Perfectly crispy deep-fried shrimps dipped in tempura batter. Served with special tempura dipping sauce. The batter used to make the tempura batter consists of flour, water, cornstarch, and eggs.";
@@ -25,6 +64,18 @@ namespace Spaghetti_Coders.Data
         public const float TempuraDiscount = 2.00F;
         public const string TempuraQuantity = "10 pcs";
         public static readonly List<FoodCategory> TempuraCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Sides };
+        public static readonly Dictionary<string, List<string>> TempuraModifications = new Dictionary<string, List<string>>
+        {
+            {
+                "Dipping_Sauce",
+                new List<string>
+                {
+                    "None",
+                    "One",
+                    "Two"
+                }
+            }
+        };
 
         public const string MisoRamenTitle = "Miso Ramen";
         public const string MisoRamenDescription = "Miso ramen soup topped with sesame, green onions, seaweed, carrots, and egg.";
@@ -184,7 +235,8 @@ namespace Spaghetti_Coders.Data
                     Price = SpicyRamenPrice,
                     Discount = SpicyRamenDiscount,
                     Quantity = SpicyRamenQuantity,
-                    Categories = SpicyRamenCategories
+                    Categories = SpicyRamenCategories,
+                    Modifications = SpicyRamenModifications
                 },
                 new FoodItem
                 {
@@ -195,13 +247,15 @@ namespace Spaghetti_Coders.Data
                     Price = TempuraPrice,
                     Discount = TempuraDiscount,
                     Quantity = TempuraQuantity,
-                    Categories = TempuraCategories
+                    Categories = TempuraCategories,
+                    Modifications = TempuraModifications
                 },
                 new FoodItem
                 {
                     Title = MisoRamenTitle,
                     Description = MisoRamenDescription,
                     ImageSource = new BitmapImage( new Uri( MisoRamenImageSource, UriKind.Relative ) ),
+                    Calories = MisoRamenCalories,
                     Price = MisoRamenPrice,
                     Quantity = MisoRamenQuantity,
                     Categories = MisoRamenCategories
