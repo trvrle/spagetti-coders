@@ -5,48 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              mc:Ignorable="d" 
              FontFamily= "MV Boli"
-             d:DesignHeight="140" d:DesignWidth="380">
-    <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="8*" />
-            <ColumnDefinition Width="17*" />
-            <ColumnDefinition Width="35*" />
-            <ColumnDefinition Width="20*" />
+             d:DesignHeight="150" d:DesignWidth="400"
+             x:Name="root">
+    <Grid Margin="10 0 10 10" Background="White">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="0,0,3,0" RenderTransformOrigin="0.553,0.5"/>
+        <Image
+            Stretch="UniformToFill"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Source="{Binding ImageSource, ElementName=root}" />
 
-        <Grid Grid.Column="1" Margin="10,0,75,0">
-            <Image Source="/Images/spicy-ramen.jpg" Margin="-8,8,-72,8" />
-        </Grid>
+        <Grid Grid.Column="1" Margin="10">
 
-        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="130"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*" />
-                <RowDefinition Height="9*" />
-                <RowDefinition Height="11*"/>
 
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="1" FontSize="30" TextWrapping="Wrap" Text="Spicy Ramen"  FontWeight="Bold" Margin="0,-1,0,0" Width="190" Grid.ColumnSpan="2" VerticalAlignment="Center"   />
+            <TextBlock 
+                VerticalAlignment="Center" 
+                FontWeight="SemiBold"
+                TextTrimming="WordEllipsis"
+                FontSize="16"
+                Text="{Binding Title, ElementName=root}" />
 
+            <StackPanel x:Name="ModificationList" Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
+
+            </StackPanel>
+
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Quantity, ElementName=root}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding PriceTotal, ElementName=root}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
-        <Grid Grid.Column="3">
-            <TextBlock FontSize="30" FontWeight="Bold" TextWrapping="Wrap" Text="$12.99" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.424"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="0.159"/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-        </Grid>
-
     </Grid>
 </UserControl>

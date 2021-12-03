@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spaghetti_Coders.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,19 @@ namespace Spaghetti_Coders.Controls
         public PaymentList()
         {
             InitializeComponent();
+            Loaded += PaymentList_Loaded;
+        }
+
+        private void PaymentList_Loaded( object sender, RoutedEventArgs e )
+        {
+            List<OrderItem> orderedItems = OrderItemData.GetOrderedItemsForPayment();
+
+            PaymentItemList.Children.Clear();
+
+            foreach ( OrderItem item in orderedItems )
+            {
+                PaymentItemList.Children.Add( new PaymentItem(item) );
+            }
         }
     }
 }

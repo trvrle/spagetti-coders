@@ -80,11 +80,13 @@ namespace Spaghetti_Coders.Pages
             
             Subtotal = OrderItemData.GetTotalOrderItemPrice();
 
-            OrderList.UpdateOrderPage += new OrderList.UpdateOrderPageDelegate( UpdateSubtotal );
+            OrderList.UpdateOrderPage += new OrderList.UpdateOrderPageDelegate( UpdatePage );
         }
 
-        private void UpdateSubtotal()
+        private void UpdatePage()
         {
+            OrderButton.IsEnabled = OrderItemData.CanOrder();
+            PayButton.IsEnabled = OrderItemData.CanPay();
             Subtotal = OrderItemData.GetTotalOrderItemPrice();
         }
 
@@ -100,7 +102,10 @@ namespace Spaghetti_Coders.Pages
 
         private void PayButton_Click( object sender, RoutedEventArgs e )
         {
-            NavigationService.Navigate( new PaymentPage() );
+            NavigationService.Navigate( new PaymentPage
+            {
+                Subtotal = OrderItemData.GetPaymentPrice()
+            } ) ;
         }
 
         private void BackButton_Click( object sender, RoutedEventArgs e )

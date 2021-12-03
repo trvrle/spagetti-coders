@@ -79,7 +79,7 @@
                 
             </Grid>
 
-            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding PriceTotal, ElementName=root}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding PriceTotal, ElementName=root}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </UserControl>

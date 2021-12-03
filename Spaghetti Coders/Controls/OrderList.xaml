@@ -6,7 +6,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="400">
          
-    <ScrollViewer CanContentScroll="True" Visibility="Visible" VerticalScrollBarVisibility="Hidden">
+    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
         <Grid>
 

@@ -126,7 +126,11 @@ namespace Spaghetti_Coders.Controls
 
         private void RemoveClick( object sender, RoutedEventArgs e )
         {
-            if ( Ordered ) return; 
+            if ( Ordered ) return;
+
+            OrderItemData.RemoveOrderItem( this );
+            ( Parent as Panel ).Children.Remove( this );
+            UpdateOrderPage.Invoke();
         }
 
         private void DecreaseClick(object sender, RoutedEventArgs e)

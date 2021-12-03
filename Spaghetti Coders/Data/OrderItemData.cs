@@ -27,6 +27,15 @@ namespace Spaghetti_Coders.Data
                 orderItems.Add( orderItem );
         }
 
+        public static void RemoveOrderItem(OrderItem orderItem)
+        {
+            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title && Enumerable.SequenceEqual( item.Modifications, orderItem.Modifications ) );
+            if (findItem != null)
+            {
+                orderItems.Remove( findItem );
+            }
+        }
+
         public static List<OrderItem> GetOrderItems()
         {
             List<OrderItem> newOrderItems = new List<OrderItem>();
@@ -79,6 +88,24 @@ namespace Spaghetti_Coders.Data
         public static bool CanPay()
         {
             return orderItems.Exists( item => item.Ordered );
+        }
+
+        public static List<OrderItem> GetOrderedItemsForPayment()
+        {
+            return orderItems.FindAll( item => item.Ordered );
+        }
+
+        public static float GetPaymentPrice()
+        {
+            List<OrderItem> orderedItems = orderItems.FindAll( item => item.Ordered );
+            float sum = 0;
+
+            foreach ( OrderItem item in orderedItems )
+            {
+                sum += item.PriceTotal;
+            }
+
+            return sum;
         }
     }
 }

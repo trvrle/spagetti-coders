@@ -6,59 +6,15 @@
              xmlns:local="clr-namespace:Spaghetti_Coders.Controls"
              mc:Ignorable="d" 
                     d:DesignHeight="450" d:DesignWidth="400">
-    <ScrollViewer CanContentScroll="True" Visibility="Visible" VerticalScrollBarVisibility="Hidden">
+    <ScrollViewer Background="#FFF9F9F9" CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
-        <Grid Background="#FFF9F9F9">
+        <Grid>
 
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-            </Grid.RowDefinitions>
+            <StackPanel x:Name="PaymentItemList" Orientation="Vertical">
 
-            <Grid Grid.Row="0">
+            </StackPanel>
 
-                <Grid.Resources >
-                    <Style TargetType="local:PaymentItem" >
-                        <Setter Property="Padding" Value="10,10,10,10" />
-                    </Style>
-                </Grid.Resources>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="150"/>
-                </Grid.RowDefinitions>
-
-                <local:PaymentItem
-                    Grid.Row="0" RenderTransformOrigin="0.5,0.5" Margin="-198,-60,-193,80" Grid.RowSpan="2">
-                    <local:PaymentItem.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </local:PaymentItem.RenderTransform>
-                </local:PaymentItem>
-
-                <local:PaymentItem RenderTransformOrigin="0.5,0.5" Margin="-198,90,-193,80" Grid.RowSpan="3" >
-                    <local:PaymentItem.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </local:PaymentItem.RenderTransform>
-                </local:PaymentItem>
-
-
-            </Grid>
         </Grid>
+
     </ScrollViewer>
 </UserControl>
