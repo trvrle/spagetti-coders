@@ -84,7 +84,7 @@ namespace Spaghetti_Coders.Pages
             
             Subtotal = OrderItemData.GetTotalOrderItemPrice();
 
-            OrderList.UpdateSubtotal += new OrderList.UpdateSubtotalDelegate( UpdateSubtotal );
+            OrderList.UpdateOrderPage += new OrderList.UpdateOrderPageDelegate( UpdateSubtotal );
         }
 
         private void UpdateSubtotal()

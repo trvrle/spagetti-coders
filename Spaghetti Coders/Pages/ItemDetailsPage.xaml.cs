@@ -131,11 +131,13 @@ namespace Spaghetti_Coders.Pages
 
         private void ModClick(object sender, RoutedEventArgs e)
         {
+            float discount = Discount ?? 0;
             NavigationService.Navigate(
                 new ModificationPage
                 {
                     Title = Title,
-                    ImageSource = ImageSource
+                    ImageSource = ImageSource,
+                    Price = Price - discount
                 }
             );
         }

@@ -8,11 +8,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="400">
     
-    <Grid Background="#deafb3">
+    <Grid Background="#deafb3" Width="400">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="133"/>
-            <ColumnDefinition Width="133"/>
-            <ColumnDefinition Width="133"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
@@ -25,7 +24,8 @@
             TextDecorations="Underline"
             FontFamily="MV Boli"/>
 
-        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+        <RadioButton x:Name="Modification1"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="0"
                      Margin="-13,0,0,-26"
                      GroupName="{Binding RadioName, ElementName=root}"
@@ -36,7 +36,8 @@
                        Margin="0,-2"/>
         </RadioButton>
 
-        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+        <RadioButton x:Name="Modification2"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="1"
                      Margin="-13,0,0,-26"
                      GroupName="{Binding RadioName, ElementName=root}"
@@ -48,7 +49,8 @@
                        Margin="0,-2"/>
         </RadioButton>
 
-        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center"
+        <RadioButton x:Name="Modification3"
+                     HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="2"
                      Margin="-13,0,0,-26"
                      GroupName="{Binding RadioName, ElementName=root}"

@@ -7,139 +7,130 @@
              mc:Ignorable="d" 
              d:DesignHeight="700" d:DesignWidth="400"
              x:Name="root">
-    <ScrollViewer CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
 
-        <Grid Background="#deafb3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="220"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="100"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition />
-            </Grid.RowDefinitions>
+    <Grid Background="#deafb3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="220"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
 
-            <Rectangle Fill="#d57174"
-                       Grid.Row="0"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="1" 
+            <Button
                     x:Name="BackButton" 
                     Height="30" Width="70" 
                     Background="Transparent" 
                     BorderBrush="Transparent"
-                    HorizontalAlignment="Left" VerticalAlignment="Bottom" 
-                    Margin="13,0,0,0" Click="BackButton_Click" >
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Click="BackButton_Click" >
                 <Image Source="/Images/backarrow.png"/>
             </Button>
 
-            <Label 
-                x:Name="Name" 
-                FontSize="18" 
-                Content="Spaghetti Coders" 
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Grid.Row="0"/>
-
-            <TextBlock 
-                x:Name="Item" 
+            <TextBlock
                 FontSize="26" 
-                Text="{Binding Title, ElementName=root}" 
+                Text="{Binding Title, ElementName=root}"
                 TextWrapping="Wrap"
                 HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                Margin="0,-10"
-                Grid.Row="2"
-                FontFamily="Mv Boli"/>
+                VerticalAlignment="Center"
+                TextAlignment="Center"
+                Grid.Column="1"
+                FontFamily="MV Boli"/>
+        </Grid>
 
-            <Border Grid.Row="3"
-                    CornerRadius="30"
-                    Background="#d57174"
-                    Height=" 200" Width="250">
-                <Image Grid.Row="3" 
-                       HorizontalAlignment="Center" 
-                       Source="{Binding ImageSource, ElementName=root}" />
-            </Border>
+        <Border Grid.Row="1"
+                CornerRadius="30"
+                Background="#d57174"
+                Height=" 200" Width="250">
+            <Image
+                Stretch="Uniform"
+                HorizontalAlignment="Center" 
+                Source="{Binding ImageSource, ElementName=root}" />
+        </Border>
 
-            <TextBlock 
+        <TextBlock 
                 Text="Modifications"
                 FontSize="20" 
                 HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
-                Grid.Row="4"
+                Grid.Row="2"
                 FontFamily="Mv Boli"
                 TextDecorations="Underline"/>
 
 
-            <ScrollViewer Grid.Row="5" CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
-                <StackPanel x:Name="ModificationList" 
+        <ScrollViewer Grid.Row="3" CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
+            <StackPanel x:Name="ModificationList" 
                             Grid.Row="1" 
                             Orientation="Vertical"
                             VerticalAlignment="Top"
                             HorizontalAlignment="Center">
 
-                </StackPanel>
-            </ScrollViewer>
+            </StackPanel>
+        </ScrollViewer>
 
-            <TextBlock Grid.Row="5"
+        <TextBlock Grid.Row="3"
                        x:Name="NoMods" 
                        TextWrapping="Wrap"
-                       Text="No Given Modifications (Type in Extra Modification Comments for more)"
+                       Text="No Given Modifications (Type in Special Instructions for more)"
                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                       FontSize="19"
+                       FontSize="18"
                        FontFamily="MV Boli"
                        Visibility="Hidden"
                        TextAlignment="Center">
-                
-            </TextBlock>
-            
-            <Button x:Name="AddItem" Content="Add Item" 
+
+        </TextBlock>
+
+        <Button x:Name="AddItem" Content="Add Item" 
                     HorizontalAlignment="Center" 
-                    Grid.Row="7" 
+                    Grid.Row="5" 
                     VerticalAlignment="Top"
                     Height="30" Width="70"
                     Background="#d57174"
                     FontWeight="SemiBold"
-                    Click="Button_Click"
-                    FontFamily="Mv Boli"/>
+                    Click="AddItem_Click"
+                    FontFamily="MV Boli"/>
 
-            <TextBlock HorizontalAlignment="Left" 
+        <TextBlock HorizontalAlignment="Left" 
                        Margin="13,10,0,0" 
-                       Grid.Row="6" 
-                       Text="Extra Modification Comments:" 
+                       Grid.Row="4" 
+                       Text="Special Instructions:" 
                        VerticalAlignment="Top"
                        FontSize="15"
-                       FontFamily="Mv Boli"/>
+                       FontFamily="MV Boli"/>
 
-            <TextBox HorizontalAlignment="Center" 
+        <TextBox HorizontalAlignment="Center" 
                      Margin="0,32,0,0" 
-                     Grid.Row="6" 
+                     Grid.Row="4" 
                      TextWrapping="Wrap"
                      VerticalAlignment="Top" 
                      Width="380" Height="58"
                      BorderThickness="3"
                      BorderBrush="#d57174"
-                     Text ="Modiication..."
+                     Text ="Enter Special Instructions..."
                      Foreground="DimGray"
-                     x:Name="Extra1"
-                     MouseDoubleClick="Extra_Click_Open"/>
+                     x:Name="SpecialInstructions_TextBox"
+                     GotFocus="Click_OpenKeyboard"/>
 
-
-            <TextBox HorizontalAlignment="Center" 
-                     Grid.Row="5"  
+        <TextBox HorizontalAlignment="Center" 
+                     Grid.Row="3"  
                      TextWrapping="Wrap" 
                      VerticalAlignment="Top" 
-                     Width="400" Height="78"
+                     Width="380" Height="80"
                      Visibility="Hidden" Margin="0,22,0,0"
-                     x:Name="Extra"
-                     KeyDown="KeyTest"/>
+                     x:Name="SpecialInstructions_KeyboardTextBox"
+                     KeyDown="KeyPressed"/>
 
-            <Grid Grid.Row="5" Grid.RowSpan="3" Margin="0,78,0,0" Visibility="Hidden" x:Name="Keyboard">
-                <Image Source="/Images/keyboard.png" Margin="0,20,0,-20"/>
-            </Grid>
-
+        <Grid Grid.Row="3" Grid.RowSpan="3" Margin="0,78,0,0" Visibility="Hidden" x:Name="Keyboard">
+            <Image Source="/Images/keyboard.png" Margin="0,20,0,-20"/>
         </Grid>
-    </ScrollViewer>
+
+    </Grid>
 </Page>

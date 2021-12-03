@@ -19,9 +19,9 @@ namespace Spaghetti_Coders.Controls
     /// </summary>
     public partial class OrderList : UserControl
     {
-        public delegate void UpdateSubtotalDelegate( );
+        public delegate void UpdateOrderPageDelegate( );
 
-        public event UpdateSubtotalDelegate UpdateSubtotal;
+        public event UpdateOrderPageDelegate UpdateOrderPage;
 
         public OrderList()
         {
@@ -35,14 +35,14 @@ namespace Spaghetti_Coders.Controls
 
             foreach(OrderItem item in orderItemList)
             {
-                item.Update += new OrderItem.UpdateDelegate( Update );
+                item.UpdateOrderPage += new OrderItem.UpdateDelegate( Update );
                 OrderItemList.Children.Add( item );
             }
         }
 
         private void Update()
         {
-            UpdateSubtotal.Invoke();
+            UpdateOrderPage.Invoke();
         }
     }
 }

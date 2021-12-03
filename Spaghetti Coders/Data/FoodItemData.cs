@@ -42,7 +42,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "One",
-                    "Two (+1)"
+                    "Two (+$1)"
                 }
             },
             {
@@ -101,7 +101,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "One",
-                    "Two (+1)"
+                    "Two (+$1)"
                 }
             },
             {
@@ -125,7 +125,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> CaliforniaRollModifications = new Dictionary<string, List<string>>
         {
             {
-                "Imitation_Crab",
+                "Imitation Crab",
                 new List<string>
                 {
                     "None",
@@ -154,7 +154,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> TunaRollModifications = new Dictionary<string, List<string>>
         {
             {
-                "Spicy_Mayo",
+                "Spicy Mayo",
                 new List<string>
                 {
                     "None",
@@ -174,7 +174,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> SalmonSushiRollModifications = new Dictionary<string, List<string>>
         {
             {
-                "Spicy_Mayo",
+                "Spicy Mayo",
                 new List<string>
                 {
                     "None",
@@ -246,7 +246,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> KaraageModifications = new Dictionary<string, List<string>>
         {
             {
-                "Dipping_Sauce",
+                "Dipping Sauce",
                 new List<string>
                 {
                     "None",

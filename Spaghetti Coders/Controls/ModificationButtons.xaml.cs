@@ -68,5 +68,15 @@ namespace Spaghetti_Coders.Controls
         {
             InitializeComponent();
         }
+
+        public string GetModification()
+        {
+            string checkedModification = "";
+            if ( Modification1.IsChecked.Value ) checkedModification = ModOne;
+            if ( Modification2.IsChecked.Value ) return "";
+            if ( Modification3.IsChecked.Value ) checkedModification = ModThree;
+
+            return $"{RadioName}: {checkedModification}";
+        }
     }
 }

@@ -40,10 +40,8 @@
                 FontSize="16"
                 Text="{Binding Title, ElementName=root}" />
 
-            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
-                <TextBlock Text="Egg: None" FontSize="12" Foreground="DarkSlateGray"/>
-                <TextBlock Text="Spice: None" FontSize="12" Foreground="DarkSlateGray"/>
-                <TextBlock Text="Soup: Extra" FontSize="12" Foreground="DarkSlateGray"/>
+            <StackPanel x:Name="ModificationList" Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
+                
             </StackPanel>
 
             <Button HorizontalAlignment="Right" Grid.Column="1" Click="RemoveClick" Background="#FFD57174" BorderBrush="#FF0A0101" BorderThickness="1" Height="20" Width="20" >

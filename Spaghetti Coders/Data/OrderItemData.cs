@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 using System.Text;
+using System.Linq;
 
 namespace Spaghetti_Coders.Data
 {
@@ -16,7 +17,7 @@ namespace Spaghetti_Coders.Data
 
         public static void AddOrderItem(OrderItem orderItem)
         {
-            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title );
+            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title && Enumerable.SequenceEqual(item.Modifications, orderItem.Modifications) );
             if ( findItem != null )
             {
                 findItem.Quantity++;

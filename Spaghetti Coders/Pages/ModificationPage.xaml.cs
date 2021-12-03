@@ -21,17 +21,11 @@ namespace Spaghetti_Coders.Pages
     /// </summary>
     public partial class ModificationPage : Page
     {
+        private List<ModificationButtons> modificationButtons = new List<ModificationButtons>();
+
         public ModificationPage()
         {
             InitializeComponent();
-        }
-
-        public ModificationPage(FoodItem foodItem)
-        {
-            InitializeComponent();
-            ImageSource = foodItem.ImageSource;
-            Title = foodItem.Title;
-
             Loaded += ModificationPageLoaded;
         }
 
@@ -59,7 +53,8 @@ namespace Spaghetti_Coders.Pages
                         ModThree = mod.Value[2]
                     };
 
-                    ModificationList.Children.Add(button);
+                    modificationButtons.Add( button );
+                    ModificationList.Children.Add( button );
                 }
             } else
             {
@@ -85,46 +80,69 @@ namespace Spaghetti_Coders.Pages
             set { SetValue(ImageSourceProperty, value); }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public float Price = 0;
+
+        private void AddItem_Click(object sender, RoutedEventArgs e)
         {
-            if (sender.Equals(AddItem))
+            List<string> modificationStrings = new List<string>();
+
+            foreach(ModificationButtons modButton in modificationButtons)
             {
-                //navigate to order screen-- check once item hooked up
-                NavigationService.Navigate(new OrderPage());
-
-                //add item to order 
-
+                string modification = modButton.GetModification();
+                if ( !modification.Equals( "" ) )
+                {
+                    modificationStrings.Add( modification );
+                }
             }
 
+            if( SpecialInstructions_KeyboardTextBox.Text != "")
+                modificationStrings.Add( SpecialInstructions_KeyboardTextBox.Text );
+
+            OrderItemData.AddOrderItem( new OrderItem
+            {
+                Title = Title,
+                ImageSource = ImageSource,
+                PricePerItem = Price,
+                PriceTotal = Price,
+                Modifications = modificationStrings,
+                Quantity = 1
+            } );
+            
+            NavigationService.Navigate(new OrderPage());
         }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
 
         // Opening keyboard + textbox
-        private void Extra_Click_Open(object sender, EventArgs e)
+        private void Click_OpenKeyboard(object sender, EventArgs e)
         {
-            Extra.Visibility = Visibility.Visible;
-            Extra1.Text = (sender as TextBox).Text;
+            SpecialInstructions_KeyboardTextBox.Visibility = Visibility.Visible;
+            SpecialInstructions_KeyboardTextBox.Focus();
+            SpecialInstructions_TextBox.Text = (sender as TextBox).Text;
             Keyboard.Visibility = Visibility.Visible;
         }
 
         // Closing keyboard + textbox and moving text to first textbox
-        private void Extra_Click_Close(object sender, EventArgs e)
+        private void Click_CloseKeyboard(object sender, EventArgs e)
         {
-            Extra.Visibility = Visibility.Hidden;
+            SpecialInstructions_KeyboardTextBox.Visibility = Visibility.Hidden;
             Keyboard.Visibility = Visibility.Hidden;
-            Extra1.Text = (sender as TextBox).Text;
-            Extra1.Foreground = Brushes.Black;
+            string text = ( sender as TextBox ).Text;
+            if ( text.Equals( "" ) )
+                text = "Enter Special Instructions...";
+            SpecialInstructions_TextBox.Text = text;
+            SpecialInstructions_TextBox.Foreground = Brushes.Black;
         }
 
         // Start close event when enter is clicked
-        private void KeyTest(object sender, KeyEventArgs e)
+        private void KeyPressed(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                Extra_Click_Close(sender, e);
+                Click_CloseKeyboard(sender, e);
             }
         }
     }

@@ -57,18 +57,11 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( PriceTotalProperty, $"${value:0.00}" ); }
         }
 
-        public static readonly DependencyProperty CommentsProperty =
-            DependencyProperty.Register( "Comments", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
-
-        public string Comments
-        {
-            get { return (string)GetValue( CommentsProperty ); }
-            set { SetValue( CommentsProperty, value ); }
-        }
+        public List<string> Modifications = new List<string>();
 
         public delegate void UpdateDelegate();
 
-        public event UpdateDelegate Update;
+        public event UpdateDelegate UpdateOrderPage;
 
         public OrderItem()
         {
@@ -83,7 +76,7 @@ namespace Spaghetti_Coders.Controls
             ImageSource = item.ImageSource;
             PricePerItem = item.PricePerItem;
             Quantity = item.Quantity;
-            Comments = item.Comments;
+            Modifications = item.Modifications;
             Loaded += OrderItem_Loaded;
         }
 
@@ -91,6 +84,16 @@ namespace Spaghetti_Coders.Controls
         {
             PriceTotal = PricePerItem * Quantity;
             if ( Quantity == 1 ) DecreaseButton.IsEnabled = false;
+
+            foreach (string modification in Modifications)
+            {
+                ModificationList.Children.Add( new TextBlock
+                {
+                    FontSize = 12,
+                    Foreground = new SolidColorBrush(Colors.DarkSlateGray),
+                    Text = modification
+                } );
+            }
         }
 
         private void EditClick(object sender, RoutedEventArgs e)
@@ -113,7 +116,7 @@ namespace Spaghetti_Coders.Controls
             if ( Quantity == 1 ) DecreaseButton.IsEnabled = false;
 
             OrderItemData.UpdateQuantity( this );
-            Update.Invoke();
+            UpdateOrderPage.Invoke();
         }
 
         private void IncreaseClick(object sender, RoutedEventArgs e)
@@ -124,7 +127,7 @@ namespace Spaghetti_Coders.Controls
             if (!DecreaseButton.IsEnabled) DecreaseButton.IsEnabled = true;
 
             OrderItemData.UpdateQuantity( this );
-            Update.Invoke();
+            UpdateOrderPage.Invoke();
         }
     }
 }
