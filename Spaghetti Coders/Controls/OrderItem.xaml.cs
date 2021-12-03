@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spaghetti_Coders.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -53,7 +54,7 @@ namespace Spaghetti_Coders.Controls
         public float PriceTotal
         {
             get { return float.Parse( ( (string)GetValue( PriceTotalProperty ) ).Replace( "$", "" ) ); }
-            set { SetValue( PriceTotalProperty, $"${value}" ); }
+            set { SetValue( PriceTotalProperty, $"${value:0.00}" ); }
         }
 
         public static readonly DependencyProperty CommentsProperty =
@@ -71,6 +72,17 @@ namespace Spaghetti_Coders.Controls
             Loaded += OrderItem_Loaded;
         }
 
+        public OrderItem(OrderItem item)
+        {
+            InitializeComponent();
+            Title = item.Title;
+            ImageSource = item.ImageSource;
+            PricePerItem = item.PricePerItem;
+            Quantity = item.Quantity;
+            Comments = item.Comments;
+            Loaded += OrderItem_Loaded;
+        }
+
         private void OrderItem_Loaded( object sender, RoutedEventArgs e )
         {
             PriceTotal = PricePerItem * Quantity;
@@ -80,6 +92,10 @@ namespace Spaghetti_Coders.Controls
         private void EditClick(object sender, RoutedEventArgs e)
         {
   
+        }
+
+        private void RemoveClick( object sender, RoutedEventArgs e )
+        {
 
         }
 
@@ -91,6 +107,8 @@ namespace Spaghetti_Coders.Controls
             PriceTotal = PricePerItem * Quantity;
 
             if ( Quantity == 1 ) DecreaseButton.IsEnabled = false;
+
+            OrderItemData.UpdateQuantity( this );
         }
 
         private void IncreaseClick(object sender, RoutedEventArgs e)
@@ -99,6 +117,8 @@ namespace Spaghetti_Coders.Controls
             PriceTotal = PricePerItem * Quantity;
             
             if (!DecreaseButton.IsEnabled) DecreaseButton.IsEnabled = true;
+
+            OrderItemData.UpdateQuantity( this );
         }
     }
 }

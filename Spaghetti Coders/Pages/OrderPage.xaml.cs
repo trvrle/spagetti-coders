@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Spaghetti_Coders.Data;
 using Spaghetti_Coders.Popups;
 
 namespace Spaghetti_Coders.Pages
@@ -19,14 +20,68 @@ namespace Spaghetti_Coders.Pages
     /// </summary>
     public partial class OrderPage : Page
     {
+
+        public static readonly DependencyProperty SubtotalProperty =
+            DependencyProperty.Register( "Subtotal", typeof( string ), typeof( OrderPage ), new PropertyMetadata( "$-" ) );
+
+        public float Subtotal
+        {
+            get { return PriceStringToFloat( (string)GetValue( SubtotalProperty ) ); }
+            set { 
+                SetValue( SubtotalProperty, FloatToPriceString( value ) );
+                GST = value * 5 / 100;
+                Total = value + GST;
+            }
+        }
+
+        public static readonly DependencyProperty GSTProperty =
+            DependencyProperty.Register( "GST", typeof( string ), typeof( OrderPage ), new PropertyMetadata( "$-" ) );
+
+        public float GST
+        {
+            get { return PriceStringToFloat( (string)GetValue( GSTProperty ) ); }
+            set { SetValue( GSTProperty, FloatToPriceString( value ) ); }
+        }
+
+        public static readonly DependencyProperty TotalProperty =
+            DependencyProperty.Register( "Total", typeof( string ), typeof( OrderPage ), new PropertyMetadata( "$-" ) );
+
+        public float Total
+        {
+            get { return PriceStringToFloat((string)GetValue( TotalProperty ) ); }
+            set { SetValue( TotalProperty, FloatToPriceString(value) ); }
+        }
+
+        private float PriceStringToFloat(string s)
+        {
+            if ( s.Equals( "$-" ) )
+                return 0;
+            return float.Parse( s.Replace( "$", "" ) );
+        }
+
+        private string FloatToPriceString(float f)
+        {
+            if ( f == 0  )
+                return "$-";
+            return $"${f:0.00}";
+        }
+
         public OrderPage()
         {
             InitializeComponent();
+            Loaded += OrderPage_Loaded;
         }
 
-        internal void Show()
+        private void OrderPage_Loaded( object sender, RoutedEventArgs e )
         {
-            throw new NotImplementedException();
+            if ( OrderItemData.Count == 0 )
+            {
+                OrderButton.IsEnabled = false;
+                PayButton.IsEnabled = false;
+                return;
+            }
+            
+            Subtotal = OrderItemData.GetTotalOrderItemPrice();
         }
 
         private void OrderButton_Click( object sender, RoutedEventArgs e )

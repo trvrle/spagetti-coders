@@ -12,6 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Spaghetti_Coders.Controls;
+using Spaghetti_Coders.Data;
 
 namespace Spaghetti_Coders.Pages
 {
@@ -114,25 +115,28 @@ namespace Spaghetti_Coders.Pages
             NavigationService.GoBack();
         }
 
-        private void ItemClick(object sender, RoutedEventArgs e)
+        private void AddItemClick(object sender, RoutedEventArgs e)
         {
+            float discount = Discount ?? 0;
+            OrderItemData.AddOrderItem( new OrderItem
+            {
+                Title = Title,
+                ImageSource = ImageSource,
+                PricePerItem = Price - discount,
+                PriceTotal = Price - discount,
+                Quantity = 1
+            } );
             NavigationService.Navigate(new OrderPage());
         }
 
         private void ModClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(
-                new ModificationPage(
-                    new FoodItem
-                    {
-                        Title = Title,
-                        Description = Description,
-                        ImageSource = ImageSource,
-                        Price = Price,
-                        Discount = Discount,
-                        Quantity = Quantity
-                    }
-                )
+                new ModificationPage
+                {
+                    Title = Title,
+                    ImageSource = ImageSource
+                }
             );
         }
     }

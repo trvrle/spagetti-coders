@@ -33,7 +33,6 @@ namespace Spaghetti_Coders.Pages
             Title = foodItem.Title;
 
             Loaded += ModificationPageLoaded;
-
         }
 
         private void ModificationPageLoaded(object sender, RoutedEventArgs e)

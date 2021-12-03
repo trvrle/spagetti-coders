@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="700" 
       d:DesignWidth="400"
+      x:Name="root"
       Title="OrderPage" 
       Background="#FFFF"
       FontFamily="MV Boli">
@@ -58,18 +59,18 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
 
-                <Label Width="200" x:Name="Subtotal" HorizontalAlignment="Left" Content="Subtotal" VerticalAlignment="Center" FontSize="16"/>
-                <Label x:Name="Subtotal_Price" HorizontalAlignment="Right" Content="$25.98" VerticalAlignment="Center" FontSize="16" />
+                <Label Width="200" HorizontalAlignment="Left" Content="Subtotal" VerticalAlignment="Center" FontSize="16"/>
+                <Label x:Name="Subtotal_Price" HorizontalAlignment="Right" Content="{Binding Subtotal, ElementName=root}" VerticalAlignment="Center" FontSize="16" />
 
-                <Label Width="200" Grid.Row="1" x:Name="GST" HorizontalAlignment="Left" Content="GST" FontSize="16" VerticalAlignment="Center"/>
-                <Label Grid.Row="1" x:Name="GST_Price" HorizontalAlignment="Right" Content="$1.30" VerticalAlignment="Center" FontSize="16"/>
+                <Label Width="200" Grid.Row="1" HorizontalAlignment="Left" Content="GST" FontSize="16" VerticalAlignment="Center"/>
+                <Label Grid.Row="1" x:Name="GST_Price" HorizontalAlignment="Right" Content="{Binding GST, ElementName=root}" VerticalAlignment="Center" FontSize="16"/>
             </Grid>
 
             <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
 
             <Grid>
-                <Label Width="200" x:Name="Total" HorizontalAlignment="Left" Content="Total" VerticalAlignment="Center" FontSize="26" FontWeight="Bold"  />
-                <Label x:Name="Total_Price" HorizontalAlignment="Right" Content="$27.28" VerticalAlignment="Center" FontSize="26"  FontWeight="Bold"  />
+                <Label Width="200" HorizontalAlignment="Left" Content="Total" VerticalAlignment="Center" FontSize="26" FontWeight="Bold"  />
+                <Label x:Name="Total_Price" HorizontalAlignment="Right" Content="{Binding Total, ElementName=root}" VerticalAlignment="Center" FontSize="26"  FontWeight="Bold"  />
             </Grid>
 
             <Grid>
@@ -78,8 +79,8 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Place Order" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="26" Click="OrderButton_Click"/>
-                <Button Grid.Column="1" Content="Pay Now" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101" FontSize="26" Click="PayButton_Click" />
+                <Button x:Name="OrderButton" Content="Place Order" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="26" Click="OrderButton_Click"/>
+                <Button x:Name="PayButton" Grid.Column="1" Content="Pay Now" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Background="#FFD57174" BorderBrush="#FF0A0101" FontSize="26" Click="PayButton_Click" />
 
             </Grid>
 

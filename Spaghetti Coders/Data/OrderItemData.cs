@@ -8,40 +8,58 @@ namespace Spaghetti_Coders.Data
 {
     public static class OrderItemData
     {
-        private static List<OrderItem> orderItems = new List<OrderItem>
-        {
-            new OrderItem
-            {
-                Title = "Spicy Ramen",
-                ImageSource = new BitmapImage( new Uri( "/Images/spicy-ramen.jpg", UriKind.Relative ) ),
-                PricePerItem = 9.99F,
-                Quantity = 1,
-                Comments = "hello spicy ramen comments"
-            },
-            new OrderItem
-            {
-                Title = "Tempura",
-                ImageSource = new BitmapImage( new Uri( "/Images/tempura.jpg", UriKind.Relative ) ),
-                PricePerItem = 9.99F,
-                Quantity = 1
-            },
-            new OrderItem
-            {
-                Title = "Tempura",
-                ImageSource = new BitmapImage( new Uri( "/Images/tempura.jpg", UriKind.Relative ) ),
-                PricePerItem = 9.99F,
-                Quantity = 1
-            }
-        };
+        private static List<OrderItem> orderItems = new List<OrderItem>();
+
+        public static int Count { 
+            get { return orderItems.Count; }
+        }
 
         public static void AddOrderItem(OrderItem orderItem)
         {
-            orderItems.Add( orderItem );
+            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title );
+            if ( findItem != null )
+            {
+                findItem.Quantity++;
+                findItem.PriceTotal = findItem.Quantity * findItem.PricePerItem;
+            }
+            else
+                orderItems.Add( orderItem );
         }
 
         public static List<OrderItem> GetOrderItems()
         {
-            return orderItems;
+            List<OrderItem> newOrderItems = new List<OrderItem>();
+
+            foreach(OrderItem item in orderItems)
+            {
+                newOrderItems.Add( new OrderItem( item ) );
+            }
+
+            return newOrderItems;
+        }
+
+        public static float GetTotalOrderItemPrice()
+        {
+            if ( orderItems.Count < 1 )
+                return 0;
+            float sum = 0;
+
+            foreach(OrderItem item in orderItems)
+            {
+                sum += item.PriceTotal;
+            }
+
+            return sum;
+        }
+
+        public static void UpdateQuantity(OrderItem orderItem)
+        {
+            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title );
+            if ( findItem != null )
+            {
+                findItem.Quantity = orderItem.Quantity;
+                findItem.PriceTotal = orderItem.PriceTotal;
+            }
         }
     }
 }
