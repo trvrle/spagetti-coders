@@ -59,6 +59,27 @@ namespace Spaghetti_Coders.Controls
 
         public List<string> Modifications = new List<string>();
 
+        public static readonly DependencyProperty OrderedProperty =
+            DependencyProperty.Register( "Ordered", typeof( Visibility ), typeof( OrderItem ), new PropertyMetadata( Visibility.Hidden ) );
+
+        public bool Ordered
+        {
+            get 
+            {
+                if ( (Visibility)GetValue( OrderedProperty ) == Visibility.Visible )
+                    return true;
+                else
+                    return false;
+            }
+            set
+            {
+                if ( value )
+                    SetValue( OrderedProperty, Visibility.Visible );
+                else
+                    SetValue( OrderedProperty, Visibility.Hidden );
+            }
+        }
+
         public delegate void UpdateDelegate();
 
         public event UpdateDelegate UpdateOrderPage;
@@ -77,6 +98,7 @@ namespace Spaghetti_Coders.Controls
             PricePerItem = item.PricePerItem;
             Quantity = item.Quantity;
             Modifications = item.Modifications;
+            Ordered = item.Ordered;
             Loaded += OrderItem_Loaded;
         }
 
@@ -99,16 +121,17 @@ namespace Spaghetti_Coders.Controls
 
         private void EditClick(object sender, RoutedEventArgs e)
         {
-  
+            if ( Ordered ) return;
         }
 
         private void RemoveClick( object sender, RoutedEventArgs e )
         {
-
+            if ( Ordered ) return; 
         }
 
         private void DecreaseClick(object sender, RoutedEventArgs e)
         {
+            if ( Ordered ) return;
             if ( Quantity <= 1 ) return;
 
             Quantity--;
@@ -122,6 +145,7 @@ namespace Spaghetti_Coders.Controls
 
         private void IncreaseClick(object sender, RoutedEventArgs e)
         {
+            if ( Ordered ) return;
             Quantity++;
             PriceTotal = PricePerItem * Quantity;
             

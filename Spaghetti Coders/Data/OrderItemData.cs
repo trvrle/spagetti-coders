@@ -62,5 +62,23 @@ namespace Spaghetti_Coders.Data
                 findItem.PriceTotal = orderItem.PriceTotal;
             }
         }
+
+        public static void Order()
+        {
+            foreach(OrderItem item in orderItems)
+            {
+                item.Ordered = true;
+            }
+        }
+
+        public static bool CanOrder()
+        {
+            return orderItems.Exists( item => !item.Ordered );
+        }
+
+        public static bool CanPay()
+        {
+            return orderItems.Exists( item => item.Ordered );
+        }
     }
 }

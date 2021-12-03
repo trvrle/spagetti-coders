@@ -33,10 +33,23 @@ namespace Spaghetti_Coders.Controls
         {
             List<OrderItem> orderItemList = OrderItemData.GetOrderItems();
 
+            OrderItemList.Children.Clear();
+
             foreach(OrderItem item in orderItemList)
             {
                 item.UpdateOrderPage += new OrderItem.UpdateDelegate( Update );
                 OrderItemList.Children.Add( item );
+            }
+        }
+
+        public void Order()
+        {
+            var collection = OrderItemList.Children.GetEnumerator();
+
+            while(collection.MoveNext())
+            {
+                OrderItem item = collection.Current as OrderItem;
+                item.Ordered = true;
             }
         }
 

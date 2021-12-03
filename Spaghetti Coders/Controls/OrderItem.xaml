@@ -14,6 +14,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <Rectangle Grid.ColumnSpan="2" 
+                   Fill="White"
+                   Panel.ZIndex="1"
+                   Opacity="0.8"
+                   Visibility="{Binding Ordered, ElementName=root}"/>
+
         <Image
             Stretch="UniformToFill"
             VerticalAlignment="Center"

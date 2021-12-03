@@ -75,12 +75,8 @@ namespace Spaghetti_Coders.Pages
 
         private void OrderPage_Loaded( object sender, RoutedEventArgs e )
         {
-            if ( OrderItemData.Count == 0 )
-            {
-                OrderButton.IsEnabled = false;
-                PayButton.IsEnabled = false;
-                return;
-            }
+            OrderButton.IsEnabled = OrderItemData.CanOrder();
+            PayButton.IsEnabled = OrderItemData.CanPay();
             
             Subtotal = OrderItemData.GetTotalOrderItemPrice();
 
@@ -94,6 +90,10 @@ namespace Spaghetti_Coders.Pages
 
         private void OrderButton_Click( object sender, RoutedEventArgs e )
         {
+            OrderItemData.Order();
+            OrderList.Order();
+            OrderButton.IsEnabled = false;
+            PayButton.IsEnabled = true; 
             OrderPopup orderPopup = new OrderPopup();
             orderPopup.Show();
         }
