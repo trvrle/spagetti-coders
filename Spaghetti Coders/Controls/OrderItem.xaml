@@ -5,69 +5,77 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              x:Name="root"
              mc:Ignorable="d" 
-             d:DesignHeight="340" d:DesignWidth="380"
+             d:DesignHeight="150" d:DesignWidth="400"
              FontFamily= "MV Boli">
-    <Grid Background="White">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="8*" />
-            <ColumnDefinition Width="17*" />
-            <ColumnDefinition Width="35*" />
-            <ColumnDefinition Width="20*" />
+    <Grid Margin="10 0 10 10" Background="WhiteSmoke" MouseDown="EditClick">
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="0,0,3,0" RenderTransformOrigin="0.553,0.5">
-            <Button x:Name="RemoveItem"  Background="#FFD57174" BorderBrush="#FF0A0101"  FontSize="20" BorderThickness="1,1,1,1" Height="50" Width="50"  Margin="3,0,0,0" Visibility="Hidden" >
+        <Image
+            Stretch="UniformToFill"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Source="{Binding ImageSource, ElementName=root}" />
+
+        <Grid Grid.Column="1" Margin="10">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock 
+                VerticalAlignment="Center" 
+                FontWeight="SemiBold"
+                TextTrimming="WordEllipsis"
+                FontSize="16"
+                Text="{Binding Title, ElementName=root}" />
+
+            <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2">
+                <TextBlock Text="Egg: None" FontSize="12" Foreground="DarkSlateGray"/>
+                <TextBlock Text="Spice: None" FontSize="12" Foreground="DarkSlateGray"/>
+                <TextBlock Text="Soup: Extra" FontSize="12" Foreground="DarkSlateGray"/>
+            </StackPanel>
+
+            <Button HorizontalAlignment="Right" Grid.Column="1" Click="RemoveClick" Background="#FFD57174" BorderBrush="#FF0A0101" BorderThickness="1" Height="20" Width="20" >
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="100"/>
                     </Style>
-
                 </Button.Resources>
-                <Image Height="56" Width="15" Source="/Images/x.png"/>
+                <Image Grid.Row="1" Height="8" Source="/Images/x.png"/>
             </Button>
-        </Grid>
 
-        <Grid Grid.Column="1" Margin="10,0,75,0">
-            <Image Source="/Images/spicy-ramen.jpg" Margin="-8,8,-72,8" />
-        </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="2">
-        
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10*" />
-                <RowDefinition Height="11*" />
-                <RowDefinition Height="11*"/>
-                <RowDefinition Height="13*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" FontSize="30" TextWrapping="Wrap" Text="Spicy Ramen"  FontWeight="Bold" Margin="0,-1,0,0" Width="190" VerticalAlignment="Center"   />
-            <Label x:Name="Quantity" Content="" Grid.Row="1" FontSize="30"  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Button x:Name="decrease" Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" Margin="-100,0,50,0" FlowDirection="LeftToRight"  Grid.Row="1" Click="decreaseClick" >
-                <Image Height="40" Width="40" Source="/Images/left.png"/>
-            </Button>
-            <Button x:Name="increase" Width="70" Height="70" Background="#FFD57174" BorderBrush="#FF170404" FlowDirection="LeftToRight" Margin="30,0,-110,0" Grid.Row="1" Click="increaseClick" >
-                <Image Height="40" Width="40" Source="/Images/right.png"/>
-            </Button>
-            <Grid Grid.Row="3">
+                <Button x:Name="DecreaseButton" Background="#FFD57174" BorderBrush="#FF0A0101" Height="20" Width="20" HorizontalAlignment="Right" Click="DecreaseClick">
+                    <Image Height="8" Source="/Images/left.png" />
+                </Button>
 
-                <TextBlock  FontSize="16" TextWrapping="Wrap" Text="{Binding Comments, ElementName=root}"  Width="190"  Height="auto" Margin="-90,-45,0,0"/>
-                <Button x:Name="EditItem"  Content="Edit Item" Height="40" Width="100" HorizontalAlignment="Right" Margin="0,-85,-100,0" Click="EditClick"/>
-                <Rectangle Height="90" Width ="300" Margin="0,-50,0,0" Stroke="#FFD57174" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="1" Text="{Binding Quantity, ElementName=root}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <Button Grid.Column="2" Background="#FFD57174" BorderBrush="#FF0A0101" Height="20" Width="20" HorizontalAlignment="Left" Click="IncreaseClick">
+                    <Image Height="8" Source="/Images/right.png" />
+                </Button>
+                
             </Grid>
-            
-        </Grid>
-        <Grid Grid.Column="3">
-            <TextBlock x:Name="itemPrice" FontSize="30" FontWeight="Bold" TextWrapping="Wrap" Text="$12.99" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0"  >
-                <TextBlock.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.424"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="0.159"/>
-                    </TransformGroup>
-                </TextBlock.RenderTransform>
-            </TextBlock>
-        </Grid>
 
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding PriceTotal, ElementName=root}" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </UserControl>

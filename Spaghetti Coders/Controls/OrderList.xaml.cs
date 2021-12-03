@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spaghetti_Coders.Data;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,17 @@ namespace Spaghetti_Coders.Controls
         public OrderList()
         {
             InitializeComponent();
+            Loaded += OrderList_Loaded;
+        }
+
+        private void OrderList_Loaded( object sender, RoutedEventArgs e )
+        {
+            List<OrderItem> orderItemList = OrderItemData.GetOrderItems();
+
+            foreach(OrderItem item in orderItemList)
+            {
+                OrderItemList.Children.Add( item );
+            }
         }
     }
 }

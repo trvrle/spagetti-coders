@@ -29,25 +29,20 @@ namespace Spaghetti_Coders.Pages
             throw new NotImplementedException();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OrderButton_Click( object sender, RoutedEventArgs e )
         {
-            if (sender.Equals(Order))
-            {
-                OrderPopup orderPopup = new OrderPopup();
-                orderPopup.Show();
-
-            }
-            else if (sender.Equals(Pay))
-            {
-                NavigationService.Navigate(new PaymentPage());
-
-            }
+            OrderPopup orderPopup = new OrderPopup();
+            orderPopup.Show();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void PayButton_Click( object sender, RoutedEventArgs e )
+        {
+            NavigationService.Navigate( new PaymentPage() );
+        }
+
+        private void BackButton_Click( object sender, RoutedEventArgs e )
         {
             NavigationService.GoBack();
         }
-        
     }
 }

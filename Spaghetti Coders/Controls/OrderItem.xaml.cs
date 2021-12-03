@@ -18,6 +18,43 @@ namespace Spaghetti_Coders.Controls
     /// </summary>
     public partial class OrderItem : UserControl
     {
+        public static readonly DependencyProperty TitleProperty =
+            DependencyProperty.Register( "Title", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
+
+        public string Title
+        {
+            get { return (string)GetValue( TitleProperty ); }
+            set { SetValue( TitleProperty, value ); }
+        }
+
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register( "ImageSource", typeof( ImageSource ), typeof( OrderItem ), new PropertyMetadata( null ) );
+
+        public ImageSource ImageSource
+        {
+            get { return (ImageSource)GetValue( ImageSourceProperty ); }
+            set { SetValue( ImageSourceProperty, value ); }
+        }
+
+        public float PricePerItem = 0;
+
+        public static readonly DependencyProperty QuantityProperty =
+            DependencyProperty.Register( "Quantity", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
+
+        public int Quantity
+        {
+            get { return int.Parse((string)GetValue(QuantityProperty)); }
+            set { SetValue( QuantityProperty, value.ToString() ); }
+        }
+
+        public static readonly DependencyProperty PriceTotalProperty =
+            DependencyProperty.Register( "PriceTotal", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
+
+        public float PriceTotal
+        {
+            get { return float.Parse( ( (string)GetValue( PriceTotalProperty ) ).Replace( "$", "" ) ); }
+            set { SetValue( PriceTotalProperty, $"${value}" ); }
+        }
 
         public static readonly DependencyProperty CommentsProperty =
             DependencyProperty.Register( "Comments", typeof( string ), typeof( OrderItem ), new PropertyMetadata( string.Empty ) );
@@ -31,6 +68,13 @@ namespace Spaghetti_Coders.Controls
         public OrderItem()
         {
             InitializeComponent();
+            Loaded += OrderItem_Loaded;
+        }
+
+        private void OrderItem_Loaded( object sender, RoutedEventArgs e )
+        {
+            PriceTotal = PricePerItem * Quantity;
+            if ( Quantity == 1 ) DecreaseButton.IsEnabled = false;
         }
 
         private void EditClick(object sender, RoutedEventArgs e)
@@ -39,31 +83,22 @@ namespace Spaghetti_Coders.Controls
 
         }
 
-        public int amount = 0;
-        public decimal price = 0;
-        public decimal testprice = 12.99M;
-        private void decreaseClick(object sender, RoutedEventArgs e)
+        private void DecreaseClick(object sender, RoutedEventArgs e)
         {
-            if (amount > 0)
-            {
-                amount--;
-            
-            }
+            if ( Quantity <= 1 ) return;
 
-            if (amount != 0) { price -=testprice; }
-            else { price = 0; }
-            
+            Quantity--;
+            PriceTotal = PricePerItem * Quantity;
 
-            itemPrice.Text = "$" + price.ToString();
-            Quantity.Content = amount.ToString();
+            if ( Quantity == 1 ) DecreaseButton.IsEnabled = false;
         }
 
-        private void increaseClick(object sender, RoutedEventArgs e)
+        private void IncreaseClick(object sender, RoutedEventArgs e)
         {
-            amount++;
-            price += testprice;
-            itemPrice.Text = "$" + price.ToString();
-            Quantity.Content = amount.ToString();
+            Quantity++;
+            PriceTotal = PricePerItem * Quantity;
+            
+            if (!DecreaseButton.IsEnabled) DecreaseButton.IsEnabled = true;
         }
     }
 }
