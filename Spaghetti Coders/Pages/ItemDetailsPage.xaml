@@ -8,89 +8,102 @@
       x:Name="root"
       FontFamily="MV Boli">
     <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="275"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="250"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="120"/>
-                <RowDefinition Height="35"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="80"/>
-            </Grid.RowDefinitions>
-
-            <Button Grid.Row ="1" x:Name="BackButton" Click="BackButton_Click" Height="30" Width="70" HorizontalAlignment="Left" Margin="10,0,0,0" FlowDirection="LeftToRight" Background="Transparent" BorderBrush="Transparent">
-                <Image x:Name="Back_Icon" Source="/Images/backarrow.png"/>
+            <Button Grid.Column="0" 
+                x:Name="BackButton" 
+                Click="BackButton_Click"
+                Height="30" Width="70" 
+                Background="Transparent" 
+                BorderBrush="Transparent"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" >
+                <Image Source="/Images/backarrow.png"/>
             </Button>
 
-            <Label Content="{Binding Title, ElementName=root}" FontStyle="Normal" FontSize="25" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Margin="0,30,0,0" Grid.RowSpan="2"/>
-
-            <Image Grid.Row="3" HorizontalAlignment="Center" Source="{Binding ImageSource, ElementName=root}" />
-
-            <Image Grid.Row="4" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
-
-            <TextBlock Grid.Row="5" FontSize="12" FontWeight="Medium" TextAlignment="Center" TextWrapping="Wrap" Margin="25,30,25,0" Text="{Binding Description, ElementName=root}" />
-
-            <TextBlock Grid.Row="6" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
-
-            <Grid 
-                Grid.Row="8"
+            <TextBlock
+                FontSize="26" 
+                Text="{Binding Title, ElementName=root}"
+                TextWrapping="Wrap"
                 HorizontalAlignment="Center"
-                Margin="20,0,20,0">
+                VerticalAlignment="Center"
+                TextAlignment="Center"
+                Grid.Column="1"/>
+        </Grid>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                    <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
+        <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding ImageSource, ElementName=root}" />
 
-                <TextBlock
-                    x:Name="DiscountedPriceTextBlock"
-                    FontSize="20" 
-                    FontWeight="Medium"
-                    Visibility="Hidden"
-                    Foreground="Red"/>
+        <Image Grid.Row="2" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 
-                <TextBlock 
-                    x:Name="PriceTextBlock"
-                    Grid.Column="1"
-                    Margin="5 0 0 0" 
-                    FontSize="20" 
-                    FontWeight="Medium" 
-                    HorizontalAlignment="Center" 
-                    Text="{Binding Price, ElementName=root}">
+        <TextBlock Grid.Row="3" FontSize="12" FontWeight="Medium" TextAlignment="Center" TextWrapping="Wrap" Margin="25,30,25,0" Text="{Binding Description, ElementName=root}" />
 
-                    <TextBlock.TextDecorations>
-                        <TextDecoration Location="Strikethrough">
-                            <TextDecoration.Pen>
-                                <Pen Brush="Red" Thickness="3"/>
-                            </TextDecoration.Pen>
-                        </TextDecoration>
-                    </TextBlock.TextDecorations>
+        <TextBlock Grid.Row="4" FontSize="15" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="20,0,20,0" Text="{Binding Calories, ElementName=root}" />
 
-                </TextBlock>
+        <Grid 
+            Grid.Row="6"
+            HorizontalAlignment="Center"
+            Margin="20,0,20,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                x:Name="DiscountedPriceTextBlock"
+                FontSize="20" 
+                FontWeight="Medium"
+                Visibility="Hidden"
+                Foreground="Red"/>
+
+            <TextBlock 
+                x:Name="PriceTextBlock"
+                Grid.Column="1"
+                Margin="5 0 0 0" 
+                FontSize="20" 
+                FontWeight="Medium" 
+                HorizontalAlignment="Center" 
+                Text="{Binding Price, ElementName=root}">
+
+                <TextBlock.TextDecorations>
+                    <TextDecoration Location="Strikethrough">
+                        <TextDecoration.Pen>
+                            <Pen Brush="Red" Thickness="3"/>
+                        </TextDecoration.Pen>
+                    </TextDecoration>
+                </TextBlock.TextDecorations>
+
+            </TextBlock>
                 
-                <TextBlock
-                    x:Name="QuantityTextBlock"
-                    Grid.Column="2"
-                    FontSize="20"
-                    FontWeight="Medium"
-                    Text="{Binding Quantity, ElementName=root}"/>
-
-            </Grid>
-
-            <Button x:Name="ModifyItem" Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,0,0,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174" Click="ModClick"/>
-
-            <Button x:Name="AddItem" Content="Add Item" FontWeight="Medium" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,0,45,0" Grid.Row="9" VerticalAlignment="Top" Background="#d57174" Click="AddItemClick"/>
+            <TextBlock
+                x:Name="QuantityTextBlock"
+                Grid.Column="2"
+                FontSize="20"
+                FontWeight="Medium"
+                Text="{Binding Quantity, ElementName=root}"/>
 
         </Grid>
+
+        <Button x:Name="ModifyItem" Content="Modify Item" FontWeight="Medium" HorizontalAlignment="Left" Width="90" Height="40" Margin="45,0,0,0" Grid.Row="7" VerticalAlignment="Top" Background="#d57174" Click="ModClick"/>
+
+        <Button x:Name="AddItem" Content="Add Item" FontWeight="Medium" HorizontalAlignment="Right" Width="90" Height="40" Margin="0,0,45,0" Grid.Row="7" VerticalAlignment="Top" Background="#d57174" Click="AddItemClick"/>
+
     </Grid>
 </Page>
