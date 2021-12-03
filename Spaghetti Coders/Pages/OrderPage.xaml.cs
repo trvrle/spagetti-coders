@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Spaghetti_Coders.Controls;
 using Spaghetti_Coders.Data;
 using Spaghetti_Coders.Popups;
 
@@ -81,6 +82,13 @@ namespace Spaghetti_Coders.Pages
                 return;
             }
             
+            Subtotal = OrderItemData.GetTotalOrderItemPrice();
+
+            OrderList.UpdateSubtotal += new OrderList.UpdateSubtotalDelegate( UpdateSubtotal );
+        }
+
+        private void UpdateSubtotal()
+        {
             Subtotal = OrderItemData.GetTotalOrderItemPrice();
         }
 

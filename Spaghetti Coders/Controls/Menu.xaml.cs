@@ -58,7 +58,7 @@ namespace Spaghetti_Coders.Controls
 
         private void FoodItemClick(object sender, RoutedEventArgs e)
         {
-            OnFoodItemClick?.Invoke( ( sender as FoodItem ) );
+            OnFoodItemClick.Invoke( sender as FoodItem );
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

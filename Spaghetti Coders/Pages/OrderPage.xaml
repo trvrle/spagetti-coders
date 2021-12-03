@@ -38,15 +38,15 @@
             </Button>
 
             <Label 
-                    Grid.Column="1"
-                    Content="Your Order"
-                    FontSize="30" 
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
+                Grid.Column="1"
+                Content="Your Order"
+                FontSize="30" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
         </Grid>
 
         <Grid Grid.Row="1">
-            <local:OrderList />
+            <local:OrderList x:Name="OrderList" />
         </Grid>
 
         <StackPanel Orientation="Vertical" Grid.Row="2">
