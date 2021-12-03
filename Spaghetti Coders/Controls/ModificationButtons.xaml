@@ -52,7 +52,7 @@
         <RadioButton x:Name="Modification3"
                      HorizontalAlignment="Center" VerticalAlignment="Center"
                      Grid.Column="2"
-                     Margin="-13,0,0,-26"
+                     Margin="-30,0,0,-26"
                      GroupName="{Binding RadioName, ElementName=root}"
                      Height="20"
                      FontFamily="MV Boli">

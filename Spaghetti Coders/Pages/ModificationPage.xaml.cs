@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Spaghetti_Coders.Data;
+using System.Text.RegularExpressions;
 
 namespace Spaghetti_Coders.Pages
 {
@@ -38,6 +39,7 @@ namespace Spaghetti_Coders.Pages
 
             if(modifications.Count != 0)
             {
+                ModificationList.Children.Clear();
                 foreach (KeyValuePair<string, List<string>> mod in modifications)
                 {
 
@@ -86,12 +88,17 @@ namespace Spaghetti_Coders.Pages
         {
             List<string> modificationStrings = new List<string>();
 
+            float modificationPrice = 0;
+
             foreach(ModificationButtons modButton in modificationButtons)
             {
                 string modification = modButton.GetModification();
                 if ( !modification.Equals( "" ) )
                 {
                     modificationStrings.Add( modification );
+                    string priceString = Regex.Match( modification, "[0-9]+\\.+[0-9]+[0-9]+" ).ToString();
+                    if(!priceString.Equals(""))
+                        modificationPrice += float.Parse( priceString );
                 }
             }
 
@@ -102,8 +109,8 @@ namespace Spaghetti_Coders.Pages
             {
                 Title = Title,
                 ImageSource = ImageSource,
-                PricePerItem = Price,
-                PriceTotal = Price,
+                PricePerItem = Price + modificationPrice,
+                PriceTotal = Price + modificationPrice,
                 Modifications = modificationStrings,
                 Quantity = 1
             } );

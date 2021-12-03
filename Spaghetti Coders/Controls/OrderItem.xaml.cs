@@ -91,6 +91,7 @@ namespace Spaghetti_Coders.Controls
                 {
                     FontSize = 12,
                     Foreground = new SolidColorBrush(Colors.DarkSlateGray),
+                    TextWrapping = TextWrapping.Wrap,
                     Text = modification
                 } );
             }

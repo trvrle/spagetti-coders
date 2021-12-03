@@ -65,16 +65,13 @@
                 FontFamily="Mv Boli"
                 TextDecorations="Underline"/>
 
+        <StackPanel x:Name="ModificationList" 
+                    Grid.Row="3" 
+                    Orientation="Vertical"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center">
 
-        <ScrollViewer Grid.Row="3" CanContentScroll="True" VerticalScrollBarVisibility="Hidden">
-            <StackPanel x:Name="ModificationList" 
-                            Grid.Row="1" 
-                            Orientation="Vertical"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Center">
-
-            </StackPanel>
-        </ScrollViewer>
+        </StackPanel>
 
         <TextBlock Grid.Row="3"
                        x:Name="NoMods" 

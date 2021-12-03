@@ -42,7 +42,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "One",
-                    "Two (+$1)"
+                    "Two (+$1.00)"
                 }
             },
             {
@@ -67,7 +67,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> TempuraModifications = new Dictionary<string, List<string>>
         {
             {
-                "Dipping_Sauce",
+                "Dipping Sauce",
                 new List<string>
                 {
                     "None",
@@ -87,7 +87,7 @@ namespace Spaghetti_Coders.Data
         public static readonly Dictionary<string, List<string>> MisoRamenModifications = new Dictionary<string, List<string>>
         {
             {
-                "Green_Onion",
+                "Green Onion",
                 new List<string>
                 {
                     "None",
@@ -101,7 +101,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "One",
-                    "Two (+$1)"
+                    "Two (+$1.00)"
                 }
             },
             {
@@ -130,11 +130,11 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "Normal",
-                    "Extra"
+                    "Extra (+$1)"
                 }
             },
             {
-                "tobiko_(flying_fish_roe)",
+                "Tobiko",
                 new List<string>
                 {
                     "None",
@@ -319,7 +319,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "Normal",
-                    "Extra"
+                    "Extra (+$0.50)"
                 }
             },
             {
@@ -406,7 +406,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "Normal",
-                    "Extra"
+                    "Extra (+$0.50)"
                 }
             },
             {
@@ -444,7 +444,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "Normal",
-                    "Extra"
+                    "Extra (+$0.50)"
                 }
             },
             {
@@ -483,7 +483,7 @@ namespace Spaghetti_Coders.Data
                 {
                     "None",
                     "Normal",
-                    "Extra"
+                    "Extra (+$0.50)"
                 }
             },
             {
