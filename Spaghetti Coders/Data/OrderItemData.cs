@@ -18,7 +18,7 @@ namespace Spaghetti_Coders.Data
         public static void AddOrderItem(OrderItem orderItem)
         {
             OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title && Enumerable.SequenceEqual(item.Modifications, orderItem.Modifications) );
-            if ( findItem != null )
+            if ( findItem != null && !findItem.Ordered)
             {
                 findItem.Quantity++;
                 findItem.PriceTotal = findItem.Quantity * findItem.PricePerItem;
@@ -29,7 +29,8 @@ namespace Spaghetti_Coders.Data
 
         public static void RemoveOrderItem(OrderItem orderItem)
         {
-            OrderItem findItem = orderItems.Find( item => item.Title == orderItem.Title && Enumerable.SequenceEqual( item.Modifications, orderItem.Modifications ) );
+            List<OrderItem> unorderedItems = orderItems.FindAll( item => !item.Ordered );
+            OrderItem findItem = unorderedItems.Find( item => item.Title == orderItem.Title && Enumerable.SequenceEqual( item.Modifications, orderItem.Modifications ) );
             if (findItem != null)
             {
                 orderItems.Remove( findItem );
