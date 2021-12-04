@@ -32,6 +32,7 @@ namespace Spaghetti_Coders.Pages
             };
             ( SpecialsTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( SpecialsTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            ( SpecialsTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod ); 
 
             MainTab.Content = new Menu
             {
@@ -39,6 +40,7 @@ namespace Spaghetti_Coders.Pages
             };
             ( MainTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( MainTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            ( MainTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
 
             SidesTab.Content = new Menu
             {
@@ -46,6 +48,7 @@ namespace Spaghetti_Coders.Pages
             };
             ( SidesTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( SidesTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            ( SidesTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
 
             DessertsTab.Content = new Menu
             {
@@ -53,6 +56,7 @@ namespace Spaghetti_Coders.Pages
             };
             ( DessertsTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( DessertsTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            ( DessertsTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
 
             DrinksTab.Content = new Menu
             {
@@ -60,6 +64,7 @@ namespace Spaghetti_Coders.Pages
             };
             ( DrinksTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( DrinksTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            ( DrinksTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
         }
 
         private void OnItemClick(FoodItem foodItem)
@@ -72,13 +77,21 @@ namespace Spaghetti_Coders.Pages
             NavigationService.Navigate( new OrderPage() );
         }
 
+        private void OnSetSortMethod(SortMethod sortMethod)
+        {
+            ( SpecialsTab.Content as Menu ).sortMethod = sortMethod;
+            ( MainTab.Content as Menu ).sortMethod = sortMethod;
+            ( SidesTab.Content as Menu ).sortMethod = sortMethod;
+            ( DessertsTab.Content as Menu ).sortMethod = sortMethod;
+            ( DrinksTab.Content as Menu ).sortMethod = sortMethod;
+        }
+
         private void Button_Click( object sender, RoutedEventArgs e )
         {
             if ( sender.Equals( Bell ) )
             {
                 BellPopup bellPopup = new BellPopup();
                 bellPopup.Show();
-
             }
         }
     }

@@ -31,6 +31,10 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( TitleProperty, value ); }
         }
 
+        public SortMethod sortMethod = SortMethod.None;
+
+        private List<SortButton> sortButtons;
+
         public delegate void OnFoodItemClickDelegate( FoodItem foodItem );
 
         public event OnFoodItemClickDelegate OnFoodItemClick;
@@ -39,21 +43,89 @@ namespace Spaghetti_Coders.Controls
 
         public event OnOrderButtonClickDelegate OnOrderButtonClick;
 
+        public delegate void OnSetSortMethodDelegate( SortMethod sortMethod );
+
+        public event OnSetSortMethodDelegate OnSetSortMethod;
+
         public Menu()
         {
             InitializeComponent();
-            Loaded += Menu_Loaded;
+            Loaded += LoadMenu;
+            sortButtons = new List<SortButton> {
+                PriceAscending_Button,
+                PriceDescending_Button,
+                CaloriesAscending_Button,
+                CaloriesDescending_Button
+            };
         }
 
-        private void Menu_Loaded(object sender, RoutedEventArgs e)
+        private void LoadMenu( object sender, RoutedEventArgs e)
+        {
+            LoadFoodItems();
+            LoadSortButtons();
+        }
+
+        private void LoadFoodItems()
         {
             FoodItemList.Children.Clear();
-            var foodItemsInCategory = FoodItemData.GetFoodItemList().FindAll( item => item.Categories.Exists( category => category.Value.Equals(Title)) ) ;
-            foodItemsInCategory.ForEach( delegate ( FoodItem foodItem )
-             {
-                 foodItem.Click += FoodItemClick;
-                 FoodItemList.Children.Add( foodItem );
-             } );
+
+            List<FoodItem> foodItems = GetFoodItems();
+            
+            foodItems.ForEach( delegate ( FoodItem foodItem )
+            {
+                foodItem.Click += FoodItemClick;
+                FoodItemList.Children.Add( foodItem );
+            } );
+        }
+
+        private List<FoodItem> GetFoodItems()
+        {
+            List<FoodItem> foodItemsInCategory = FoodItemData.GetFoodItemList().FindAll( item => item.Categories.Exists( category => category.Value.Equals( Title ) ) );
+
+            switch ( sortMethod )
+            {
+                case SortMethod.PriceAscending:
+                    foodItemsInCategory.Sort( delegate ( FoodItem item1, FoodItem item2 ) {
+                        float item1Discount = item1.Discount ?? 0;
+                        float item2Discount = item2.Discount ?? 0;
+                        return (int)( item1.Price - item1Discount - ( item2.Price - item2Discount ) );
+                    } );
+                    break;
+                case SortMethod.PriceDescending:
+                    foodItemsInCategory.Sort( delegate ( FoodItem item1, FoodItem item2 ) {
+                        float item1Discount = item1.Discount ?? 0;
+                        float item2Discount = item2.Discount ?? 0;
+                        return (int)( item2.Price - item2Discount - ( item1.Price - item1Discount ) );
+                    } );
+                    break;
+                case SortMethod.CaloriesAscending:
+                    foodItemsInCategory.Sort( delegate ( FoodItem item1, FoodItem item2 ) { return item1.Calories - item2.Calories; } );
+                    break;
+                case SortMethod.CaloriesDescending:
+                    foodItemsInCategory.Sort( delegate ( FoodItem item1, FoodItem item2 ) { return item2.Calories - item1.Calories; } );
+                    break;
+            }
+
+            return foodItemsInCategory;
+        }
+
+        private void LoadSortButtons()
+        {
+            PriceAscending_Button.ActiveSortMethod = SortMethod.PriceAscending;
+            PriceDescending_Button.ActiveSortMethod = SortMethod.PriceDescending;
+            CaloriesAscending_Button.ActiveSortMethod = SortMethod.CaloriesAscending;
+            CaloriesDescending_Button.ActiveSortMethod = SortMethod.CaloriesDescending;
+
+            foreach(SortButton button in sortButtons)
+            {
+                button.OnSortButtonClicked += new SortButton.OnSortButtonClickedDelegate( OnSortButtonClicked );
+                button.SetSortMethod( sortMethod );
+            }
+
+            if ( sortButtons.Exists( button => button.Active ) )
+            {
+                SortMenu_Button.Background = Brushes.LightBlue;
+            }
         }
 
         private void FoodItemClick(object sender, RoutedEventArgs e)
@@ -64,15 +136,35 @@ namespace Spaghetti_Coders.Controls
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             OnOrderButtonClick?.Invoke( );
-
         }
 
-        private void SortButton_Click( object sender, RoutedEventArgs e )
+        private void SortMenuButton_Click( object sender, RoutedEventArgs e )
         {
             if ( SortMenu.Visibility == Visibility.Hidden )
                 SortMenu.Visibility = Visibility.Visible;
             else
                 SortMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void OnSortButtonClicked(SortMethod sortMethodClicked)
+        {
+            Debug.WriteLine( "SortMethod: " + sortMethodClicked );
+            foreach(SortButton button in sortButtons)
+            {
+                button.SetSortMethod( sortMethodClicked );
+            }
+
+            if ( sortButtons.Exists( button => button.Active ) )
+            {
+                SortMenu_Button.Background = Brushes.LightBlue;
+            }
+            else
+                SortMenu_Button.Background = new SolidColorBrush( Color.FromRgb( 0xD5, 0x71, 0x74 ) );
+
+            OnSetSortMethod.Invoke( sortMethodClicked );
+
+            LoadFoodItems();
+            SortMenu.Visibility = Visibility.Hidden;
         }
 
     }

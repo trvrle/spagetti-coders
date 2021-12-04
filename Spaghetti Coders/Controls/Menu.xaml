@@ -40,8 +40,8 @@
                     FontSize="18"
                     Content="{Binding Title, ElementName=root}" />
 
-                <Button Grid.Column="2" x:Name="SortButton" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" FlowDirection="LeftToRight" Margin="10" Click="SortButton_Click">
-                    <Image x:Name="Sort_Icon" Stretch="Fill" Source="/Images/sort.png" Height="22" Width="22"/>
+                <Button Grid.Column="2" x:Name="SortMenu_Button" Height="50" Width="50" Background="#FFD57174" BorderBrush="#FF170404" HorizontalAlignment="Right" FlowDirection="LeftToRight" Margin="10" Click="SortMenuButton_Click">
+                    <Image x:Name="Sort_Icon" Source="/Images/sort.png" Height="22" Width="22"/>
                 </Button>
 
                 <Grid
@@ -62,57 +62,36 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
 
-                    <Button Background="Transparent" BorderBrush="Transparent">
-                        <Grid Width="150">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Images/price.png" Height="20" Width="20" />
-                            <Label HorizontalAlignment="Center" Grid.Column="1" Content="Price" />
-                            <Image Grid.Column="2" Source="/Images/up.png" Height="20" Width="20" />
-                        </Grid>
-                    </Button>
+                    <local:SortButton 
+                        x:Name="PriceAscending_Button"
+                        SortName="Price"
+                        SortTypeImage="/Images/price.png"
+                        SortDirectionImage="/Images/up.png"
+                        Active="False"/>
 
-                    <Button Grid.Row="1" Background="Transparent" BorderBrush="Transparent">
-                        <Grid Width="150">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Images/price.png" Height="20" Width="20" />
-                            <Label HorizontalAlignment="Center" Grid.Column="1" Content="Price" />
-                            <Image Grid.Column="2" Source="/Images/down.png" Height="20" Width="20" />
-                        </Grid>
-                    </Button>
+                    <local:SortButton 
+                        x:Name="PriceDescending_Button"
+                        Grid.Row="1"
+                        SortName="Price"
+                        SortTypeImage="/Images/price.png"
+                        SortDirectionImage="/Images/down.png"
+                        Active="False"/>
 
-                    <Button Grid.Row="2" Background="Transparent" BorderBrush="Transparent">
-                        <Grid Width="150">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Images/fire.png" Height="20" Width="20" />
-                            <Label HorizontalAlignment="Center" Grid.Column="1" Content="Calories" />
-                            <Image Grid.Column="2" Source="/Images/up.png" Height="20" Width="20" />
-                        </Grid>
-                    </Button>
+                    <local:SortButton 
+                        x:Name="CaloriesAscending_Button"
+                        Grid.Row="2"
+                        SortName="Calories"
+                        SortTypeImage="/Images/fire.png"
+                        SortDirectionImage="/Images/up.png"
+                        Active="False"/>
 
-                    <Button Grid.Row="3" Background="Transparent" BorderBrush="Transparent">
-                        <Grid Width="150">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="75"/>
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="/Images/fire.png" Height="20" Width="20" />
-                            <Label HorizontalAlignment="Center" Grid.Column="1" Content="Calories" />
-                            <Image Grid.Column="2" Source="/Images/down.png" Height="20" Width="20" />
-                        </Grid>
-                    </Button>
+                    <local:SortButton 
+                        x:Name="CaloriesDescending_Button"
+                        Grid.Row="3"
+                        SortName="Calories"
+                        SortTypeImage="/Images/fire.png"
+                        SortDirectionImage="/Images/down.png"
+                        Active="False"/>
 
                 </Grid>
 
