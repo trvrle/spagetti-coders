@@ -31,6 +31,15 @@ namespace Spaghetti_Coders.Controls
             set { SetValue( TitleProperty, value ); }
         }
 
+        public static readonly DependencyProperty NumberOfItemsProperty =
+            DependencyProperty.Register( "NumberOfItems", typeof( string ), typeof( Menu ), new PropertyMetadata( string.Empty ) );
+
+        public string NumberOfItems
+        {
+            get { return (string)GetValue( NumberOfItemsProperty ); }
+            set { SetValue( NumberOfItemsProperty, value ); }
+        }
+
         public SortMethod sortMethod = SortMethod.None;
 
         private List<SortButton> sortButtons;
@@ -61,8 +70,27 @@ namespace Spaghetti_Coders.Controls
 
         private void LoadMenu( object sender, RoutedEventArgs e)
         {
+            LoadNumberOfItemsCanOrder();
             LoadFoodItems();
             LoadSortButtons();
+        }
+
+        private void LoadNumberOfItemsCanOrder()
+        {
+            int count = OrderItemData.GetNumberOfItemsCanOrder();
+            if ( count == 0 )
+            {
+                NumOfItemsBackground.Visibility = Visibility.Hidden;
+                NumOfItemsText.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                NumOfItemsBackground.Visibility = Visibility.Visible;
+                NumOfItemsText.Visibility = Visibility.Visible;
+                if ( count > 9 )
+                    count = 9;
+                NumberOfItems = count.ToString();
+            }
         }
 
         private void LoadFoodItems()

@@ -81,6 +81,11 @@ namespace Spaghetti_Coders.Data
             }
         }
 
+        public static int GetNumberOfItemsCanOrder()
+        {
+            return orderItems.Count( item => !item.Ordered );
+        }
+
         public static bool CanOrder()
         {
             return orderItems.Exists( item => !item.Ordered );

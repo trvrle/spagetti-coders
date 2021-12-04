@@ -49,7 +49,7 @@ namespace Spaghetti_Coders.Data
                 "Soup",
                 new List<string>
                 {
-                    "None",
+                    "Less",
                     "Normal",
                     "Extra"
                 }
@@ -209,7 +209,7 @@ namespace Spaghetti_Coders.Data
                 "Broth",
                 new List<string>
                 {
-                    "None",
+                    "Less",
                     "Normal",
                     "Extra"
                 }
