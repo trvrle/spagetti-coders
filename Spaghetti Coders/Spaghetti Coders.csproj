@@ -15,8 +15,12 @@
     <None Remove="Images\backarrow.png" />
     <None Remove="Images\bell.png" />
     <None Remove="Images\california-roll.jpg" />
+    <None Remove="Images\cart.png" />
     <None Remove="Images\coffee-milk-tea.jpg" />
     <None Remove="Images\divider.png" />
+    <None Remove="Images\dollar.png" />
+    <None Remove="Images\down.png" />
+    <None Remove="Images\fire.png" />
     <None Remove="Images\green-tea-ice-cream.jpg" />
     <None Remove="Images\green-tea.jpg" />
     <None Remove="Images\hot-matcha-latte.jpg" />
@@ -29,6 +33,7 @@
     <None Remove="Images\miso-ramen.jpg" />
     <None Remove="Images\order.png" />
     <None Remove="Images\original-milk-tea.jpg" />
+    <None Remove="Images\price.png" />
     <None Remove="Images\right.png" />
     <None Remove="Images\roasted-milk-tea.jpg" />
     <None Remove="Images\salmon-sushi-roll.jpg" />
@@ -40,6 +45,7 @@
     <None Remove="Images\taro-milk-tea.jpg" />
     <None Remove="Images\tempura.jpg" />
     <None Remove="Images\tuna-roll.jpg" />
+    <None Remove="Images\up.png" />
     <None Remove="Images\x.png" />
   </ItemGroup>
 
@@ -47,8 +53,11 @@
     <Resource Include="Images\agedashi-tofu-with-broth.jpg" />
     <Resource Include="Images\backarrow.png" />
     <Resource Include="Images\bell.png" />
+    <Resource Include="Images\cart.png" />
     <Resource Include="Images\coffee-milk-tea.jpg" />
     <Resource Include="Images\divider.png" />
+    <Resource Include="Images\down.png" />
+    <Resource Include="Images\fire.png" />
     <Resource Include="Images\green-tea-ice-cream.jpg" />
     <Resource Include="Images\green-tea.jpg" />
     <Resource Include="Images\hot-matcha-latte.jpg" />
@@ -59,6 +68,7 @@
     <Resource Include="Images\left.png" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\original-milk-tea.jpg" />
+    <Resource Include="Images\price.png" />
     <Resource Include="Images\right.png" />
   </ItemGroup>
 
@@ -68,9 +78,9 @@
     <Resource Include="Images\strawberry-chocolate-mochi.jpeg" />
     <Resource Include="Images\taiyaki.jpg" />
     <Resource Include="Images\taro-milk-tea.jpg" />
+    <Resource Include="Images\up.png" />
     <Resource Include="Images\x.png" />
     <Resource Include="Images\miso-ramen.jpg" />
-    <Resource Include="Images\order.png" />
     <Resource Include="Images\salmon-sushi-roll.jpg" />
     <Resource Include="Images\salmon-sushi.jpg" />
     <Resource Include="Images\search.png" />

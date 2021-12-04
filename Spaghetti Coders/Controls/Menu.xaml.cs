@@ -61,20 +61,19 @@ namespace Spaghetti_Coders.Controls
             OnFoodItemClick.Invoke( sender as FoodItem );
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
-            if (sender.Equals(OrderButton))
-            {
-                OnOrderButtonClick?.Invoke( );
-            }
-
-            if (sender.Equals(SortButton))
-            {
-                
-
-            }
+            OnOrderButtonClick?.Invoke( );
 
         }
-        
+
+        private void SortButton_Click( object sender, RoutedEventArgs e )
+        {
+            if ( SortMenu.Visibility == Visibility.Hidden )
+                SortMenu.Visibility = Visibility.Visible;
+            else
+                SortMenu.Visibility = Visibility.Hidden;
+        }
+
     }
 }
