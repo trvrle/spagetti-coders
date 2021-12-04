@@ -148,7 +148,6 @@ namespace Spaghetti_Coders.Controls
 
         private void OnSortButtonClicked(SortMethod sortMethodClicked)
         {
-            Debug.WriteLine( "SortMethod: " + sortMethodClicked );
             foreach(SortButton button in sortButtons)
             {
                 button.SetSortMethod( sortMethodClicked );

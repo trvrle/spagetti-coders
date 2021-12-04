@@ -56,7 +56,7 @@
                         <Setter Property="CornerRadius" Value="100"/>
                     </Style>
                 </Button.Resources>
-                <Image Grid.Row="1" Height="8" Source="/Images/x.png"/>
+                <Image Grid.Row="1" Height="14" Source="/Images/x.png"/>
             </Button>
 
             <Grid Grid.Row="1" Grid.Column="1">
@@ -68,13 +68,13 @@
                 </Grid.ColumnDefinitions>
 
                 <Button x:Name="DecreaseButton" Background="#FFD57174" BorderBrush="#FF0A0101" Height="20" Width="20" HorizontalAlignment="Right" Click="DecreaseClick">
-                    <Image Height="8" Source="/Images/left.png" />
+                    <Image Height="14" Source="/Images/left.png" />
                 </Button>
 
                 <TextBlock Grid.Column="1" Text="{Binding Quantity, ElementName=root}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
                 <Button Grid.Column="2" Background="#FFD57174" BorderBrush="#FF0A0101" Height="20" Width="20" HorizontalAlignment="Left" Click="IncreaseClick">
-                    <Image Height="8" Source="/Images/right.png" />
+                    <Image Height="14" Source="/Images/right.png" />
                 </Button>
                 
             </Grid>
