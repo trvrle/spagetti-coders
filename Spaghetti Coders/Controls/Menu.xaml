@@ -32,6 +32,12 @@
                     <Image x:Name="Order_Icon" Stretch="Fill" Source="/Images/cart.png" Height="22" Width="22"/>
                 </Button>
 
+                <Grid Grid.Column="0" Height="50" Width="50">
+                    <Ellipse Height="20" Width="20" Fill="Red" VerticalAlignment="Top" Margin="0 -5 0 0"/>
+
+                    <TextBlock Height="20" Width="20" Text="1" Foreground="White" VerticalAlignment="Top" Margin="12 -7 0 0" />
+                </Grid>
+
                 <Label
                     Grid.Column="1"
                     HorizontalAlignment="Center"

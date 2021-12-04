@@ -13,12 +13,9 @@
         <!-- Notification area -->
 
         <Border BorderThickness="1" Background="#FFF7D9DC" BorderBrush="#FFD57174" CornerRadius="10" Opacity="0.9">
-            <StackPanel Margin="2" >
-                <TextBlock  TextWrapping="Wrap" Margin="1"  TextAlignment="Center" FontStyle="Italic" FontFamily="MV Boli" FontSize="20" HorizontalAlignment="Center" Height="78">
- 
-         The Waitress will be with you shortly
-                </TextBlock>
-            </StackPanel>
+            <Grid Margin="2" >
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontFamily="MV Boli" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Text="The Waitress will be with you shortly"/>
+            </Grid>
         </Border>
 
 

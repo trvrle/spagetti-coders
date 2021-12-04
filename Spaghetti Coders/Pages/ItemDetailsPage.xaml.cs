@@ -126,7 +126,7 @@ namespace Spaghetti_Coders.Pages
                 PriceTotal = Price - discount,
                 Quantity = 1
             } );
-            NavigationService.Navigate(new OrderPage());
+            NavigationService.GoBack();
         }
 
         private void ModClick(object sender, RoutedEventArgs e)

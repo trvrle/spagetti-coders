@@ -114,8 +114,11 @@ namespace Spaghetti_Coders.Pages
                 Modifications = modificationStrings,
                 Quantity = 1
             } );
-            
-            NavigationService.Navigate(new OrderPage());
+
+            while ( NavigationService.CanGoBack )
+            {
+                NavigationService.GoBack();
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
