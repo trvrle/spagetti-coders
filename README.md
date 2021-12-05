@@ -35,3 +35,5 @@ __Order Page:__
 
 * Search: this function is not fully functional. Currently you can click the search box and the text clears and the button has a response that you clicked it. To be implemented in the future is that you can type what you are looking for and items that contain the text in your seach will show up. 
 
+![Test Image 1](https://github.com/lauratimm/Garmin-Watchface/blob/master/watchface.PNG)
+
