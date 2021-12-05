@@ -33,5 +33,5 @@ __Order Page:__
 
 *all of the above functions are working* 
 
-Search 
+* Search: this function is not fully functional. Currently you can click the search box and the text clears and the button has a response that you clicked it. To be implemented in the future is that you can type what you are looking for and items that contain the text in your seach will show up. 
 
