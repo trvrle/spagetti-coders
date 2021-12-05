@@ -24,8 +24,8 @@ Item Detain Page:
 
 Modificaiton Page:
   -Select Modifications (pre-set modifications or write your own): The modification are set to how the order comes origianlly for each item you can add more or less of something from the common modifiations, If the modification you are looking for doesnt exist you can write you own in the text box. *a phone keyboard pops up to view placement press enter to close the keyboard when you are done*
-  
-Add Item to order 
+  -Add Item to order from modification page: when item is added you will return to the main screen
+
   
 On the order Page you can increase or decrease quantity of order (price will adjust accordingly)
   
