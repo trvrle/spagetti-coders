@@ -35,5 +35,6 @@ __Order Page:__
 
 * Search: this function is not fully functional. Currently you can click the search box and the text clears and the button has a response that you clicked it. To be implemented in the future is that you can type what you are looking for and items that contain the text in your seach will show up. 
 
-<img src= "https://github.com/trvrle/spaghetti-coders/blob/main/2021-12-05%2015_20_03-.png" width="280" height="490">
+<p align="center">
+<img src= "https://github.com/trvrle/spaghetti-coders/blob/main/2021-12-05%2015_20_03-.png" width="280" height="490"> <img src= "https://github.com/trvrle/spaghetti-coders/blob/main/Modify.png" width="280" height="490"> <img src= "https://github.com/trvrle/spaghetti-coders/blob/main/OrderPage.png" width="280" height="490"></p>
 
