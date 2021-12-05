@@ -6,6 +6,8 @@ Team Name: Spaghetti Coders
 Group: 17 
 Members: Laura Timm, Trevor Le, Jacky Lam, Maggie Ma, Yihan Wei
 
+Introduction: A company wants to design an ordering system for restaurants/bars, allowing users to interact with the menu and order their food from their table directly. We created a system that users can use their phone to view items on the menu, select and modify those items, and order items from their table. They can add and order items at any point in their visit. Once they have completed their meal they can view their recipt and then pay with the restaurants current payment system.
+
 __Included Features and How to access:__
 
 __Main Screen:__
@@ -35,7 +37,7 @@ __Order Page:__
 
 * Search: this function is not fully functional. Currently you can click the search box and the text clears and the button has a response that you clicked it. To be implemented in the future is that you can type what you are looking for and items that contain the text in your seach will show up. 
 
-Below are a Few Pages from our System: 
+__Below are a Few Pages from our System:__
 <p align="center">
   <img src= "https://github.com/trvrle/spaghetti-coders/blob/main/2021-12-05%2015_20_03-.png" width="280" height="490"> <img src= "https://github.com/trvrle/spaghetti-coders/blob/main/Modify.png" width="280" height="490"> <img src= "https://github.com/trvrle/spaghetti-coders/blob/main/OrderPage.png" width="280" height="490"></p>
 
