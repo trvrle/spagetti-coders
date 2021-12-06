@@ -18,20 +18,52 @@ namespace Spaghetti_Coders.Controls
     /// </summary>
     public partial class SearchBox : UserControl
     {
+        public delegate void OnSearchViewActivatedDelegate();
+
+        public event OnSearchViewActivatedDelegate OnSearchViewActivated;
+
+        public delegate void OnSearchViewDeactivatedDelegate();
+
+        public event OnSearchViewDeactivatedDelegate OnSearchViewDeactivated;
+
         public SearchBox()
         {
             InitializeComponent();
         }
 
-        private void OnSearch( object sender, MouseButtonEventArgs e )
+        private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show( "Clicked Search", "Search", MessageBoxButton.OK, MessageBoxImage.Information );
+            TextBox searchBox = (TextBox)sender;
+            searchBox.Text = string.Empty;
+            OnSearchViewActivated.Invoke();
+            ActivateSearchView();
         }
-        public void TextBox_GotFocus(object sender, RoutedEventArgs e)
+
+        private void SearchBox_LostFocus( object sender, RoutedEventArgs e )
         {
-            TextBox tb = (TextBox)sender;
-            tb.Text = string.Empty;
-            tb.GotFocus -= TextBox_GotFocus;
+            TextBox searchBox = (TextBox)sender;
+            if(searchBox.Text.Equals(string.Empty))
+                searchBox.Text = "Search...";
+        }
+
+        private void CloseSearchView( object sender, RoutedEventArgs e )
+        {
+            Search_TextBox.Text = "Search...";
+            DeactivateSearchView();
+        }
+
+        private void ActivateSearchView()
+        {
+            SearchImage.Visibility = Visibility.Hidden;
+            CloseImage.Visibility = Visibility.Visible;
+            OnSearchViewActivated.Invoke();
+        }
+
+        private void DeactivateSearchView()
+        {
+            SearchImage.Visibility = Visibility.Visible;
+            CloseImage.Visibility = Visibility.Hidden;
+            OnSearchViewDeactivated.Invoke();
         }
     }
 }

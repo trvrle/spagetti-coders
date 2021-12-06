@@ -65,6 +65,14 @@ namespace Spaghetti_Coders.Pages
             ( DrinksTab.Content as Menu ).OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
             ( DrinksTab.Content as Menu ).OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
             ( DrinksTab.Content as Menu ).OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
+
+            SearchMenu.OnFoodItemClick += new Menu.OnFoodItemClickDelegate( OnItemClick );
+            SearchMenu.OnOrderButtonClick += new Menu.OnOrderButtonClickDelegate( OnOrderButtonClick );
+            SearchMenu.OnSetSortMethod += new Menu.OnSetSortMethodDelegate( OnSetSortMethod );
+
+            SearchBox.OnSearchViewActivated += new SearchBox.OnSearchViewActivatedDelegate( OnSearchViewActivated );
+            SearchBox.OnSearchViewDeactivated += new SearchBox.OnSearchViewDeactivatedDelegate( OnSearchViewDeactivated );
+
         }
 
         private void OnItemClick(FoodItem foodItem)
@@ -84,6 +92,19 @@ namespace Spaghetti_Coders.Pages
             ( SidesTab.Content as Menu ).sortMethod = sortMethod;
             ( DessertsTab.Content as Menu ).sortMethod = sortMethod;
             ( DrinksTab.Content as Menu ).sortMethod = sortMethod;
+            SearchMenu.sortMethod = sortMethod;
+        }
+
+        private void OnSearchViewActivated()
+        {
+            CategoryTabs.Visibility = Visibility.Hidden;
+            SearchMenu.Visibility = Visibility.Visible;
+        }
+        private void OnSearchViewDeactivated()
+        {
+            CategoryTabs.Visibility = Visibility.Visible;
+            SearchMenu.Visibility = Visibility.Hidden;
+            Keyboard.Focus(CategoryTabs);
         }
 
         private void Button_Click( object sender, RoutedEventArgs e )

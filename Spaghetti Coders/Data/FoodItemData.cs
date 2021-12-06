@@ -15,7 +15,7 @@ namespace Spaghetti_Coders.Data
         public const float SpicyRamenPrice = 12.99F;
         public const float SpicyRamenDiscount = 3.00F;
         public const string SpicyRamenQuantity = "bowl";
-        public static readonly List<FoodCategory> SpicyRamenCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Main };
+        public static readonly List<FoodCategory> SpicyRamenCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Specials, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> SpicyRamenModifications = new Dictionary<string, List<string>>
         {
             {
@@ -63,7 +63,7 @@ namespace Spaghetti_Coders.Data
         public const float TempuraPrice = 11.99F;
         public const float TempuraDiscount = 2.00F;
         public const string TempuraQuantity = "10 pcs";
-        public static readonly List<FoodCategory> TempuraCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Sides };
+        public static readonly List<FoodCategory> TempuraCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Specials, FoodCategory.Sides };
         public static readonly Dictionary<string, List<string>> TempuraModifications = new Dictionary<string, List<string>>
         {
             {
@@ -83,7 +83,7 @@ namespace Spaghetti_Coders.Data
         public const int MisoRamenCalories = 200;
         public const float MisoRamenPrice = 12.99F;
         public const string MisoRamenQuantity = "bowl";
-        public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly List<FoodCategory> MisoRamenCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> MisoRamenModifications = new Dictionary<string, List<string>>
         {
             {
@@ -121,7 +121,7 @@ namespace Spaghetti_Coders.Data
         public const int CaliforniaRollCalories = 262;
         public const float CaliforniaRollPrice = 8.99F;
         public const string CaliforniaRollQuantity = "8 pcs";
-        public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> {FoodCategory.Main };
+        public static readonly List<FoodCategory> CaliforniaRollCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> CaliforniaRollModifications = new Dictionary<string, List<string>>
         {
             {
@@ -150,7 +150,7 @@ namespace Spaghetti_Coders.Data
         public const int TunaRollCalories = 176;
         public const float TunaRollPrice = 12.99F;
         public const string TunaRollQuantity = "9 pcs";
-        public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly List<FoodCategory> TunaRollCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> TunaRollModifications = new Dictionary<string, List<string>>
         {
             {
@@ -170,7 +170,7 @@ namespace Spaghetti_Coders.Data
         public const int SalmonSushiRollCalories = 220;
         public const float SalmonSushiRollPrice = 12.99F;
         public const string SalmonSushiRollQuantity = "8 pcs";
-        public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly List<FoodCategory> SalmonSushiRollCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> SalmonSushiRollModifications = new Dictionary<string, List<string>>
         {
             {
@@ -190,7 +190,7 @@ namespace Spaghetti_Coders.Data
         public const int SalmonSushiCalories = 190; 
         public const float SalmonSushiPrice = 8.99F;
         public const string SalmonSushiQuantity = "4 pcs";
-        public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.Main };
+        public static readonly List<FoodCategory> SalmonSushiCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Main };
         public static readonly Dictionary<string, List<string>> SalmonSushiModifications = new Dictionary<string, List<string>>
         {
 
@@ -202,7 +202,7 @@ namespace Spaghetti_Coders.Data
         public const int AgedashiTofuWithBrothCalories = 140;
         public const float AgedashiTofuWithBrothPrice = 6.99F;
         public const string AgedashiTofuWithBrothQuantity = "bowl";
-        public static readonly List<FoodCategory> AgedashiTofuWithBrothCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly List<FoodCategory> AgedashiTofuWithBrothCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Sides };
         public static readonly Dictionary<string, List<string>> AgedashiTofuWithBrothModifications = new Dictionary<string, List<string>>
         {
             {
@@ -222,7 +222,7 @@ namespace Spaghetti_Coders.Data
         public const int JapanesePancakesCalories = 800;
         public const float JapanesePancakesPrice = 7.99F;
         public const string JapanesePancakesQuantity = "2 pcs";
-        public static readonly List<FoodCategory> JapanesePancakesCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly List<FoodCategory> JapanesePancakesCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Sides };
         public static readonly Dictionary<string, List<string>> JapanesePancakesModifications = new Dictionary<string, List<string>>
         {
             {
@@ -242,7 +242,7 @@ namespace Spaghetti_Coders.Data
         public const int KaraageCalories = 452;
         public const float KaraagePrice = 11.50F;
         public const string KaraageQuantity = "10 pcs";
-        public static readonly List<FoodCategory> KaraageCategories = new List<FoodCategory> { FoodCategory.Sides };
+        public static readonly List<FoodCategory> KaraageCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Sides };
         public static readonly Dictionary<string, List<string>> KaraageModifications = new Dictionary<string, List<string>>
         {
             {
@@ -262,7 +262,7 @@ namespace Spaghetti_Coders.Data
         public const int GreenTeaIceCreamCalories = 140;
         public const float GreenTeaIceCreamPrice = 3.99F;
         public const string GreenTeaIceCreamQuantity = "scoop";
-        public static readonly List<FoodCategory> GreenTeaIceCreamCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly List<FoodCategory> GreenTeaIceCreamCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Desserts };
         public static readonly Dictionary<string, List<string>> GreenTeaIceCreamModifications = new Dictionary<string, List<string>>
         {
 
@@ -274,7 +274,7 @@ namespace Spaghetti_Coders.Data
         public const int IceCreamMochiCalories = 450;
         public const float IceCreamMochiPrice = 9.50F;
         public const string IceCreamMochiQuantity = "4 confections";
-        public static readonly List<FoodCategory> IceCreamMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly List<FoodCategory> IceCreamMochiCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Desserts };
         public static readonly Dictionary<string, List<string>> IceCreamMochiModifications = new Dictionary<string, List<string>>
         {
 
@@ -286,7 +286,7 @@ namespace Spaghetti_Coders.Data
         public const int StrawberryChocolateMochiCalories = 550;
         public const float StrawberryChocolateMochiPrice = 7.50F;
         public const string StrawberryChocolateMochiQuantity = "4 confections";
-        public static readonly List<FoodCategory> StrawberryChocolateMochiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly List<FoodCategory> StrawberryChocolateMochiCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Desserts };
         public static readonly Dictionary<string, List<string>> StrawberryChocolateMochiModifications = new Dictionary<string, List<string>>
         {
 
@@ -298,7 +298,7 @@ namespace Spaghetti_Coders.Data
         public const int TaiyakiCalories = 220;
         public const float TaiyakiPrice = 3.99F;
         public const string TaiyakiQuantity = "taiyaki";
-        public static readonly List<FoodCategory> TaiyakiCategories = new List<FoodCategory> { FoodCategory.Desserts };
+        public static readonly List<FoodCategory> TaiyakiCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Desserts };
         public static readonly Dictionary<string, List<string>> TaiyakiModifications = new Dictionary<string, List<string>>
         {
 
@@ -310,7 +310,7 @@ namespace Spaghetti_Coders.Data
         public const int CoffeeMilkTeaCalories = 320;
         public const float CoffeeMilkTeaPrice = 5.25F;
         public const string CoffeeMilkTeaQuantity = "drink w/ boba";
-        public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> CoffeeMilkTeaCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> CoffeeMilkTeaModifications = new Dictionary<string, List<string>>
         {
             {
@@ -348,7 +348,7 @@ namespace Spaghetti_Coders.Data
         public const int GreenTeaCalories = 50;
         public const float GreenTeaPrice = 1.99F;
         public const string GreenTeaQuantity = "teapot";
-        public static readonly List<FoodCategory> GreenTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> GreenTeaCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> GreenTeaModifications = new Dictionary<string, List<string>>
         {
             {
@@ -377,7 +377,7 @@ namespace Spaghetti_Coders.Data
         public const int HotMatchaLatteCalories = 250;
         public const float HotMatchaLattePrice = 3.25F;
         public const string HotMatchaLatteQuantity = "mug";
-        public static readonly List<FoodCategory> HotMatchaLatteCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> HotMatchaLatteCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> HotMatchaLatteModifications = new Dictionary<string, List<string>>
         {
             {
@@ -397,7 +397,7 @@ namespace Spaghetti_Coders.Data
         public const int OriginalMilkTeaCalories = 455;
         public const float OriginalMilkTeaPrice = 5.25F;
         public const string OriginalMilkTeaQuantity = "drink w/ boba";
-        public static readonly List<FoodCategory> OriginalMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> OriginalMilkTeaCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> OriginalMilkTeaModifications = new Dictionary<string, List<string>>
         {
             {
@@ -435,7 +435,7 @@ namespace Spaghetti_Coders.Data
         public const int RoastedMilkTeaCalories = 450;
         public const float RoastedMilkTeaPrice = 5.25F;
         public const string RoastedMilkTeaQuantity = "drink w/ boba";
-        public static readonly List<FoodCategory> RoastedMilkTeaCategories = new List<FoodCategory> { FoodCategory.Drinks };
+        public static readonly List<FoodCategory> RoastedMilkTeaCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> RoastedMilkTeaModifications = new Dictionary<string, List<string>>
         {
             {
@@ -474,7 +474,7 @@ namespace Spaghetti_Coders.Data
         public const float TaroMilkTeaPrice = 5.25F;
         public const float TaroMilkTeaDiscount = 1.00F;
         public const string TaroMilkTeaQuantity = "drink w/ boba";
-        public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.Specials, FoodCategory.Drinks };
+        public static readonly List<FoodCategory> TaroMilkTeaCategories = new List<FoodCategory> { FoodCategory.All, FoodCategory.Specials, FoodCategory.Drinks };
         public static readonly Dictionary<string, List<string>> TaroMilkTeaModifications = new Dictionary<string, List<string>>
         {
             {

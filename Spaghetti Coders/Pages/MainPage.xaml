@@ -35,11 +35,13 @@
                 </Button>
             </Grid>
 
-            <local1:SearchBox Grid.Column="1" Margin="10" />
+            <local1:SearchBox x:Name="SearchBox" Grid.Column="1" Margin="10" />
 
         </Grid>
 
-        <TabControl Grid.Row="1" x:Name="tabControl" FontSize="16">
+        <local1:Menu x:Name="SearchMenu" Title="All Items" Grid.Row="1" Visibility="Hidden"/>
+
+        <TabControl Grid.Row="1" x:Name="CategoryTabs" FontSize="16">
             <TabItem Name="SpecialsTab" Header="Specials" Background="#d57174" Height="50" Width="75"/>
             <TabItem Name="MainTab" Header="Main" Background="#d57174" Width="75"/>
             <TabItem Name="SidesTab" Header="Sides" Background="#d57174" Width="75"/>

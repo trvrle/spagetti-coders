@@ -9,21 +9,35 @@
     <Grid>
 
         <TextBox 
+            x:Name="Search_TextBox"
             Height="30" 
             FontSize="16"
             Text="Search..."
             VerticalAlignment="Center"
             Padding="5,2,0,0"
-            GotFocus="TextBox_GotFocus"/>
+            Foreground="DarkSlateGray"
+            GotFocus="SearchBox_GotFocus"
+            LostFocus="SearchBox_LostFocus"/>
 
         <Image
+            x:Name="SearchImage"
             Height="20"
             Width="20" 
             Source="/Images/search.png"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
-            Margin="0,0,5,0" 
-            MouseDown="OnSearch"/>
+            Margin="0,0,5,0" />
+
+        <Image 
+            x:Name="CloseImage"
+            Height="20"
+            Width="20" 
+            Source="/Images/x.png"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Margin="0,0,5,0"
+            MouseDown="CloseSearchView"
+            Visibility="Hidden"/>
 
     </Grid>
 </UserControl>

@@ -10,6 +10,7 @@ namespace Spaghetti_Coders.Data
 
         public string Value { get; private set; }
 
+        public static FoodCategory All { get { return new FoodCategory( "All Items" ); } }
         public static FoodCategory Specials { get { return new FoodCategory( "Today's Specials" ); } }
         public static FoodCategory Main { get { return new FoodCategory( "Main" ); } }
         public static FoodCategory Sides { get { return new FoodCategory( "Sides" ); } }
