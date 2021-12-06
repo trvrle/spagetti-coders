@@ -49,10 +49,12 @@
         <Border Grid.Row="1"
                 CornerRadius="30"
                 Background="#d57174"
-                Height=" 200" Width="250">
+                Height="200" Width="250">
             <Image
-                Stretch="Uniform"
-                HorizontalAlignment="Center" 
+                Stretch="UniformToFill"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="190"
                 Source="{Binding ImageSource, ElementName=root}" />
         </Border>
 
