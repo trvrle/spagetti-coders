@@ -26,6 +26,10 @@ namespace Spaghetti_Coders.Controls
 
         public event OnSearchViewDeactivatedDelegate OnSearchViewDeactivated;
 
+        public delegate void OnSearchTextChangedDelegate( string searchText );
+
+        public event OnSearchTextChangedDelegate OnSearchTextChanged;
+
         public SearchBox()
         {
             InitializeComponent();
@@ -44,6 +48,14 @@ namespace Spaghetti_Coders.Controls
             TextBox searchBox = (TextBox)sender;
             if(searchBox.Text.Equals(string.Empty))
                 searchBox.Text = "Search...";
+        }
+
+        private void SearchBox_TextChanged( object sender, RoutedEventArgs e)
+        {
+            string searchText = Search_TextBox.Text;
+            if ( searchText.Equals( "Search..." ) ) return;
+
+            OnSearchTextChanged.Invoke( searchText );
         }
 
         private void CloseSearchView( object sender, RoutedEventArgs e )

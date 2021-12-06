@@ -44,6 +44,18 @@ namespace Spaghetti_Coders.Controls
 
         private List<SortButton> sortButtons;
 
+        private string searchText = string.Empty;
+
+        public string SearchText
+        {
+            get { return searchText; }
+            set 
+            {
+                searchText = value;
+                LoadFoodItems();
+            }
+        }
+
         public delegate void OnFoodItemClickDelegate( FoodItem foodItem );
 
         public event OnFoodItemClickDelegate OnFoodItemClick;
@@ -98,6 +110,9 @@ namespace Spaghetti_Coders.Controls
             FoodItemList.Children.Clear();
 
             List<FoodItem> foodItems = GetFoodItems();
+
+            if ( !searchText.Equals( string.Empty ) )
+                foodItems = foodItems.FindAll( item => item.Title.ToLower().Contains( searchText.ToLower() ) );
             
             foodItems.ForEach( delegate ( FoodItem foodItem )
             {

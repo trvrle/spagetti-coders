@@ -17,7 +17,8 @@
             Padding="5,2,0,0"
             Foreground="DarkSlateGray"
             GotFocus="SearchBox_GotFocus"
-            LostFocus="SearchBox_LostFocus"/>
+            LostFocus="SearchBox_LostFocus"
+            TextChanged="SearchBox_TextChanged"/>
 
         <Image
             x:Name="SearchImage"

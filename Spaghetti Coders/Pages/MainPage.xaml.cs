@@ -72,7 +72,7 @@ namespace Spaghetti_Coders.Pages
 
             SearchBox.OnSearchViewActivated += new SearchBox.OnSearchViewActivatedDelegate( OnSearchViewActivated );
             SearchBox.OnSearchViewDeactivated += new SearchBox.OnSearchViewDeactivatedDelegate( OnSearchViewDeactivated );
-
+            SearchBox.OnSearchTextChanged += new SearchBox.OnSearchTextChangedDelegate( OnSearchTextChanged );
         }
 
         private void OnItemClick(FoodItem foodItem)
@@ -105,6 +105,11 @@ namespace Spaghetti_Coders.Pages
             CategoryTabs.Visibility = Visibility.Visible;
             SearchMenu.Visibility = Visibility.Hidden;
             Keyboard.Focus(CategoryTabs);
+        }
+
+        private void OnSearchTextChanged(string searchText)
+        {
+            SearchMenu.SearchText = searchText;
         }
 
         private void Button_Click( object sender, RoutedEventArgs e )
