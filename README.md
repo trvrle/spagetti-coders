@@ -6,6 +6,8 @@ Group: 17
 
 Members: Laura Timm, Trevor Le, Jacky Lam, Maggie Ma, Yihan Wei
 
+Github URL: https://github.com/trvrle/spaghetti-coders
+
 ### __Prerequisites:__
 1. Download & install Visual Studio 2019 with all the packages required to run a WPF application
 2. Disable UI Debugging Tools for XAML by going to Debug > Options > Debugging > General > uncheck the 'Enable UI Debugging Tools for XAML' checkbox
